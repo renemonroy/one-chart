@@ -1,0 +1,11 @@
+{
+  "name": "1chart",
+  "version": "0.1.0",
+  "description": "One chart to rule them all.",
+  "author": "René Monroy <rene.monroy@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js"
+}
