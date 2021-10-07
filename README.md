@@ -1,2 +1,2 @@
-# one-chart
+# 1Chart
 One chart to rule them all.
