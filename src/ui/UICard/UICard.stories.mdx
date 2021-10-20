@@ -1,0 +1,137 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs";
+import ContentLoader from "react-content-loader";
+import UIProvider from "../UIProvider/UIProvider";
+import UIText from "../UIText/UIText";
+import UILegends from "../UILegends/UILegends";
+import UICard from "./UICard";
+
+<Meta
+  title="UI/UICard"
+  component={UICard}
+  decorators={[
+    (storyFn) => (
+      <UIProvider>
+        <div style={{ width: "736px" }}>{storyFn()}</div>
+      </UIProvider>
+    ),
+  ]}
+/>
+
+# UICard
+
+## Examples
+
+<Preview>
+  <Story name="withTitle">
+    <UICard isLoading={false}>
+      <UICard.Header title="Card with Title" />
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withSubtitle">
+    <UICard isLoading={false}>
+      <UICard.Header
+        title="Card with Title"
+        subtitle="A long description goes in this part"
+      />
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withPlaceholder">
+    <UICard isLoading={true}>
+      <UICard.Header
+        title="Card with Title"
+        subtitle="A long description goes in this part"
+      >
+        <UILegends
+          legendsData={[
+            { color: "supportive500", label: "Avg Legend 1", shape: "line" },
+            { color: "primary500", label: "Avg Legend 2", shape: "dot" },
+          ]}
+        />
+      </UICard.Header>
+      <UICard.Placeholder>
+        <ContentLoader
+          speed={3}
+          width={736}
+          height={89}
+          viewBox="0 0 736 89"
+          backgroundColor="#3A4458"
+          foregroundColor="#585C6C"
+        >
+          <rect x="24" y="28" rx="4" ry="4" width="140" height="16" />
+          <rect x="24" y="52" rx="4" ry="4" width="261" height="10" />
+          <circle cx="612" cy="34" r="4" />
+          <rect x="623" y="29" rx="4" ry="4" width="90" height="10" />
+        </ContentLoader>
+      </UICard.Placeholder>
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withLegends">
+    <UICard isLoading={false}>
+      <UICard.Header
+        title="Card with Title"
+        subtitle="A long description goes in this part"
+      >
+        <UILegends
+          legendsData={[
+            { color: "supportive500", label: "Avg Legend 1", shape: "line" },
+            { color: "primary500", label: "Avg Legend 2", shape: "dot" },
+          ]}
+        />
+      </UICard.Header>
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withContent">
+    <UICard isLoading={false}>
+      <UICard.Header
+        title="Card with Title"
+        subtitle="A long description goes in this part"
+      />
+      <UICard.Content>
+        <UIText tag="body2">Here goes a graph.</UIText>
+      </UICard.Content>
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withoutHeader">
+    <UICard isLoading={false}>
+      <UICard.Content>
+        <UIText tag="body2">Here goes a graph.</UIText>
+      </UICard.Content>
+    </UICard>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="withAllSections">
+    <UICard isLoading={false}>
+      <UICard.Header
+        title="Card with Title"
+        subtitle="A long description goes in this part"
+      >
+        <UILegends
+          legendsData={[
+            { color: "supportive500", label: "Avg Legend 1", shape: "line" },
+            { color: "primary500", label: "Avg Legend 2", shape: "dot" },
+          ]}
+        />
+      </UICard.Header>
+      <UICard.Content>
+        <UIText tag="body2">Here goes a graph.</UIText>
+      </UICard.Content>
+    </UICard>
+  </Story>
+</Preview>
