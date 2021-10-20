@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs";
+import UIProvider from "../UIProvider/UIProvider";
+import UILegends from "./UILegends";
+
+<Meta
+  title="UI/UILegends"
+  component={UILegends}
+  decorators={[(storyFn) => <UIProvider>{storyFn()}</UIProvider>]}
+/>
+
+# UILegends
+
+## Examples
+
+<Preview>
+  <Story name="withLegendsData">
+    <UILegends
+      legendsData={[
+        { color: "supportive500", label: "Avg Legend 1", shape: "line" },
+        { label: "Avg Legend 2", shape: "dot" },
+        { color: "secondary500", label: "Avg Legend 3", shape: "line" },
+      ]}
+    />
+  </Story>
+</Preview>
