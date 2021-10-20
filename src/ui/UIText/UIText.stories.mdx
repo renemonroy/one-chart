@@ -1,0 +1,137 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs";
+
+import UIProvider from "../UIProvider/UIProvider";
+import UIText from "./UIText.tsx";
+
+<Meta
+  title="UI/UIText"
+  component={UIText}
+  decorators={[(storyFn) => <UIProvider>{storyFn()}</UIProvider>]}
+/>
+
+# UIText
+
+## Examples
+
+### Normal
+
+<Preview>
+  <Story name="Normal Weight">
+    <UIText tag="h1">This is UIText with "h1" tag</UIText>
+    <br />
+    <UIText tag="h2">This is UIText with "h2" tag</UIText>
+    <br />
+    <UIText tag="h3">This is UIText with "h3" tag</UIText>
+    <br />
+    <UIText tag="h4">This is UIText with "h4" tag</UIText>
+    <br />
+    <UIText tag="subtitle1" mb={7}>
+      This is UIText with "subtitle1" tag
+    </UIText>
+    <br />
+    <UIText tag="subtitle2" mb={7}>
+      This is UIText with "subtitle2" tag
+    </UIText>
+    <br />
+    <UIText tag="body1">This is UIText with "body1" tag</UIText>
+    <br />
+    <UIText tag="body2">This is UIText with "body2" tag</UIText>
+    <br />
+    <UIText tag="caption1" mb={7}>
+      This is UIText with "caption1" tag
+    </UIText>
+    <br />
+    <UIText tag="caption2">This is UIText with "caption2" tag</UIText>
+    <br />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Medium Weight">
+    <UIText tag="h1" weight="medium">
+      This is UIText with "h1" tag
+    </UIText>
+    <br />
+    <UIText tag="h2" weight="medium">
+      This is UIText with "h2" tag
+    </UIText>
+    <br />
+    <UIText tag="h3" weight="medium">
+      This is UIText with "h3" tag
+    </UIText>
+    <br />
+    <UIText tag="h4" weight="medium">
+      This is UIText with "h4" tag
+    </UIText>
+    <br />
+    <UIText tag="subtitle1" weight="medium" mb={7}>
+      This is UIText with "subtitle1" tag
+    </UIText>
+    <br />
+    <UIText tag="subtitle2" weight="medium" mb={7}>
+      This is UIText with "subtitle2" tag
+    </UIText>
+    <br />
+    <UIText tag="body1" weight="medium">
+      This is UIText with "body1" tag
+    </UIText>
+    <br />
+    <UIText tag="body2" weight="medium">
+      This is UIText with "body2" tag
+    </UIText>
+    <br />
+    <UIText tag="caption1" weight="medium" mb={7}>
+      This is UIText with "caption1" tag
+    </UIText>
+    <br />
+    <UIText tag="caption2" weight="medium">
+      This is UIText with "caption2" tag
+    </UIText>
+    <br />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Bold Weight">
+    <UIText tag="h1" weight="bold">
+      This is UIText with "h1" tag
+    </UIText>
+    <br />
+    <UIText tag="h2" weight="bold">
+      This is UIText with "h2" tag
+    </UIText>
+    <br />
+    <UIText tag="h3" weight="bold">
+      This is UIText with "h3" tag
+    </UIText>
+    <br />
+    <UIText tag="h4" weight="bold">
+      This is UIText with "h4" tag
+    </UIText>
+    <br />
+    <UIText tag="subtitle1" weight="bold" mb={7}>
+      This is UIText with "subtitle1" tag
+    </UIText>
+    <br />
+    <UIText tag="subtitle2" weight="bold" mb={7}>
+      This is UIText with "subtitle2" tag
+    </UIText>
+    <br />
+    <UIText tag="body1" weight="bold">
+      This is UIText with "body1" tag
+    </UIText>
+    <br />
+    <UIText tag="body2" weight="bold">
+      This is UIText with "body2" tag
+    </UIText>
+    <br />
+    <UIText tag="caption1" weight="bold" mb={7}>
+      This is UIText with "caption1" tag
+    </UIText>
+    <br />
+    <UIText tag="caption2" weight="bold">
+      This is UIText with "caption2" tag
+    </UIText>
+    <br />
+  </Story>
+</Preview>
