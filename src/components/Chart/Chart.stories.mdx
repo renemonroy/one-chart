@@ -5,6 +5,8 @@ import developmentTimelineSchema from "../../examples/DevelopmentTimeline/Develo
 import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
 import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
 import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
+import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
+import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
 
 <Meta
   title="LittCharts/Chart"
@@ -53,6 +55,19 @@ export const Template = (args) => <Chart {...args} />;
     args={{
       schema: historicalRentSchema,
       data: historicalRentData,
+      isLoading: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Concessions Example"
+    args={{
+      schema: concessionsSchema,
+      data: concessionsData,
       isLoading: false,
     }}
   >
