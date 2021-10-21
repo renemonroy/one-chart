@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import UIProvider from "../../ui/UIProvider/UIProvider";
+import Chart from "./Chart";
+import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
+import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
+
+<Meta
+  title="LittCharts/Chart"
+  decorators={[
+    (storyFn) => (
+      <UIProvider theme="thanos">
+        <div style={{ height: "355px" }}>{storyFn()}</div>
+      </UIProvider>
+    ),
+  ]}
+  argTypes={{
+    schema: {
+      name: "Schema",
+      description:
+        "Helps the component to interpret how you want to render the data.",
+    },
+  }}
+/>
+
+# Chart
+
+## Description
+
+<ArgsTable of={Chart} />
+
+## Examples
+
+export const Template = (args) => <Chart {...args} />;
+
+<Canvas>
+  <Story
+    name="Development Timeline Example"
+    args={{
+      schema: developmentTimelineSchema,
+      data: developmentTimelineData,
+      isLoading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
