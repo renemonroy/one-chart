@@ -5,6 +5,8 @@ import developmentTimelineSchema from "../../examples/DevelopmentTimeline/Develo
 import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
 import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
 import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
+import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts";
+import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
 import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
 import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
 
@@ -68,6 +70,19 @@ export const Template = (args) => <Chart {...args} />;
     args={{
       schema: concessionsSchema,
       data: concessionsData,
+      isLoading: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Concessions Quarter Example"
+    args={{
+      schema: concessionsQuarterSchema,
+      data: concessionsQuarterMockup,
       isLoading: false,
     }}
   >
