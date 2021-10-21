@@ -9,6 +9,8 @@ import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts"
 import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
 import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
 import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
+import absortionSchema from "../../examples/Absortion/Absortion.schema.ts";
+import absortionData from "../../examples/Absortion/Absortion.mockup.json";
 
 <Meta
   title="LittCharts/Chart"
@@ -83,6 +85,19 @@ export const Template = (args) => <Chart {...args} />;
     args={{
       schema: concessionsQuarterSchema,
       data: concessionsQuarterMockup,
+      isLoading: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Absortion Example"
+    args={{
+      schema: absortionSchema,
+      data: absortionData,
       isLoading: false,
     }}
   >
