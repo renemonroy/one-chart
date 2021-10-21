@@ -3,6 +3,8 @@ import UIProvider from "../../ui/UIProvider/UIProvider";
 import Chart from "./Chart";
 import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
 import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
+import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
+import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
 
 <Meta
   title="LittCharts/Chart"
@@ -39,6 +41,19 @@ export const Template = (args) => <Chart {...args} />;
       schema: developmentTimelineSchema,
       data: developmentTimelineData,
       isLoading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Historical Rent Example"
+    args={{
+      schema: historicalRentSchema,
+      data: historicalRentData,
+      isLoading: false,
     }}
   >
     {Template.bind({})}
