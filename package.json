@@ -9,7 +9,8 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
-    "dev": "start-storybook -p 6006"
+    "dev": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
