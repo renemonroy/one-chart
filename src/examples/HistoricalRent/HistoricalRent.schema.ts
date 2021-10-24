@@ -1,6 +1,6 @@
 import { format } from "d3";
 
-export default ({ currencySymbol = "$" }) => ({
+export default {
   id: "historical-rent",
   title: "Historical Rent",
   subtitle: "Annual values shown on graph",
@@ -29,7 +29,7 @@ export default ({ currencySymbol = "$" }) => ({
       value: "year",
     },
     {
-      format: (val: number) => `TI ${currencySymbol}${format(".2s")(val)} psf`,
+      format: (val: number) => `TI $${format(".2s")(val)} psf`,
       shape: "left-axis",
       value: "avgRentFS",
       width: 80,
@@ -52,4 +52,4 @@ export default ({ currencySymbol = "$" }) => ({
       value: ["year", "avgRentNNN"],
     },
   ],
-});
+};
