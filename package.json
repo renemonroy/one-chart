@@ -10,7 +10,7 @@
   "jsnext:main": "dist/index.es.js",
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -o docs-build",
     "deploy:storybook": "storybook-to-ghpages --source-branch=main"
   },
   "devDependencies": {
