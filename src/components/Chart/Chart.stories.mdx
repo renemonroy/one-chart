@@ -1,19 +1,19 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import UIProvider from "../../ui/UIProvider/UIProvider";
 import Chart from "./Chart";
-import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
-import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
-import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
-import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
 import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts";
 import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
-import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
-import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
+import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
+import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
 import absortionSchema from "../../examples/Absortion/Absortion.schema.ts";
 import absortionData from "../../examples/Absortion/Absortion.mockup.json";
+import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
+import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
+import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
+import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
 
 <Meta
-  title="LittCharts/Chart"
+  title="1Chart/Chart"
   decorators={[
     (storyFn) => (
       <UIProvider theme="thanos">
@@ -46,7 +46,7 @@ export const Template = (args) => <Chart {...args} />;
     args={{
       schema: developmentTimelineSchema,
       data: developmentTimelineData,
-      isLoading: true,
+      isLoading: false,
     }}
   >
     {Template.bind({})}
