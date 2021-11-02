@@ -128,6 +128,7 @@ function DevelopmentTimeline() {
 
 - Typescript
 - React
+- React Content Loader
 - D3
 - Styled Components
 - Styled System
