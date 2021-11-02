@@ -1,6 +1,6 @@
 # 1Chart
 
-One chart to rule them all?
+One chart component to rule them all?
 
 ![Storybook Screenshot](https://user-images.githubusercontent.com/106011/139783454-4009cec6-0caf-4c36-ba87-c54b558363ac.png)
 
@@ -8,7 +8,7 @@ One chart to rule them all?
 
 ### Description
 
-For developers who want to build powerful D3 charts easier and faster, 1Chart is a Proof of Concept project that explores the possibility to simplify building multiple charts in a consitent way. Unlike D3 alone, where you need to spend time figuring multiple ways to render a single solution and learning its syntax, this PoC focuses on designing charts following a single pattern, through the use of JS or JSON schemas.
+For those who want to build powerful D3 charts easier and faster, 1Chart is a Proof of Concept project that explores the possibility to simplify building multiple charts in a consitent way. Unlike D3 alone, where you need to spend time figuring multiple ways to render a single solution and learning its syntax, this PoC focuses on designing charts following a single pattern, through the use of JS or JSON schemas.
 
 ## Motivation
 
