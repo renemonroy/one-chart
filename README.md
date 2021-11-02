@@ -2,6 +2,8 @@
 
 One chart to rule them all?
 
+![Storybook Screenshot](https://user-images.githubusercontent.com/106011/139783454-4009cec6-0caf-4c36-ba87-c54b558363ac.png)
+
 ## Overview
 
 ### Description
