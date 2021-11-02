@@ -3,6 +3,7 @@
 One chart component to rule them all?
 
 ![Storybook Screenshot](https://user-images.githubusercontent.com/106011/139783454-4009cec6-0caf-4c36-ba87-c54b558363ac.png)
+[1Chart Playground](https://renemonroy.github.io/one-chart)
 
 ## Overview
 
