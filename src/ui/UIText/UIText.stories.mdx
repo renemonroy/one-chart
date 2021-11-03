@@ -1,12 +1,11 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
-
-import UIProvider from "../UIProvider/UIProvider";
+import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
 import UIText from "./UIText.tsx";
 
 <Meta
   title="UI/UIText"
   component={UIText}
-  decorators={[(storyFn) => <UIProvider>{storyFn()}</UIProvider>]}
+  decorators={[(storyFn) => <ChartsProvider>{storyFn()}</ChartsProvider>]}
 />
 
 # UIText

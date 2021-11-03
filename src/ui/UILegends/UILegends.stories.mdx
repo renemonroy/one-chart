@@ -1,11 +1,11 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
-import UIProvider from "../UIProvider/UIProvider";
+import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
 import UILegends from "./UILegends";
 
 <Meta
   title="UI/UILegends"
   component={UILegends}
-  decorators={[(storyFn) => <UIProvider>{storyFn()}</UIProvider>]}
+  decorators={[(storyFn) => <ChartsProvider>{storyFn()}</ChartsProvider>]}
 />
 
 # UILegends

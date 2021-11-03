@@ -1,6 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
 import ContentLoader from "react-content-loader";
-import UIProvider from "../UIProvider/UIProvider";
+import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
 import UIText from "../UIText/UIText";
 import UILegends from "../UILegends/UILegends";
 import UICard from "./UICard";
@@ -10,9 +10,9 @@ import UICard from "./UICard";
   component={UICard}
   decorators={[
     (storyFn) => (
-      <UIProvider>
+      <ChartsProvider>
         <div style={{ width: "736px" }}>{storyFn()}</div>
-      </UIProvider>
+      </ChartsProvider>
     ),
   ]}
 />
