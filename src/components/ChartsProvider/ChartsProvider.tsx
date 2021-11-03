@@ -1,10 +1,10 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { IUIProviderProps } from "./UIProvider.types";
+import { IChartsProviderProps } from "./ChartsProvider.types";
 import allThemes from "../../themes/themes";
 import GlobalStyle from "../../styles/global.styles";
 
-function UIProvider(props: IUIProviderProps) {
+function ChartsProvider(props: IChartsProviderProps) {
   const { children, theme = "thanos" } = props;
   return (
     <ThemeProvider theme={allThemes[theme]}>
@@ -14,4 +14,4 @@ function UIProvider(props: IUIProviderProps) {
   );
 }
 
-export default UIProvider;
+export default ChartsProvider;

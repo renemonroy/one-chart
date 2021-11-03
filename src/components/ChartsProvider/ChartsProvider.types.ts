@@ -1,4 +1,4 @@
-export interface IUIProviderProps {
+export interface IChartsProviderProps {
   children?: any;
   theme?: "thanos" | "hulk";
 }

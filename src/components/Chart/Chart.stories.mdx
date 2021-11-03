@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import UIProvider from "../../ui/UIProvider/UIProvider";
+import ChartsProvider from "../ChartsProvider/ChartsProvider";
 import Chart from "./Chart";
 import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts";
 import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
@@ -16,9 +16,9 @@ import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.moc
   title="1Chart/Chart"
   decorators={[
     (storyFn) => (
-      <UIProvider theme="thanos">
+      <ChartsProvider theme="thanos">
         <div style={{ height: "355px" }}>{storyFn()}</div>
-      </UIProvider>
+      </ChartsProvider>
     ),
   ]}
   argTypes={{
