@@ -1,6 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
 import ContentLoader from "react-content-loader";
 import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
+import UIChartPlaceholder from "../UIChartPlaceholder/UIChartPlaceholder";
 import UIText from "../UIText/UIText";
 import UILegends from "../UILegends/UILegends";
 import UICard from "./UICard";
@@ -55,19 +56,15 @@ import UICard from "./UICard";
         />
       </UICard.Header>
       <UICard.Placeholder>
-        <ContentLoader
-          speed={3}
-          width={736}
-          height={89}
-          viewBox="0 0 736 89"
-          backgroundColor="#3A4458"
-          foregroundColor="#585C6C"
-        >
-          <rect x="24" y="28" rx="4" ry="4" width="140" height="16" />
-          <rect x="24" y="52" rx="4" ry="4" width="261" height="10" />
-          <circle cx="612" cy="34" r="4" />
-          <rect x="623" y="29" rx="4" ry="4" width="90" height="10" />
-        </ContentLoader>
+        {(phDimensions) => (
+          <UIChartPlaceholder
+            dimensions={phDimensions}
+            hasBars={true}
+            hasLegends={true}
+            hasTitle={true}
+            hasSubtitle={true}
+          />
+        )}
       </UICard.Placeholder>
     </UICard>
   </Story>
