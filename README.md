@@ -1,4 +1,4 @@
-# [1Chart](https://renemonroy.github.io/one-chart)
+# [📈 1Chart](https://renemonroy.github.io/one-chart)
 
 A single chart component to rule them all?!
 
