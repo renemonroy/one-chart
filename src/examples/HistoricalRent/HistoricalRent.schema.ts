@@ -17,7 +17,7 @@ export default {
       domain: [20, 120],
     },
   },
-  graphsXGap: -20, // A hack we can do to follow the design
+  xAxisGap: -20, // A hack we can do to follow a custom design
   graphs: [
     {
       shape: "background-lines",

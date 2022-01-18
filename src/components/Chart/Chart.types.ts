@@ -138,8 +138,8 @@ export interface ISchema {
   subtitle?: string;
   values: ISchemaValues;
   graphs: ISchemaGraphs;
-  graphsXGap?: number;
-  graphsYGap?: number;
+  xAxisGap?: number;
+  yAxisGap?: number;
   debounce?: number;
 }
 

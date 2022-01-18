@@ -38,8 +38,8 @@ export function getInternalDimensions(
   const { height, width } = dimensions;
   const { graphs } = schema;
   const { AXIS_WIDTH, AXIS_HEIGHT } = constants;
-  const xGap = schema.graphsXGap || constants.X_AXIS_SPACE;
-  const yGap = schema.graphsYGap || constants.Y_AXIS_SPACE;
+  const xGap = schema.xAxisGap || constants.X_AXIS_SPACE;
+  const yGap = schema.yAxisGap || constants.Y_AXIS_SPACE;
   const axisDimensions = getAxisGraphs(graphs).reduce(
     (acc, curr) => {
       acc.width = (curr?.width || AXIS_WIDTH) + acc.width;
@@ -150,8 +150,8 @@ export function renderBottomAxis(
   graph: types.IAxisGraph,
   config: types.IGraphsConfig,
 ) {
-  const xGap = config.schema.graphsXGap || constants.X_AXIS_SPACE;
-  const yGap = config.schema.graphsYGap || constants.Y_AXIS_SPACE;
+  const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
+  const yGap = config.schema.yAxisGap || constants.Y_AXIS_SPACE;
   return config.svg
     .append("g")
     .attr("class", constants.BOTTOM_AXIS_CLASSNAME)
@@ -231,7 +231,7 @@ export function renderBackgroundLines(
 ) {
   const scaleX = config.scales[`${graph.value}Scale`] as any;
   const isScaleTime = config.schema.values[`${graph.value}`].scale === "time";
-  const xGap = config.schema.graphsXGap || constants.X_AXIS_SPACE;
+  const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const width = scaleX.bandwidth ? scaleX.bandwidth() : 0;
   const height = config.internalDimensions.height;
   const leftPos = config.internalDimensions.left + xGap;
@@ -268,7 +268,7 @@ export function renderVerticalBars(
   data: types.TData,
   config: types.IGraphsConfig,
 ) {
-  const xGap = config.schema.graphsXGap || constants.X_AXIS_SPACE;
+  const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const theme = config.theme;
   const scaleX = config.scales[`${graph.value[0]}Scale`] as any;
   const scaleY = config.scales[`${graph.value[1]}Scale`] as any;
@@ -358,7 +358,7 @@ export function renderLine(
   const theme = config.theme;
   const scaleX = config.scales[`${graph.value[0]}Scale`] as any;
   const scaleY = config.scales[`${graph.value[1]}Scale`] as any;
-  const xGap = config.schema.graphsXGap || constants.X_AXIS_SPACE;
+  const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const isScaleTime =
     config.schema.values[`${graph.value[0]}`].scale === "time";
   const width = isScaleTime
