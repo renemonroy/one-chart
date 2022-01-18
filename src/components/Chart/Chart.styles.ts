@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SUICard } from "../../ui/UICard/UICard.styles";
+import { SCard } from "../Card/Card.styles";
 import * as constants from "./Chart.constants";
 
 export const SLittChartContainer = styled.div`
@@ -22,7 +22,7 @@ export const SLittChart = styled.svg`
     stroke: ${({ theme }) => theme.chart.lineColor};
   }
 
-  ${SUICard} & {
+  ${SCard} & {
     text.${constants.TEXT_CLASSNAME} {
       color: ${({ theme }) => theme.card.textColor};
     }

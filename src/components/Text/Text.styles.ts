@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { space } from "styled-system";
-import { IThemedUIText } from "./UIText.types";
-import { SUICardHeader, SUICardContent } from "../UICard/UICard.styles";
+import { IThemedText } from "./Text.types";
+import { SCardHeader, SCardContent } from "../Card/Card.styles";
 
 function truncateText(truncate: boolean) {
   return truncate
@@ -14,13 +14,13 @@ function truncateText(truncate: boolean) {
 }
 
 const TextStyles = css`
-  color: ${({ theme }: IThemedUIText) => theme.def.textColor};
+  color: ${({ theme }: IThemedText) => theme.def.textColor};
   font-size: var(--text-size);
   font-weight: var(--text-weight);
-  ${({ truncate = false }: IThemedUIText) => truncateText(truncate)}
+  ${({ truncate = false }: IThemedText) => truncateText(truncate)}
   ${space}
 
-  ${SUICardContent} & {
+  ${SCardContent} & {
     color: var(--graph-card-content-color);
   }
 `;
@@ -58,7 +58,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   ${TextStyles}
 
-  ${SUICardHeader} & {
+  ${SCardHeader} & {
     color: var(--title-color);
   }
 `;
@@ -80,7 +80,7 @@ export const Subtitle2 = styled.span`
   display: inline-block;
   ${TextStyles}
 
-  ${SUICardHeader} & {
+  ${SCardHeader} & {
     color: var(--subtitle-color);
     margin-top: 0.125rem;
   }
@@ -119,7 +119,7 @@ export const Caption2 = styled.span`
   display: inline-block;
   ${TextStyles}
 
-  ${SUICardHeader} & {
+  ${SCardHeader} & {
     color: var(--graph-card-content-color);
     padding: 0.125rem 0;
   }

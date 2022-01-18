@@ -6,10 +6,10 @@ import {
   EXTRA_PADDING_BOTTOM,
   BG_COLOR,
   FG_COLOR,
-} from "./UIChartPlaceholder.constants";
-import { IUIChartPlaceholderProps } from "./UIChartPlaceholder.types";
+} from "./ChartPlaceholder.constants";
+import { IChartPlaceholderProps } from "./ChartPlaceholder.types";
 
-function UIChartPlaceholder({
+function ChartPlaceholder({
   dimensions,
   hasBars = false,
   hasLegends = false,
@@ -17,7 +17,7 @@ function UIChartPlaceholder({
   hasTitle = false,
   backgroundColor = BG_COLOR,
   foregroundColor = FG_COLOR,
-}: IUIChartPlaceholderProps) {
+}: IChartPlaceholderProps) {
   const theme = useContext(ThemeContext);
   const { height, width } = dimensions;
   const plx = PADDING;
@@ -79,4 +79,4 @@ function UIChartPlaceholder({
   );
 }
 
-export default UIChartPlaceholder;
+export default ChartPlaceholder;

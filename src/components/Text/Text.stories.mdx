@@ -1,0 +1,136 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs";
+import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
+import Text from "./Text.tsx";
+
+<Meta
+  title="Text"
+  component={Text}
+  decorators={[(storyFn) => <ChartsProvider>{storyFn()}</ChartsProvider>]}
+/>
+
+# Text
+
+## Examples
+
+### Normal
+
+<Preview>
+  <Story name="Normal Weight">
+    <Text tag="h1">This is Text with "h1" tag</Text>
+    <br />
+    <Text tag="h2">This is Text with "h2" tag</Text>
+    <br />
+    <Text tag="h3">This is Text with "h3" tag</Text>
+    <br />
+    <Text tag="h4">This is Text with "h4" tag</Text>
+    <br />
+    <Text tag="subtitle1" mb={7}>
+      This is Text with "subtitle1" tag
+    </Text>
+    <br />
+    <Text tag="subtitle2" mb={7}>
+      This is Text with "subtitle2" tag
+    </Text>
+    <br />
+    <Text tag="body1">This is Text with "body1" tag</Text>
+    <br />
+    <Text tag="body2">This is Text with "body2" tag</Text>
+    <br />
+    <Text tag="caption1" mb={7}>
+      This is Text with "caption1" tag
+    </Text>
+    <br />
+    <Text tag="caption2">This is Text with "caption2" tag</Text>
+    <br />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Medium Weight">
+    <Text tag="h1" weight="medium">
+      This is Text with "h1" tag
+    </Text>
+    <br />
+    <Text tag="h2" weight="medium">
+      This is Text with "h2" tag
+    </Text>
+    <br />
+    <Text tag="h3" weight="medium">
+      This is Text with "h3" tag
+    </Text>
+    <br />
+    <Text tag="h4" weight="medium">
+      This is Text with "h4" tag
+    </Text>
+    <br />
+    <Text tag="subtitle1" weight="medium" mb={7}>
+      This is Text with "subtitle1" tag
+    </Text>
+    <br />
+    <Text tag="subtitle2" weight="medium" mb={7}>
+      This is Text with "subtitle2" tag
+    </Text>
+    <br />
+    <Text tag="body1" weight="medium">
+      This is Text with "body1" tag
+    </Text>
+    <br />
+    <Text tag="body2" weight="medium">
+      This is Text with "body2" tag
+    </Text>
+    <br />
+    <Text tag="caption1" weight="medium" mb={7}>
+      This is Text with "caption1" tag
+    </Text>
+    <br />
+    <Text tag="caption2" weight="medium">
+      This is Text with "caption2" tag
+    </Text>
+    <br />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Bold Weight">
+    <Text tag="h1" weight="bold">
+      This is Text with "h1" tag
+    </Text>
+    <br />
+    <Text tag="h2" weight="bold">
+      This is Text with "h2" tag
+    </Text>
+    <br />
+    <Text tag="h3" weight="bold">
+      This is Text with "h3" tag
+    </Text>
+    <br />
+    <Text tag="h4" weight="bold">
+      This is Text with "h4" tag
+    </Text>
+    <br />
+    <Text tag="subtitle1" weight="bold" mb={7}>
+      This is Text with "subtitle1" tag
+    </Text>
+    <br />
+    <Text tag="subtitle2" weight="bold" mb={7}>
+      This is Text with "subtitle2" tag
+    </Text>
+    <br />
+    <Text tag="body1" weight="bold">
+      This is Text with "body1" tag
+    </Text>
+    <br />
+    <Text tag="body2" weight="bold">
+      This is Text with "body2" tag
+    </Text>
+    <br />
+    <Text tag="caption1" weight="bold" mb={7}>
+      This is Text with "caption1" tag
+    </Text>
+    <br />
+    <Text tag="caption2" weight="bold">
+      This is Text with "caption2" tag
+    </Text>
+    <br />
+  </Story>
+</Preview>

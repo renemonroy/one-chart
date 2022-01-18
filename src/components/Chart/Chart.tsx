@@ -3,19 +3,19 @@ import { useTheme } from "styled-components";
 import { select } from "d3";
 import { ITheme } from "../../themes/themes.types";
 import useResizeObserver from "../../hooks/useResizeObserver/useResizeObserver";
-import UICard from "../../ui/UICard/UICard";
-import UILegends from "../../ui/UILegends/UILegends";
-import UIChartPlaceholder from "../../ui/UIChartPlaceholder/UIChartPlaceholder";
+import Card from "../Card/Card";
+import Legends from "../Legends/Legends";
+import ChartPlaceholder from "../ChartPlaceholder/ChartPlaceholder";
 import * as types from "./Chart.types";
 import * as utils from "./Chart.utils";
 import * as constants from "./Chart.constants";
 import { SLittChart } from "./Chart.styles";
 
 /**
- * UIChart
+ * Chart
  * -----------------------------------------------------------------------
  */
-function UIChart({ schema, data, isLoading = true }: types.ILittChartProps) {
+function Chart({ schema, data, isLoading = true }: types.ILittChartProps) {
   const theme = useTheme() as ITheme;
   const wrapperRef = useRef<types.TWrapperRef>(null);
   const svgRef = useRef<types.TSVGRef>(null);
@@ -46,16 +46,16 @@ function UIChart({ schema, data, isLoading = true }: types.ILittChartProps) {
   }, [data, dimensions]);
 
   return (
-    <UICard isLoading={isLoading}>
-      <UICard.Header title={schema.title} subtitle={schema.subtitle}>
-        {legends && <UILegends legendsData={legends} />}
-      </UICard.Header>
-      <UICard.Content ref={wrapperRef}>
+    <Card isLoading={isLoading}>
+      <Card.Header title={schema.title} subtitle={schema.subtitle}>
+        {legends && <Legends legendsData={legends} />}
+      </Card.Header>
+      <Card.Content ref={wrapperRef}>
         <SLittChart ref={svgRef} id={`${schema.id}-svg`} theme={theme} />
-      </UICard.Content>
-      <UICard.Placeholder>
+      </Card.Content>
+      <Card.Placeholder>
         {(phDimensions: DOMRect) => (
-          <UIChartPlaceholder
+          <ChartPlaceholder
             dimensions={phDimensions}
             hasBars={true}
             hasLegends={true}
@@ -63,9 +63,9 @@ function UIChart({ schema, data, isLoading = true }: types.ILittChartProps) {
             hasSubtitle={true}
           />
         )}
-      </UICard.Placeholder>
-    </UICard>
+      </Card.Placeholder>
+    </Card>
   );
 }
 
-export default UIChart;
+export default Chart;

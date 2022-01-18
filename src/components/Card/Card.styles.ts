@@ -7,11 +7,11 @@ const sharedStyles = css`
 `;
 
 /**
- * UICard Content styles
+ * Card Content styles
  * ----------------------------------------------------------------
  */
 
-export const SUICard = styled.div`
+export const SCard = styled.div`
   background-color: var(--bg-color);
   border-radius: ${({ theme }) => theme.def.borderRadius};
   flex-direction: column;
@@ -24,11 +24,11 @@ export const SUICard = styled.div`
 `;
 
 /**
- * UICard Header styles
+ * Card Header styles
  * ----------------------------------------------------------------
  */
 
-export const SUICardHeader = styled.header`
+export const SCardHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   padding: 0 1.5rem 1.5rem;
@@ -39,23 +39,23 @@ export const SUICardHeader = styled.header`
   }
 `;
 
-export const SUICardHeaderLeftSide = styled.div`
+export const SCardHeaderLeftSide = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const SUICardHeaderRightSide = styled.div`
+export const SCardHeaderRightSide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 `;
 
 /**
- * UICard Content styles
+ * Card Content styles
  * ----------------------------------------------------------------
  */
 
-export const SUICardContent = styled.div`
+export const SCardContent = styled.div`
   align-items: center;
   flex: 1;
   flex-direction: column;
@@ -64,16 +64,16 @@ export const SUICardContent = styled.div`
 `;
 
 /**
- * UICard Placeholder styles
+ * Card Placeholder styles
  * ----------------------------------------------------------------
  */
 
-export const SUICardPlaceholder = styled.div`
+export const SCardPlaceholder = styled.div`
   flex-direction: column;
   height: 100%;
   ${sharedStyles}
 
-  ${SUICard} & {
+  ${SCard} & {
     padding-top: 0;
   }
 `;

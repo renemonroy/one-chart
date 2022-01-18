@@ -6,17 +6,17 @@ import {
 } from "../../themes/themes.types";
 import { SpaceProps } from "styled-system";
 
-export interface IUIText extends React.HTMLAttributes<HTMLElement>, SpaceProps {
+export interface IText extends React.HTMLAttributes<HTMLElement>, SpaceProps {
   tag?: TTextTag;
   truncate?: boolean;
   weight?: TFontWeight;
 }
 
-export interface IThemedUIText extends IUIText {
+export interface IThemedText extends IText {
   theme: ITheme;
 }
 
-export interface IUITextStyle {
+export interface ITextStyle {
   color: TColor;
   weight: TFontWeight;
 }

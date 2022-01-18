@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import { IUIText } from "./UIText.types";
+import { IText } from "./Text.types";
 import {
   H1,
   H2,
@@ -12,9 +12,9 @@ import {
   Body2,
   Caption1,
   Caption2,
-} from "./UIText.styles";
+} from "./Text.styles";
 
-function UIText(props: IUIText): JSX.Element {
+function Text(props: IText): JSX.Element {
   const { children, tag, weight, style, ...rest } = props;
   const theme = useContext(ThemeContext);
 
@@ -103,7 +103,7 @@ function UIText(props: IUIText): JSX.Element {
   }
 }
 
-UIText.defaultProps = {
+Text.defaultProps = {
   children: null,
   color: "uiBlack",
   tag: "body1",
@@ -111,4 +111,4 @@ UIText.defaultProps = {
   weight: "normal",
 };
 
-export default UIText;
+export default Text;

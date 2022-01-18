@@ -1,14 +1,14 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
 import ContentLoader from "react-content-loader";
 import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
-import UIChartPlaceholder from "../UIChartPlaceholder/UIChartPlaceholder";
-import UIText from "../UIText/UIText";
-import UILegends from "../UILegends/UILegends";
-import UICard from "./UICard";
+import ChartPlaceholder from "../ChartPlaceholder/ChartPlaceholder";
+import Text from "../Text/Text";
+import Legends from "../Legends/Legends";
+import Card from "./Card";
 
 <Meta
-  title="UI/UICard"
-  component={UICard}
+  title="Card"
+  component={Card}
   decorators={[
     (storyFn) => (
       <ChartsProvider>
@@ -18,46 +18,46 @@ import UICard from "./UICard";
   ]}
 />
 
-# UICard
+# Card
 
 ## Examples
 
 <Preview>
   <Story name="withTitle">
-    <UICard isLoading={false}>
-      <UICard.Header title="Card with Title" />
-    </UICard>
+    <Card isLoading={false}>
+      <Card.Header title="Card with Title" />
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withSubtitle">
-    <UICard isLoading={false}>
-      <UICard.Header
+    <Card isLoading={false}>
+      <Card.Header
         title="Card with Title"
         subtitle="A long description goes in this part"
       />
-    </UICard>
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withPlaceholder">
-    <UICard isLoading={true}>
-      <UICard.Header
+    <Card isLoading={true}>
+      <Card.Header
         title="Card with Title"
         subtitle="A long description goes in this part"
       >
-        <UILegends
+        <Legends
           legendsData={[
             { color: "supportive500", label: "Avg Legend 1", shape: "line" },
             { color: "primary500", label: "Avg Legend 2", shape: "dot" },
           ]}
         />
-      </UICard.Header>
-      <UICard.Placeholder>
+      </Card.Header>
+      <Card.Placeholder>
         {(phDimensions) => (
-          <UIChartPlaceholder
+          <ChartPlaceholder
             dimensions={phDimensions}
             hasBars={true}
             hasLegends={true}
@@ -65,70 +65,70 @@ import UICard from "./UICard";
             hasSubtitle={true}
           />
         )}
-      </UICard.Placeholder>
-    </UICard>
+      </Card.Placeholder>
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withLegends">
-    <UICard isLoading={false}>
-      <UICard.Header
+    <Card isLoading={false}>
+      <Card.Header
         title="Card with Title"
         subtitle="A long description goes in this part"
       >
-        <UILegends
+        <Legends
           legendsData={[
             { color: "supportive500", label: "Avg Legend 1", shape: "line" },
             { color: "primary500", label: "Avg Legend 2", shape: "dot" },
           ]}
         />
-      </UICard.Header>
-    </UICard>
+      </Card.Header>
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withContent">
-    <UICard isLoading={false}>
-      <UICard.Header
+    <Card isLoading={false}>
+      <Card.Header
         title="Card with Title"
         subtitle="A long description goes in this part"
       />
-      <UICard.Content>
-        <UIText tag="body2">Here goes a graph.</UIText>
-      </UICard.Content>
-    </UICard>
+      <Card.Content>
+        <Text tag="body2">Here goes a graph.</Text>
+      </Card.Content>
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withoutHeader">
-    <UICard isLoading={false}>
-      <UICard.Content>
-        <UIText tag="body2">Here goes a graph.</UIText>
-      </UICard.Content>
-    </UICard>
+    <Card isLoading={false}>
+      <Card.Content>
+        <Text tag="body2">Here goes a graph.</Text>
+      </Card.Content>
+    </Card>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="withAllSections">
-    <UICard isLoading={false}>
-      <UICard.Header
+    <Card isLoading={false}>
+      <Card.Header
         title="Card with Title"
         subtitle="A long description goes in this part"
       >
-        <UILegends
+        <Legends
           legendsData={[
             { color: "supportive500", label: "Avg Legend 1", shape: "line" },
             { color: "primary500", label: "Avg Legend 2", shape: "dot" },
           ]}
         />
-      </UICard.Header>
-      <UICard.Content>
-        <UIText tag="body2">Here goes a graph.</UIText>
-      </UICard.Content>
-    </UICard>
+      </Card.Header>
+      <Card.Content>
+        <Text tag="body2">Here goes a graph.</Text>
+      </Card.Content>
+    </Card>
   </Story>
 </Preview>

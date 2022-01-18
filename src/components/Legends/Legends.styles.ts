@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { space } from "styled-system";
-import { Caption2 } from "../UIText/UIText.styles";
+import { Caption2 } from "../Text/Text.styles";
 
-export const SUILegends = styled.div`
+export const SLegends = styled.div`
   display: flex;
   flex-direction: row;
   align-items: right;

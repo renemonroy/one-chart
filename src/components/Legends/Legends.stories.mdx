@@ -1,20 +1,20 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs";
 import ChartsProvider from "../../components/ChartsProvider/ChartsProvider";
-import UILegends from "./UILegends";
+import Legends from "./Legends";
 
 <Meta
-  title="UI/UILegends"
-  component={UILegends}
+  title="Legends"
+  component={Legends}
   decorators={[(storyFn) => <ChartsProvider>{storyFn()}</ChartsProvider>]}
 />
 
-# UILegends
+# Legends
 
 ## Examples
 
 <Preview>
   <Story name="withLegendsData">
-    <UILegends
+    <Legends
       legendsData={[
         { color: "supportive500", label: "Avg Legend 1", shape: "line" },
         { label: "Avg Legend 2", shape: "dot" },

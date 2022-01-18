@@ -1,6 +1,6 @@
 import { TColor } from "../../themes/themes.types";
 
-export interface IUIChartPlaceholderProps {
+export interface IChartPlaceholderProps {
   dimensions: DOMRect;
   hasTitle?: boolean;
   hasSubtitle?: boolean;

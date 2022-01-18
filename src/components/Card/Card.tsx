@@ -8,31 +8,31 @@ import React, {
   useState,
 } from "react";
 import { ThemeContext } from "styled-components";
-import { INITIAL_STATE } from "./UICard.constants";
+import { INITIAL_STATE } from "./Card.constants";
 import {
-  SUICard,
-  SUICardContent,
-  SUICardHeader,
-  SUICardPlaceholder,
-  SUICardHeaderLeftSide,
-  SUICardHeaderRightSide,
-} from "./UICard.styles";
+  SCard,
+  SCardContent,
+  SCardHeader,
+  SCardPlaceholder,
+  SCardHeaderLeftSide,
+  SCardHeaderRightSide,
+} from "./Card.styles";
 import {
-  IUICardContentProps,
-  IUICardHeaderProps,
-  IUICardPlaceholderProps,
-  IUICardProps,
-  IUICardContext,
-} from "./UICard.types";
-import UIText from "../UIText/UIText";
+  ICardContentProps,
+  ICardHeaderProps,
+  ICardPlaceholderProps,
+  ICardProps,
+  ICardContext,
+} from "./Card.types";
+import Text from "../Text/Text";
 
-const CardContext = createContext<IUICardContext>(INITIAL_STATE);
+const CardContext = createContext<ICardContext>(INITIAL_STATE);
 
 /**
- * UICard.Header
+ * Card.Header
  * ----------------------------------------------------------------
  */
-function Header(props: IUICardHeaderProps) {
+function Header(props: ICardHeaderProps) {
   const { title, subtitle, children } = props;
   const theme = useContext(ThemeContext);
   const { isLoading } = useContext(CardContext);
@@ -42,21 +42,21 @@ function Header(props: IUICardHeaderProps) {
     "--graph-card-content-color": theme.card.textColor,
   } as React.CSSProperties;
   return !isLoading ? (
-    <SUICardHeader style={titleStyle}>
-      <SUICardHeaderLeftSide>
-        {title && <UIText tag="h4">{title}</UIText>}
-        {subtitle && <UIText tag="subtitle2">{subtitle}</UIText>}
-      </SUICardHeaderLeftSide>
-      {children && <SUICardHeaderRightSide>{children}</SUICardHeaderRightSide>}
-    </SUICardHeader>
+    <SCardHeader style={titleStyle}>
+      <SCardHeaderLeftSide>
+        {title && <Text tag="h4">{title}</Text>}
+        {subtitle && <Text tag="subtitle2">{subtitle}</Text>}
+      </SCardHeaderLeftSide>
+      {children && <SCardHeaderRightSide>{children}</SCardHeaderRightSide>}
+    </SCardHeader>
   ) : null;
 }
 
 /**
- * UICard.Content
+ * Card.Content
  * ----------------------------------------------------------------
  */
-function Content(props: IUICardContentProps, ref?: React.Ref<HTMLDivElement>) {
+function Content(props: ICardContentProps, ref?: React.Ref<HTMLDivElement>) {
   const { children } = props;
   const theme = useContext(ThemeContext);
   const { isLoading } = useContext(CardContext);
@@ -64,17 +64,17 @@ function Content(props: IUICardContentProps, ref?: React.Ref<HTMLDivElement>) {
     "--graph-card-content-color": theme.card.textColor,
   } as React.CSSProperties;
   return !isLoading ? (
-    <SUICardContent ref={ref} style={contentStyle}>
+    <SCardContent ref={ref} style={contentStyle}>
       {children}
-    </SUICardContent>
+    </SCardContent>
   ) : null;
 }
 
 /**
- * UICard.Placeholder
+ * Card.Placeholder
  * ----------------------------------------------------------------
  */
-function Placeholder(props: IUICardPlaceholderProps) {
+function Placeholder(props: ICardPlaceholderProps) {
   const { children } = props;
   const { isLoading } = useContext(CardContext);
   const ref = useRef(null);
@@ -85,17 +85,17 @@ function Placeholder(props: IUICardPlaceholderProps) {
     }
   }, [ref.current]);
   return isLoading ? (
-    <SUICardPlaceholder ref={ref}>
+    <SCardPlaceholder ref={ref}>
       {el && children(el.getBoundingClientRect())}
-    </SUICardPlaceholder>
+    </SCardPlaceholder>
   ) : null;
 }
 
 /**
- * UICard
+ * Card
  * ----------------------------------------------------------------
  */
-function UICard(props: IUICardProps): JSX.Element {
+function Card(props: ICardProps): JSX.Element {
   const { children, ...rest } = props;
   const theme = useContext(ThemeContext);
   const value = useMemo(() => ({ ...rest }), [props.children, props.isLoading]);
@@ -104,18 +104,18 @@ function UICard(props: IUICardProps): JSX.Element {
   } as React.CSSProperties;
   return (
     <CardContext.Provider value={value}>
-      <SUICard style={cardStyle}>{children}</SUICard>
+      <SCard style={cardStyle}>{children}</SCard>
     </CardContext.Provider>
   );
 }
 
-UICard.defaultProps = {
+Card.defaultProps = {
   children: () => null,
   isLoading: true,
 };
 
-UICard.Header = Header;
-UICard.Content = forwardRef(Content);
-UICard.Placeholder = Placeholder;
+Card.Header = Header;
+Card.Content = forwardRef(Content);
+Card.Placeholder = Placeholder;
 
-export default UICard;
+export default Card;

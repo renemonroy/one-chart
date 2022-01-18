@@ -1,12 +1,8 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import UIText from "../UIText/UIText";
-import { ILegendShapeProps, IUILegendsProps } from "./UILegends.types";
-import {
-  SUILegends,
-  SDotLegendShape,
-  SLineLegendShape,
-} from "./UILegends.styles";
+import Text from "../Text/Text";
+import { ILegendShapeProps, ILegendsProps } from "./Legends.types";
+import { SLegends, SDotLegendShape, SLineLegendShape } from "./Legends.styles";
 import { COLORS } from "../../themes/themes.constants";
 
 /**
@@ -33,29 +29,29 @@ LegendShape.defaultProps = {
 };
 
 /**
- * UILegends
+ * Legends
  * ----------------------------------------------------------------
  */
-function UILegends(props: IUILegendsProps): JSX.Element {
+function Legends(props: ILegendsProps): JSX.Element {
   const { legendsData } = props;
   const theme = useContext(ThemeContext);
   const legendsStyle = {
     "--legends-color": theme.def.textColor,
   } as React.CSSProperties;
   return (
-    <SUILegends style={legendsStyle}>
+    <SLegends style={legendsStyle}>
       {legendsData.map((legend, i) => (
-        <UIText key={`legend-${i}`} tag="caption2">
+        <Text key={`legend-${i}`} tag="caption2">
           <LegendShape shapeType={legend.shape} shapeColor={legend.color} />
           {legend.label}
-        </UIText>
+        </Text>
       ))}
-    </SUILegends>
+    </SLegends>
   );
 }
 
-UILegends.defaultProps = {
+Legends.defaultProps = {
   legendsData: [],
 };
 
-export default UILegends;
+export default Legends;

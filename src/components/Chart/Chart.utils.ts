@@ -12,7 +12,7 @@ import {
   scaleTime,
   select,
 } from "d3";
-import { IUILegend } from "../../ui/UILegends/UILegends.types";
+import { ILegend } from "../Legends/Legends.types";
 import {
   drawRect,
   drawNegativeRect,
@@ -476,5 +476,5 @@ export function buildLegends(
       });
     }
     return acc;
-  }, [] as IUILegend[]);
+  }, [] as ILegend[]);
 }

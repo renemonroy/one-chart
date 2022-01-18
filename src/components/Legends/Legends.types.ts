@@ -11,12 +11,12 @@ export interface IThemedLegendShape extends ILegendShapeProps {
   theme: ITheme;
 }
 
-export interface IUILegend {
+export interface ILegend {
   color: TColor;
   label: string;
   shape: TShapeType;
 }
 
-export interface IUILegendsProps {
-  legendsData: IUILegend[];
+export interface ILegendsProps {
+  legendsData: ILegend[];
 }
