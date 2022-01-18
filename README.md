@@ -1,6 +1,6 @@
 # [📈 1Chart](https://renemonroy.github.io/one-chart)
 
-A single chart component to rule them all?!
+> A single chart component to rule them all?!
 
 ![Storybook Screenshot 1](https://user-images.githubusercontent.com/106011/139783618-84663fc6-c601-4ae8-95c5-4d82b9c5a439.png)
 ![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/139783624-fa1bf3b7-bf3e-441f-bd8f-dcd56a5c9420.png)
