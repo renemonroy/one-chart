@@ -13,26 +13,26 @@ export default {
       domain: [0, 1400000],
     },
   },
-  graphs: [
+  components: [
     {
-      shape: "background-lines",
+      type: "background-lines",
       value: "x",
     },
     {
+      type: "bottom-axis",
+      value: "x",
       height: 13,
-      shape: "bottom-axis",
-      value: "x",
     },
     {
-      format: (val: number) => `$${format(".2s")(val)} sf`,
-      shape: "left-axis",
+      type: "left-axis",
       value: "y",
+      format: (val: number) => `$${format(".2s")(val)} sf`,
       width: 50,
     },
     {
-      borderRadius: 4,
-      shape: "vertical-bars",
+      type: "vertical-bars",
       value: ["x", "y"],
+      borderRadius: 4,
     },
   ],
 };

@@ -82,7 +82,7 @@ export interface ISchemaValues {
   [key: string]: ISchemaValue;
 }
 
-export type TGraphsType =
+export type TComponentsType =
   | "bottom-axis"
   | "left-axis"
   | "right-axis"
@@ -90,8 +90,8 @@ export type TGraphsType =
   | "background-lines"
   | "line";
 
-export interface IGraph {
-  shape: TGraphsType;
+export interface IComponent {
+  type: TComponentsType;
   enabledColor?: TColor;
   disabledColor?: TColor;
   hoveredColor?: TColor;
@@ -102,16 +102,16 @@ export interface IGraph {
   gap?: number;
 }
 
-export interface IVerticalBarsGraph extends IGraph {
+export interface IVerticalBarsComponent extends IComponent {
   borderRadius?: number;
   value: string[];
 }
 
-export interface ILineGraph extends IGraph {
+export interface ILineComponent extends IComponent {
   value: string[];
 }
 
-export interface IAxisGraph extends IGraph {
+export interface IAxisComponent extends IComponent {
   height?: number;
   width?: number;
   value: string;
@@ -119,25 +119,25 @@ export interface IAxisGraph extends IGraph {
   format(value: any): string;
 }
 
-export interface IBackgroundLines extends IGraph {
+export interface IBackgroundLinesComponent extends IComponent {
   value: string;
   ticks?: number;
 }
 
-export type TSchemaGraph =
-  | IVerticalBarsGraph
-  | IAxisGraph
-  | IBackgroundLines
-  | IGraph;
+export type TSchemaComponent =
+  | IVerticalBarsComponent
+  | IAxisComponent
+  | IBackgroundLinesComponent
+  | IComponent;
 
-export type ISchemaGraphs = TSchemaGraph[];
+export type ISchemaComponents = TSchemaComponent[];
 
 export interface ISchema {
   id: string;
   title: string;
   subtitle?: string;
   values: ISchemaValues;
-  graphs: ISchemaGraphs;
+  components: ISchemaComponents;
   xAxisGap?: number;
   yAxisGap?: number;
   debounce?: number;
@@ -165,7 +165,7 @@ export type TSVGRef = SVGSVGElement | null;
 
 export type TSVGSelection = Selection<SVGSVGElement, unknown, null, undefined>;
 
-export interface IGraphsConfig {
+export interface IComponentsConfig {
   dimensions: DOMRectReadOnly;
   internalDimensions: DOMRectReadOnly;
   scales: ISchemaValues;

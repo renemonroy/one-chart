@@ -17,7 +17,7 @@ export const X_AXIS_SPACE = 10;
 export const Y_AXIS_SPACE = 20;
 
 export const TEXT_CLASSNAME = "litt-chart-text";
-export const SHAPE_CLASSNAME = "litt-chart-shape";
+export const COMPONENT_CLASSNAME = "litt-chart-component";
 export const LEFT_AXIS_CLASSNAME = "litt-chart-left-axis";
 export const RIGHT_AXIS_CLASSNAME = "litt-chart-right-axis";
 export const BOTTOM_AXIS_CLASSNAME = "litt-chart-bottom-axis";

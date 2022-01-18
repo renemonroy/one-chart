@@ -18,41 +18,41 @@ export default {
     },
   },
   xAxisGap: 50,
-  graphs: [
+  components: [
     {
-      shape: "background-lines",
+      type: "background-lines",
       value: "date",
     },
     {
+      type: "bottom-axis",
+      value: "date",
       format: timeFormat("%Y"),
       height: 13,
-      shape: "bottom-axis",
-      value: "date",
     },
     {
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
-      shape: "left-axis",
+      type: "left-axis",
       value: "avgTIAllowance",
+      format: (val: number) => `TI $${format(".2s")(val)} psf`,
       width: 70,
     },
     {
-      format: (val: number) => `${val} months`,
-      shape: "right-axis",
+      type: "right-axis",
       value: "avgFreeRentMonth",
+      format: (val: number) => `${val} months`,
       width: 70,
     },
     {
+      type: "vertical-bars",
+      value: ["date", "avgFreeRentMonth"],
       borderRadius: 4,
       gap: 5,
       legend: "Months of Free Rent",
-      shape: "vertical-bars",
-      value: ["date", "avgFreeRentMonth"],
     },
     {
+      type: "line",
+      value: ["date", "avgTIAllowance"],
       enabledColor: "supportive500",
       legend: "Tenant Improvement Allowance",
-      shape: "line",
-      value: ["date", "avgTIAllowance"],
     },
   ],
 };

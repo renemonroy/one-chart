@@ -17,39 +17,39 @@ export default {
       domain: [0, 90], // @TODO - measure this number from max value
     },
   },
-  graphs: [
+  components: [
     {
-      shape: "background-lines",
+      type: "background-lines",
       value: "year",
     },
     {
+      type: "bottom-axis",
+      value: "year",
       height: 13,
-      shape: "bottom-axis",
-      value: "year",
     },
     {
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
-      shape: "left-axis",
+      type: "left-axis",
       value: "tenantImprovement",
+      format: (val: number) => `TI $${format(".2s")(val)} psf`,
       width: 70,
     },
     {
-      format: (val: number) => `${val} months`,
-      shape: "right-axis",
+      type: "right-axis",
       value: "monthsOfFreeRent",
+      format: (val: number) => `${val} months`,
       width: 70,
     },
     {
-      borderRadius: 4,
-      legend: "Months of Free Rent",
-      shape: "vertical-bars",
+      type: "vertical-bars",
       value: ["year", "monthsOfFreeRent"],
+      legend: "Months of Free Rent",
+      borderRadius: 4,
     },
     {
-      enabledColor: "supportive500",
-      legend: "Tenant Improvement Allowance",
-      shape: "line",
+      type: "line",
       value: ["year", "tenantImprovement"],
+      legend: "Tenant Improvement Allowance",
+      enabledColor: "supportive500",
     },
   ],
 };

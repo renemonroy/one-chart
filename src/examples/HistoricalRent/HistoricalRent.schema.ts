@@ -18,38 +18,38 @@ export default {
     },
   },
   xAxisGap: -20, // A hack we can do to follow a custom design
-  graphs: [
+  components: [
     {
-      shape: "background-lines",
+      type: "background-lines",
       value: "year",
     },
     {
+      type: "bottom-axis",
+      value: "year",
       height: 13,
-      shape: "bottom-axis",
-      value: "year",
     },
     {
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
-      shape: "left-axis",
+      type: "left-axis",
       value: "avgRentFS",
+      format: (val: number) => `TI $${format(".2s")(val)} psf`,
       width: 80,
     },
     {
-      format: () => ``,
-      shape: "right-axis",
+      type: "right-axis",
       value: "avgRentNNN",
+      format: () => ``,
       width: -10, // Another hack we can do :)
     },
     {
-      legend: "Average Rent • FS",
-      shape: "line",
+      type: "line",
       value: ["year", "avgRentFS"],
+      legend: "Average Rent • FS",
     },
     {
-      enabledColor: "uiWhite",
-      legend: "Average Rent • NNN",
-      shape: "line",
+      type: "line",
       value: ["year", "avgRentNNN"],
+      legend: "Average Rent • NNN",
+      enabledColor: "uiWhite",
     },
   ],
 };

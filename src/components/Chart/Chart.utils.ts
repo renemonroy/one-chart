@@ -22,13 +22,13 @@ import * as types from "./Chart.types";
 import * as constants from "./Chart.constants";
 
 /**
- * getAxisGraphs
+ * getAxisComponents
  * -----------------------------------------------------------------------
  */
-export function getAxisGraphs(graphs: types.ISchemaGraphs) {
-  return graphs.filter((graph) =>
-    graph.shape.includes("-axis"),
-  ) as types.IAxisGraph[];
+export function getAxisComponents(components: types.ISchemaComponents) {
+  return components.filter((component) =>
+    component["type"].includes("-axis"),
+  ) as types.IAxisComponent[];
 }
 
 export function getInternalDimensions(
@@ -36,19 +36,19 @@ export function getInternalDimensions(
   schema: types.ISchema,
 ) {
   const { height, width } = dimensions;
-  const { graphs } = schema;
+  const { components } = schema;
   const { AXIS_WIDTH, AXIS_HEIGHT } = constants;
   const xGap = schema.xAxisGap || constants.X_AXIS_SPACE;
   const yGap = schema.yAxisGap || constants.Y_AXIS_SPACE;
-  const axisDimensions = getAxisGraphs(graphs).reduce(
+  const axisDimensions = getAxisComponents(components).reduce(
     (acc, curr) => {
       acc.width = (curr?.width || AXIS_WIDTH) + acc.width;
       acc.height = (curr?.height || AXIS_HEIGHT) + acc.height;
-      if (curr.shape == "left-axis" && curr?.width) {
+      if (curr["type"] == "left-axis" && curr?.width) {
         acc.width = acc.width + xGap;
         acc.left = acc.left + curr.width;
       }
-      if (curr.shape == "right-axis" && curr?.width) {
+      if (curr["type"] == "right-axis" && curr?.width) {
         acc.width = acc.width + xGap;
         acc.right = acc.right + curr.width;
       }
@@ -147,8 +147,8 @@ export function buildScales(
  * -----------------------------------------------------------------------
  */
 export function renderBottomAxis(
-  graph: types.IAxisGraph,
-  config: types.IGraphsConfig,
+  component: types.IAxisComponent,
+  config: types.IComponentsConfig,
 ) {
   const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const yGap = config.schema.yAxisGap || constants.Y_AXIS_SPACE;
@@ -162,9 +162,9 @@ export function renderBottomAxis(
       })`,
     )
     .call(
-      axisBottom(config.scales[`${graph.value}Scale`] as any)
-        .tickFormat(graph.format || null)
-        .ticks(graph.ticks || null)
+      axisBottom(config.scales[`${component.value}Scale`] as any)
+        .tickFormat(component.format || null)
+        .ticks(component.ticks || null)
         .tickSize(0),
     )
     .call((g) => g.select(".domain").attr("stroke-width", 0))
@@ -176,17 +176,19 @@ export function renderBottomAxis(
  * -----------------------------------------------------------------------
  */
 export function renderLeftAxis(
-  graph: types.IAxisGraph,
-  config: types.IGraphsConfig,
+  component: types.IAxisComponent,
+  config: types.IComponentsConfig,
 ) {
   return config.svg
     .append("g")
     .attr("class", constants.LEFT_AXIS_CLASSNAME)
     .attr("transform", `translate(${config.internalDimensions.left}, 0)`)
     .call(
-      axisLeft(config.scales[`${graph.value}Scale`] as any)
-        .tickFormat(graph.format)
-        .tickValues(graph.ticks || config.schema.values[graph.value].domain)
+      axisLeft(config.scales[`${component.value}Scale`] as any)
+        .tickFormat(component.format)
+        .tickValues(
+          component.ticks || config.schema.values[component.value].domain,
+        )
         .tickSize(0),
     )
     .call((g) => g.select(".domain").attr("stroke-width", 0))
@@ -198,8 +200,8 @@ export function renderLeftAxis(
  * -----------------------------------------------------------------------
  */
 export function renderRightAxis(
-  graph: types.IAxisGraph,
-  config: types.IGraphsConfig,
+  component: types.IAxisComponent,
+  config: types.IComponentsConfig,
 ) {
   return config.svg
     .append("g")
@@ -211,9 +213,11 @@ export function renderRightAxis(
       }, 0)`,
     )
     .call(
-      axisRight(config.scales[`${graph.value}Scale`] as any)
-        .tickFormat(graph.format)
-        .tickValues(graph.ticks || config.schema.values[graph.value].domain)
+      axisRight(config.scales[`${component.value}Scale`] as any)
+        .tickFormat(component.format)
+        .tickValues(
+          component.ticks || config.schema.values[component.value].domain,
+        )
         .tickSize(0),
     )
     .call((g) => g.select(".domain").attr("stroke-width", 0))
@@ -225,17 +229,18 @@ export function renderRightAxis(
  * -----------------------------------------------------------------------
  */
 export function renderBackgroundLines(
-  graph: types.IBackgroundLines,
+  component: types.IBackgroundLinesComponent,
   data: types.TData,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
-  const scaleX = config.scales[`${graph.value}Scale`] as any;
-  const isScaleTime = config.schema.values[`${graph.value}`].scale === "time";
+  const scaleX = config.scales[`${component.value}Scale`] as any;
+  const isScaleTime =
+    config.schema.values[`${component.value}`].scale === "time";
   const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const width = scaleX.bandwidth ? scaleX.bandwidth() : 0;
   const height = config.internalDimensions.height;
   const leftPos = config.internalDimensions.left + xGap;
-  const $graph = config.svg
+  const $component = config.svg
     .append("g")
     .attr("class", constants.BG_LINES_CLASSNAME)
     .selectAll("path")
@@ -248,7 +253,9 @@ export function renderBackgroundLines(
           drawVerticalLine({
             x:
               leftPos +
-              scaleX(isScaleTime ? new Date(d[graph.value]) : d[graph.value]),
+              scaleX(
+                isScaleTime ? new Date(d[component.value]) : d[component.value],
+              ),
             y: 0,
             w: width,
             h: height,
@@ -256,7 +263,7 @@ export function renderBackgroundLines(
         )
         .attr("class", constants.BG_LINE_CLASSNAME),
     );
-  return $graph;
+  return $component;
 }
 
 /**
@@ -264,69 +271,74 @@ export function renderBackgroundLines(
  * -----------------------------------------------------------------------
  */
 export function renderVerticalBars(
-  graph: types.IVerticalBarsGraph,
+  component: types.IVerticalBarsComponent,
   data: types.TData,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
   const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const theme = config.theme;
-  const scaleX = config.scales[`${graph.value[0]}Scale`] as any;
-  const scaleY = config.scales[`${graph.value[1]}Scale`] as any;
-  const barGap = graph.gap || constants.SCALE_GAP / 2;
+  const scaleX = config.scales[`${component.value[0]}Scale`] as any;
+  const scaleY = config.scales[`${component.value[1]}Scale`] as any;
+  const barGap = component.gap || constants.SCALE_GAP / 2;
   const isScaleTime =
-    config.schema.values[`${graph.value[0]}`].scale === "time";
+    config.schema.values[`${component.value[0]}`].scale === "time";
   const barWidth = config.internalDimensions.width / data.length - barGap;
   const halfWidth = isScaleTime ? barWidth / 2 : -barGap / 2;
   const left = config.internalDimensions.left + xGap;
-  const $graph = config.svg
+  const $component = config.svg
     .append("g")
     .attr("class", constants.CHART_VERTICAL_BARS)
     .style(
-      "--shape-enabled-color",
-      graph.enabledColor
-        ? theme.__COLORS[graph.enabledColor]
+      "--component-enabled-color",
+      component.enabledColor
+        ? theme.__COLORS[component.enabledColor]
         : theme.chart.valueEnabled,
     )
     .style(
-      "--shape-hovered-color",
-      graph.hoveredColor
-        ? theme.__COLORS[graph.hoveredColor]
+      "--component-hovered-color",
+      component.hoveredColor
+        ? theme.__COLORS[component.hoveredColor]
         : theme.chart.valueHovered,
     )
     .style(
-      "--shape-disabled-color",
-      graph.disabledColor
-        ? theme.__COLORS[graph.disabledColor]
+      "--component-disabled-color",
+      component.disabledColor
+        ? theme.__COLORS[component.disabledColor]
         : theme.chart.valueDisabled,
     )
     .style(
-      "--shape-stroke-color",
-      graph.strokeColor
-        ? theme.__COLORS[graph.strokeColor]
+      "--component-stroke-color",
+      component.strokeColor
+        ? theme.__COLORS[component.strokeColor]
         : theme.chart.strokeColor,
     )
     .style(
-      "--shape-stroke-opacity",
-      graph.strokeOpacity || theme.chart.strokeOpacity,
+      "--component-stroke-opacity",
+      component.strokeOpacity || theme.chart.strokeOpacity,
     )
-    .style("--shape-stroke-width", graph.strokeWidth || theme.chart.strokeWidth)
+    .style(
+      "--component-stroke-width",
+      component.strokeWidth || theme.chart.strokeWidth,
+    )
     .selectAll("path")
-    .data(data.filter((d) => !!d[graph.value[1]]))
+    .data(data.filter((d) => !!d[component.value[1]]))
     .enter()
     .append("path")
     .call((g) =>
       g
         .attr("d", (d: types.TValueName, i: number) => {
-          const yVal = d[graph.value[1]];
+          const yVal = d[component.value[1]];
           const xVal = scaleX(
-            isScaleTime ? new Date(d[graph.value[0]]) : d[graph.value[0]],
+            isScaleTime
+              ? new Date(d[component.value[0]])
+              : d[component.value[0]],
           );
           const rectConfig = {
             x: left + xVal - halfWidth,
             y: scaleY(0),
             w: barWidth,
             h: scaleY(0) - scaleY(yVal),
-            r: graph.borderRadius || constants.BORDER_RADIUS,
+            r: component.borderRadius || constants.BORDER_RADIUS,
           };
           return yVal > 0
             ? drawRect(rectConfig)
@@ -334,7 +346,7 @@ export function renderVerticalBars(
             ? drawNegativeRect(rectConfig)
             : null;
         })
-        .attr("class", constants.SHAPE_CLASSNAME)
+        .attr("class", constants.COMPONENT_CLASSNAME)
         .on("mouseover", function onBarOver() {
           select(this).classed("hovered", true);
         })
@@ -342,7 +354,7 @@ export function renderVerticalBars(
           select(this).classed("hovered", false);
         }),
     );
-  return $graph;
+  return $component;
 }
 
 /**
@@ -351,16 +363,16 @@ export function renderVerticalBars(
  * @TODO - figure out all 'any' and remove them properly
  */
 export function renderLine(
-  graph: types.ILineGraph,
+  component: types.ILineComponent,
   data: types.TData,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
   const theme = config.theme;
-  const scaleX = config.scales[`${graph.value[0]}Scale`] as any;
-  const scaleY = config.scales[`${graph.value[1]}Scale`] as any;
+  const scaleX = config.scales[`${component.value[0]}Scale`] as any;
+  const scaleY = config.scales[`${component.value[1]}Scale`] as any;
   const xGap = config.schema.xAxisGap || constants.X_AXIS_SPACE;
   const isScaleTime =
-    config.schema.values[`${graph.value[0]}`].scale === "time";
+    config.schema.values[`${component.value[0]}`].scale === "time";
   const width = isScaleTime
     ? 0
     : config.internalDimensions.width / data.length / 2;
@@ -369,79 +381,89 @@ export function renderLine(
       config.internalDimensions.left +
       xGap +
       width +
-      scaleX(isScaleTime ? new Date(d[graph.value[0]]) : d[graph.value[0]]),
-    (d: any) => scaleY(d[graph.value[1]]),
+      scaleX(
+        isScaleTime ? new Date(d[component.value[0]]) : d[component.value[0]],
+      ),
+    (d: any) => scaleY(d[component.value[1]]),
   );
-  const $graph = config.svg
+  const $component = config.svg
     .append("g")
     .attr("class", constants.CHART_LINE)
     .style(
-      "--shape-enabled-color",
-      graph.enabledColor
-        ? theme.__COLORS[graph.enabledColor]
+      "--component-enabled-color",
+      component.enabledColor
+        ? theme.__COLORS[component.enabledColor]
         : theme.chart.valueEnabled,
     )
     .style(
-      "--shape-hovered-color",
-      graph.hoveredColor
-        ? theme.__COLORS[graph.hoveredColor]
+      "--component-hovered-color",
+      component.hoveredColor
+        ? theme.__COLORS[component.hoveredColor]
         : theme.chart.valueHovered,
     )
     .style(
-      "--shape-disabled-color",
-      graph.disabledColor
-        ? theme.__COLORS[graph.disabledColor]
+      "--component-disabled-color",
+      component.disabledColor
+        ? theme.__COLORS[component.disabledColor]
         : theme.chart.valueDisabled,
     )
     .append("path")
     .attr("d", drawLine(data))
-    .attr("class", constants.SHAPE_CLASSNAME);
-  return $graph;
+    .attr("class", constants.COMPONENT_CLASSNAME);
+  return $component;
 }
 
 /**
- * renderGraph
+ * renderComponent
  * -----------------------------------------------------------------------
  */
-export function renderGraph(
-  graph: types.TSchemaGraph,
+export function renderComponent(
+  component: types.TSchemaComponent,
   data: types.TData,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
-  switch (graph.shape) {
+  switch (component["type"]) {
     case "bottom-axis":
-      renderBottomAxis(graph as types.IAxisGraph, config);
+      renderBottomAxis(component as types.IAxisComponent, config);
       break;
     case "left-axis":
-      renderLeftAxis(graph as types.IAxisGraph, config);
+      renderLeftAxis(component as types.IAxisComponent, config);
       break;
     case "right-axis":
-      renderRightAxis(graph as types.IAxisGraph, config);
+      renderRightAxis(component as types.IAxisComponent, config);
       break;
     case "background-lines":
-      renderBackgroundLines(graph as types.IBackgroundLines, data, config);
+      renderBackgroundLines(
+        component as types.IBackgroundLinesComponent,
+        data,
+        config,
+      );
       break;
     case "vertical-bars":
-      renderVerticalBars(graph as types.IVerticalBarsGraph, data, config);
+      renderVerticalBars(
+        component as types.IVerticalBarsComponent,
+        data,
+        config,
+      );
       break;
     case "line":
-      renderLine(graph as types.ILineGraph, data, config);
+      renderLine(component as types.ILineComponent, data, config);
       break;
   }
 }
 
 /**
- * renderGraphs
+ * renderComponents
  * -----------------------------------------------------------------------
  */
-export function renderGraphs(
+export function renderComponents(
   schema: types.ISchema,
   data: types.TData,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
   config.svg.selectAll("g").remove();
-  schema.graphs.forEach((graph: types.TSchemaGraph) => {
-    renderGraph(graph, data, config);
+  schema.components.forEach((component: types.TSchemaComponent) => {
+    renderComponent(component, data, config);
   });
 }
 
@@ -465,14 +487,14 @@ export function getLegendShape(name: string) {
  */
 export function buildLegends(
   schema: types.ISchema,
-  config: types.IGraphsConfig,
+  config: types.IComponentsConfig,
 ) {
-  return schema.graphs.reduce((acc, curr) => {
+  return schema.components.reduce((acc, curr) => {
     if (curr?.legend) {
       acc.push({
         color: curr.enabledColor || config.theme.chart.valueEnabled,
         label: curr.legend,
-        shape: getLegendShape(curr.shape),
+        shape: getLegendShape(curr["type"]),
       });
     }
     return acc;

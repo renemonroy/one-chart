@@ -29,44 +29,44 @@ export const SLittChart = styled.svg`
   }
 
   /* &:hover g path {
-    fill: var(--shape-disabled-color);
+    fill: var(--component-disabled-color);
   } */
 
   g.${constants.CHART_VERTICAL_BARS} {
-    path.${constants.SHAPE_CLASSNAME} {
-      fill: var(--shape-enabled-color);
+    path.${constants.COMPONENT_CLASSNAME} {
+      fill: var(--component-enabled-color);
       transition: all 0.1s ease;
       stroke-opacity: 0;
-      stroke-width: var(--shape-stroke-width);
+      stroke-width: var(--component-stroke-width);
     }
 
     &:hover {
-      path.${constants.SHAPE_CLASSNAME} {
+      path.${constants.COMPONENT_CLASSNAME} {
         &.hovered {
-          fill: var(--shape-hovered-color);
-          stroke: var(--shape-stroke-color);
-          stroke-opacity: var(--shape-stroke-opacity);
+          fill: var(--component-hovered-color);
+          stroke: var(--component-stroke-color);
+          stroke-opacity: var(--component-stroke-opacity);
           paint-order: stroke;
         }
 
         &:not(.hovered) {
-          fill: var(--shape-disabled-color);
+          fill: var(--component-disabled-color);
         }
       }
 
       /* & ~ g {
         path {
-          fill: var(--shape-disabled-color);
+          fill: var(--component-disabled-color);
         }
       } */
     }
   }
 
   g.${constants.CHART_LINE} {
-    path.${constants.SHAPE_CLASSNAME} {
+    path.${constants.COMPONENT_CLASSNAME} {
       fill: none;
       stroke-width: 3;
-      stroke: var(--shape-enabled-color)};
+      stroke: var(--component-enabled-color)};
     }
   }
 `;

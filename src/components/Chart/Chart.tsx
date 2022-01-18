@@ -40,7 +40,7 @@ function Chart({ schema, data, isLoading = true }: types.ILittChartProps) {
         schema,
       };
 
-      utils.renderGraphs(schema, data, config);
+      utils.renderComponents(schema, data, config);
       setLegends(utils.buildLegends(schema, config));
     }
   }, [data, dimensions]);
