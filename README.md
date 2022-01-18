@@ -2,7 +2,9 @@
 
 One chart component to rule them all?
 
-![Storybook Screenshot](https://user-images.githubusercontent.com/106011/139783454-4009cec6-0caf-4c36-ba87-c54b558363ac.png)
+![Storybook Screenshot 1](https://user-images.githubusercontent.com/106011/139783618-84663fc6-c601-4ae8-95c5-4d82b9c5a439.png)
+![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/139783624-fa1bf3b7-bf3e-441f-bd8f-dcd56a5c9420.png)
+![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783633-c752b9eb-d379-4bb5-adb4-3266c9a0b974.png)
 [1Chart Playground](https://renemonroy.github.io/one-chart)
 
 ## Overview
@@ -116,12 +118,16 @@ import schema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schem
 import data from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
 import Chart from "./Chart";
 
-// Note: All graphs require the UIProvider to get the default Theme but wasn't added
+// Note: the UIProvider is required to get the default Theme but wasn't added
 // here for simplicity.
 function DevelopmentTimeline() {
   return <Chart data={data} isLoading={false} schema={schema} />;
 }
 ```
+
+The code above renders a chart similar to this:
+
+![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
 
 ## Features
 
