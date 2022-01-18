@@ -17,7 +17,7 @@ export default {
       domain: [0, 330], // @TODO - measure this number from max value
     },
   },
-  xAxisGap: 30,
+  xAxisGap: 50,
   graphs: [
     {
       shape: "background-lines",
