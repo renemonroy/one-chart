@@ -15,7 +15,7 @@
 [Description](#-description) •
 [Motivation](#-motivation) •
 [Example](#-example) •
-[Run Locally](#-run-locally) •
+[Run Locally](#%EF%B8%8F-run-locally) •
 [Stack](#-stack) •
 [Goals](#-goals)
 
@@ -140,7 +140,7 @@ The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
 
-## 💻 Run Locally
+## ⚙️ Run Locally
 
 To run the project locally you need to install the dependencies first. 1Chart
 does not require Yarn but the lock file is shared. To install dependencies with
