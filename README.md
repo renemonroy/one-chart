@@ -2,6 +2,19 @@
 
 > A single chart component to rule them all?!
 
+## Table of Contents
+
+- [Overview](https://github.com/renemonroy/one-chart#overview)
+  - [Screenshots](https://github.com/renemonroy/one-chart#screenshots)
+  - [Description](https://github.com/renemonroy/one-chart#description)
+  - [Motivation](https://github.com/renemonroy/one-chart#motivation)
+- [Getting Started](https://github.com/renemonroy/one-chart#getting-started)
+  - [Run Local](https://github.com/renemonroy/one-chart#run-local)
+  - [Example](https://github.com/renemonroy/one-chart#example)
+- [Features](https://github.com/renemonroy/one-chart#features)
+  - [Stack](https://github.com/renemonroy/one-chart#stack)
+  - [Goals](https://github.com/renemonroy/one-chart#goals)
+
 ## Overview
 
 ### Screenshots
@@ -20,7 +33,7 @@ There are plenty of use cases for charts and D3 has been the go-to for many year
 
 ## Getting Started
 
-### Development
+### Run Local
 
 To run the project locally you need to install the dependencies first. 1Chart does not require Yarn but the lock file is shared. To install dependencies with Yarn just run:
 
