@@ -12,9 +12,13 @@
 
 **A single chart component to rule them all?!**
 
-[Overview](#overview) •
-[Getting Started](https://github.com/renemonroy/one-chart#getting-started) •
-[Features](https://github.com/renemonroy/one-chart#features)
+[Description](#description) •
+[Screenshots](#screenshots) •
+[Example](#overview) •
+[Motivation](#motivation) •
+[Run Locally](#run-locally) •
+[Stack](#stack) •
+[Goals](#goals)
 
 </div>
 
