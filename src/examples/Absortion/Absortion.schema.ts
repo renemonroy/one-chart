@@ -40,20 +40,16 @@ export default {
       value: ["year", "occupancy"],
       legend: "Occupancy",
       borderRadius: "5 5 0 0",
-      enabledColor: "supportive500",
-      hoveredColor: "supportive500",
-      disabledColor: "supportive700",
-      strokeColor: "supportive500", // this because using Thanos theme for examples
     },
     {
       type: "vertical-bars",
       value: ["year", "vacancy"],
       legend: "Vacancy",
       borderRadius: "0 0 5 5",
-      enabledColor: "secondary500",
-      hoveredColor: "secondary500",
-      disabledColor: "secondary700",
-      strokeColor: "secondary500", // this because using Thanos theme for examples
+      enabledColor: "secondary700",
+      hoveredColor: "secondary600",
+      disabledColor: "secondary800",
+      strokeColor: "secondary700", // this because using Thanos theme for examples
     },
   ],
 };

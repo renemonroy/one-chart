@@ -49,7 +49,7 @@ export default {
       type: "line",
       value: ["year", "avgRentNNN"],
       legend: "Average Rent • NNN",
-      enabledColor: "uiWhite",
+      enabledColor: "secondary500",
     },
   ],
 };

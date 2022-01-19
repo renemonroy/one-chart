@@ -43,13 +43,14 @@ export default {
       type: "vertical-bars",
       value: ["year", "monthsOfFreeRent"],
       legend: "Months of Free Rent",
-      borderRadius: 4,
+      borderRadius: "4 4 0 0",
+      barWidth: 20,
     },
     {
       type: "line",
       value: ["year", "tenantImprovement"],
       legend: "Tenant Improvement Allowance",
-      enabledColor: "supportive500",
+      enabledColor: "supportive400",
     },
   ],
 };
