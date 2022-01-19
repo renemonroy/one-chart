@@ -1,19 +1,20 @@
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+<div align="center">
 # [📈 1Chart](https://renemonroy.github.io/one-chart)
-
 > A single chart component to rule them all?!
 
-### Table of Contents
+[Overview](#overview) •
+[Getting Started](https://github.com/renemonroy/one-chart#getting-started) •
+[Features](https://github.com/renemonroy/one-chart#features)
 
-- [Overview](https://github.com/renemonroy/one-chart#overview)
-  - [Screenshots](https://github.com/renemonroy/one-chart#screenshots)
-  - [Description](https://github.com/renemonroy/one-chart#description)
-  - [Motivation](https://github.com/renemonroy/one-chart#motivation)
-- [Getting Started](https://github.com/renemonroy/one-chart#getting-started)
-  - [Run Local](https://github.com/renemonroy/one-chart#run-local)
-  - [Example](https://github.com/renemonroy/one-chart#example)
-- [Features](https://github.com/renemonroy/one-chart#features)
-  - [Stack](https://github.com/renemonroy/one-chart#stack)
-  - [Goals](https://github.com/renemonroy/one-chart#goals)
+</div>
 
 ## Overview
 
@@ -25,23 +26,37 @@
 
 ### Description
 
-For those who want to build easier/faster yet powerful D3 charts, 1Chart is a Proof of Concept project that explores the possibility to simplify building charts following a consitent pattern. Unlike D3 alone, where you need to spend time learning its sometimes very complex syntax, this PoC focuses on building powerful charts through the use of schemas.
+For those who want to build easier/faster yet powerful D3 charts, 1Chart is a
+Proof of Concept project that explores the possibility to simplify building
+charts following a consitent pattern. Unlike D3 alone, where you need to spend
+time learning its sometimes very complex syntax, this PoC focuses on building
+powerful charts through the use of schemas.
 
 ### Motivation
 
-There are plenty of use cases for charts and D3 has been the go-to for many years, but somehow it still misses that dev experience that we'd like for quick usage. More than that, it is a so convenient tool that lets you do a lot of other hidden things too. But that advantage left no easy control over user interfaces dedicated to graphs. The idea behind this PoC is to ease the creation of charts following a single pattern while giving the consistency required to have multiple yet different graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is focused only on charts.
+There are plenty of use cases for charts and D3 has been the go-to for many
+years, but somehow it still misses that dev experience that we'd like for quick
+usage. More than that, it is a so convenient tool that lets you do a lot of
+other hidden things too. But that advantage left no easy control over user
+interfaces dedicated to graphs. The idea behind this PoC is to ease the creation
+of charts following a single pattern while giving the consistency required to
+have multiple yet different graphs. 1Chart is basically a mix between a D3
+wrapper and an UI Library that is focused only on charts.
 
 ## Getting Started
 
 ### Run Local
 
-To run the project locally you need to install the dependencies first. 1Chart does not require Yarn but the lock file is shared. To install dependencies with Yarn just run:
+To run the project locally you need to install the dependencies first. 1Chart
+does not require Yarn but the lock file is shared. To install dependencies with
+Yarn just run:
 
 ```sh
 yarn install
 ```
 
-Since 1Chart uses Storybook as dev server, execute the following script to run it locally:
+Since 1Chart uses Storybook as dev server, execute the following script to run
+it locally:
 
 ```sh
 yarn dev
