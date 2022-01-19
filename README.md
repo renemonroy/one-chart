@@ -83,26 +83,26 @@ export default {
       domain: [0, 1400000],
     },
   },
-  graphs: [
+  components: [
     {
-      shape: "background-lines",
+      type: "background-lines",
       value: "year",
     },
     {
+      type: "bottom-axis",
+      value: "year",
       height: 13,
-      shape: "bottom-axis",
-      value: "year",
     },
     {
-      format: (val: number) => `$${format(".2s")(val)} sf`,
-      shape: "left-axis",
+      type: "left-axis",
       value: "total",
+      format: (val: number) => `$${format(".2s")(val)} sf`,
       width: 50,
     },
     {
-      borderRadius: 4,
-      shape: "vertical-bars",
+      type: "vertical-bars",
       value: ["year", "total"],
+      borderRadius: 4,
     },
   ],
 ```
