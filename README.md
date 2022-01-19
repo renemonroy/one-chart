@@ -18,9 +18,7 @@
 
 </div>
 
-## Overview
-
-### Description
+## 📖 Description
 
 For those who want to build easier/faster yet powerful D3 charts, 1Chart is a
 Proof of Concept project that explores the possibility to simplify building
@@ -28,26 +26,13 @@ charts following a consitent pattern. Unlike D3 alone, where you need to spend
 time learning its sometimes very complex syntax, this PoC focuses on building
 powerful charts through the use of schemas.
 
-### Screenshots
+## 📸 Screenshots
 
 ![Storybook Screenshot 1](https://user-images.githubusercontent.com/106011/139783618-84663fc6-c601-4ae8-95c5-4d82b9c5a439.png)
 ![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/139783624-fa1bf3b7-bf3e-441f-bd8f-dcd56a5c9420.png)
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783633-c752b9eb-d379-4bb5-adb4-3266c9a0b974.png)
 
-### Motivation
-
-There are plenty of use cases for charts and D3 has been the go-to for many
-years, but somehow it still misses that dev experience that we'd like for quick
-usage. More than that, it is a so convenient tool that lets you do a lot of
-other hidden things too. But that advantage left no easy control over user
-interfaces dedicated to graphs. The idea behind this PoC is to ease the creation
-of charts following a single pattern while giving the consistency required to
-have multiple yet different graphs. 1Chart is basically a mix between a D3
-wrapper and an UI Library that is focused only on charts.
-
-## Getting Started
-
-### Example
+## 👀 Example
 
 Let's say you have the next data:
 
@@ -141,7 +126,20 @@ The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
 
-### Run Local
+## 💡 Motivation
+
+There are plenty of use cases for charts and D3 has been the go-to for many
+years, but somehow it still misses that dev experience that we'd like for quick
+usage. More than that, it is a so convenient tool that lets you do a lot of
+other hidden things too. But that advantage left no easy control over user
+interfaces dedicated to graphs.
+
+The idea behind this PoC is to ease the creation of charts following a single
+pattern while giving the consistency required to have multiple yet different
+graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is
+focused only on charts.
+
+## ⚙️ Run Locally
 
 To run the project locally you need to install the dependencies first. 1Chart
 does not require Yarn but the lock file is shared. To install dependencies with
@@ -158,9 +156,7 @@ it locally:
 yarn dev
 ```
 
-## Features
-
-### Stack
+### 🥞 Stack
 
 - Typescript
 - React
@@ -170,7 +166,7 @@ yarn dev
 - Styled System
 - Storybook
 
-### Goals
+### 🎯 Goals
 
 - Consistency
 - Performance
