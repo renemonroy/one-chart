@@ -27,19 +27,21 @@
 
 ## 📖 Description
 
-For those who want to build easier/faster yet powerful D3 charts, 1Chart is a
-Proof of Concept project that explores the possibility to simplify building
-charts following a consitent pattern. Unlike D3 alone, where you need to spend
-time learning its sometimes very complex syntax, this PoC focuses on building
-powerful charts through the use of schemas.
+For developers who want to build powerful D3 charts faster, 1Chart is a Proof
+of Concept project that explores the possibility to simplify the building of
+charts while following a consitent and simple pattern.
+
+Unlike D3 alone, where you need to spend time dealing with its sometime complex
+syntax and organization, this PoC focuses on building powerful charts through
+the use of schemas.
 
 ## 💡 Motivation
 
 There are plenty of use cases for charts and D3 has been the go-to for many
 years, but somehow it still misses that dev experience that we'd like for quick
-usage. More than that, it is a so convenient tool that lets you do a lot of
+usage. Moreover, D3 is a so convenient tool that it lets you do a lot of
 other hidden things too. But that advantage left no easy control over user
-interfaces dedicated to graphs.
+interfaces dedicated to pure graphs.
 
 The idea behind this PoC is to ease the creation of charts following a single
 pattern while giving the consistency required to have multiple yet different
@@ -129,7 +131,7 @@ import schema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schem
 import data from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
 import Chart from "./Chart";
 
-// Note: the UIProvider is required to get the default Theme but wasn't added
+// Note: the ChartsProvider is required to get the default Theme but wasn't added
 // here for simplicity.
 function DevelopmentTimeline() {
   return <Chart data={data} isLoading={false} schema={schema} />;
