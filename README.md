@@ -47,23 +47,6 @@ wrapper and an UI Library that is focused only on charts.
 
 ## Getting Started
 
-### Run Local
-
-To run the project locally you need to install the dependencies first. 1Chart
-does not require Yarn but the lock file is shared. To install dependencies with
-Yarn just run:
-
-```sh
-yarn install
-```
-
-Since 1Chart uses Storybook as dev server, execute the following script to run
-it locally:
-
-```sh
-yarn dev
-```
-
 ### Example
 
 Let's say you have the next data:
@@ -157,6 +140,23 @@ function DevelopmentTimeline() {
 The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
+
+### Run Local
+
+To run the project locally you need to install the dependencies first. 1Chart
+does not require Yarn but the lock file is shared. To install dependencies with
+Yarn just run:
+
+```sh
+yarn install
+```
+
+Since 1Chart uses Storybook as dev server, execute the following script to run
+it locally:
+
+```sh
+yarn dev
+```
 
 ## Features
 
