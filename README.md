@@ -2,7 +2,7 @@
 
 > A single chart component to rule them all?!
 
-## Table of Contents
+### Table of Contents
 
 - [Overview](https://github.com/renemonroy/one-chart#overview)
   - [Screenshots](https://github.com/renemonroy/one-chart#screenshots)
