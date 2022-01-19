@@ -4,7 +4,7 @@ import baseTheme from "./base.theme";
 export default {
   ...baseTheme,
   chart: {
-    valueEnabled: constants.COLORS.primary500,
+    valueEnabled: constants.COLORS.primary700,
     valueDisabled: constants.COLORS.primary700,
     valueHovered: constants.COLORS.primary500,
     strokeColor: constants.COLORS.primary500,

@@ -20,7 +20,7 @@ export default {
     bulletColor: constants.COLORS.primary500,
   },
   card: {
-    backgroundColor: constants.COLORS.primary900,
+    backgroundColor: constants.COLORS.uiBlack,
     h4Color: constants.COLORS.uiWhite,
     subtitle2Color: constants.COLORS.ui200,
     textColor: constants.COLORS.uiWhite,

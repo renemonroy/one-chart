@@ -32,7 +32,8 @@ export default {
     {
       type: "vertical-bars",
       value: ["x", "y"],
-      borderRadius: 4,
+      borderRadius: "10 10 0 0",
+      barWidth: 20,
     },
   ],
 };

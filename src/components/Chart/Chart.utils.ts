@@ -282,8 +282,12 @@ export function renderVerticalBars(
   const barGap = component.gap || constants.SCALE_GAP / 2;
   const isScaleTime =
     config.schema.values[`${component.value[0]}`].scale === "time";
-  const barWidth = config.internalDimensions.width / data.length - barGap;
-  const halfWidth = isScaleTime ? barWidth / 2 : -barGap / 2;
+  const colWidth = config.internalDimensions.width / data.length - barGap;
+  const halfColWidth = colWidth / 2;
+  const barWidth = component.barWidth || colWidth;
+  const halfWidth = isScaleTime
+    ? -halfColWidth
+    : halfColWidth - barWidth / 2 + barGap / 2;
   const left = config.internalDimensions.left + xGap;
   const $component = config.svg
     .append("g")
@@ -334,7 +338,7 @@ export function renderVerticalBars(
               : d[component.value[0]],
           );
           const rectConfig = {
-            x: left + xVal - halfWidth,
+            x: left + xVal + halfWidth,
             y: scaleY(0),
             w: barWidth,
             h: scaleY(0) - scaleY(yVal),

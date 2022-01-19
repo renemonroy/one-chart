@@ -103,6 +103,7 @@ export interface IComponent {
 }
 
 export interface IVerticalBarsComponent extends IComponent {
+  barWidth?: number;
   borderRadius?: number;
   value: string[];
 }
