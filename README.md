@@ -7,9 +7,8 @@
   "MD041": false
 } -->
 <div align="center">
-# [📈 1Chart](https://renemonroy.github.io/one-chart)
 
-> A single chart component to rule them all?!
+# [📈 1Chart](https://renemonroy.github.io/one-chart)
 
 [Overview](#overview) •
 [Getting Started](https://github.com/renemonroy/one-chart#getting-started) •
