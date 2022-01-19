@@ -10,6 +10,8 @@
 
 # [📈 1Chart](https://renemonroy.github.io/one-chart)
 
+**A single chart component to rule them all?!**
+
 [Overview](#overview) •
 [Getting Started](https://github.com/renemonroy/one-chart#getting-started) •
 [Features](https://github.com/renemonroy/one-chart#features)
