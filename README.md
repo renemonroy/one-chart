@@ -13,8 +13,8 @@
 **A single chart component to rule them all?!**
 
 [Description](#-description) •
-[Example](#-example) •
 [Motivation](#-motivation) •
+[Example](#-example) •
 [Run Locally](#-run-locally) •
 [Stack](#-stack) •
 [Goals](#-goals)
@@ -32,6 +32,19 @@ Proof of Concept project that explores the possibility to simplify building
 charts following a consitent pattern. Unlike D3 alone, where you need to spend
 time learning its sometimes very complex syntax, this PoC focuses on building
 powerful charts through the use of schemas.
+
+## 💡 Motivation
+
+There are plenty of use cases for charts and D3 has been the go-to for many
+years, but somehow it still misses that dev experience that we'd like for quick
+usage. More than that, it is a so convenient tool that lets you do a lot of
+other hidden things too. But that advantage left no easy control over user
+interfaces dedicated to graphs.
+
+The idea behind this PoC is to ease the creation of charts following a single
+pattern while giving the consistency required to have multiple yet different
+graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is
+focused only on charts.
 
 ## 👀 Example
 
@@ -126,19 +139,6 @@ function DevelopmentTimeline() {
 The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
-
-## 💡 Motivation
-
-There are plenty of use cases for charts and D3 has been the go-to for many
-years, but somehow it still misses that dev experience that we'd like for quick
-usage. More than that, it is a so convenient tool that lets you do a lot of
-other hidden things too. But that advantage left no easy control over user
-interfaces dedicated to graphs.
-
-The idea behind this PoC is to ease the creation of charts following a single
-pattern while giving the consistency required to have multiple yet different
-graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is
-focused only on charts.
 
 ## ⚙️ Run Locally
 
