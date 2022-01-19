@@ -157,7 +157,7 @@ it locally:
 yarn dev
 ```
 
-### 🥞 Stack
+## 🥞 Stack
 
 - Typescript
 - React
@@ -167,7 +167,7 @@ yarn dev
 - Styled System
 - Storybook
 
-### 🎯 Goals
+## 🎯 Goals
 
 - Consistency
 - Performance
