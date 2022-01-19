@@ -12,12 +12,12 @@
 
 **A single chart component to rule them all?!**
 
-[Description](#description) •
-[Example](#overview) •
-[Motivation](#motivation) •
-[Run Locally](#run-locally) •
-[Stack](#stack) •
-[Goals](#goals)
+[Description](#-description) •
+[Example](#-example) •
+[Motivation](#-motivation) •
+[Run Locally](#-run-locally) •
+[Stack](#-stack) •
+[Goals](#-goals)
 
 </div>
 
