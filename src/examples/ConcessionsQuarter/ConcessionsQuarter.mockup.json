@@ -1,117 +1,82 @@
 [
   {
-    "avgFreeRentMonth": 7.392272148288973,
-    "avgTIAllowance": 50.98781093155893,
-    "date": "2016-01-01"
-  },
-  {
-    "avgFreeRentMonth": 7.222564133456904,
-    "avgTIAllowance": 49.66301974050047,
-    "date": "2016-04-01"
-  },
-  {
-    "avgFreeRentMonth": 7.3844275,
-    "avgTIAllowance": 51.188357717391305,
-    "date": "2016-07-01"
-  },
-  {
-    "avgFreeRentMonth": 7.388768961625282,
-    "avgTIAllowance": 52.03684018058691,
-    "date": "2016-10-01"
-  },
-  {
-    "avgFreeRentMonth": 7.637480355555556,
-    "avgTIAllowance": 53.0197784,
-    "date": "2017-01-01"
-  },
-  {
-    "avgFreeRentMonth": 7.601235528942116,
-    "avgTIAllowance": 51.759475748503,
-    "date": "2017-04-01"
-  },
-  {
-    "avgFreeRentMonth": 7.4750191076624635,
-    "avgTIAllowance": 55.86793501454898,
-    "date": "2017-07-01"
-  },
-  {
-    "avgFreeRentMonth": 7.760532897196263,
-    "avgTIAllowance": 57.790658037383174,
-    "date": "2017-10-01"
-  },
-  {
-    "avgFreeRentMonth": 7.661231841216216,
-    "avgTIAllowance": 55.761479560810805,
+    "a": 6.661,
+    "b": 45.761,
     "date": "2018-01-01"
   },
   {
-    "avgFreeRentMonth": 7.573895559210526,
-    "avgTIAllowance": 57.22637417763158,
+    "a": 8.573,
+    "b": 57.226,
     "date": "2018-04-01"
   },
   {
-    "avgFreeRentMonth": 7.617059634551495,
-    "avgTIAllowance": 57.57338421926911,
+    "a": 4.617,
+    "b": 47.573,
     "date": "2018-07-01"
   },
   {
-    "avgFreeRentMonth": 7.678807629427793,
-    "avgTIAllowance": 58.199234786557675,
+    "a": 7.678,
+    "b": 88.199,
     "date": "2018-10-01"
   },
   {
-    "avgFreeRentMonth": 8.035827106518283,
-    "avgTIAllowance": 61.277943004769476,
+    "a": 8.035,
+    "b": 61.277,
     "date": "2019-01-01"
   },
   {
-    "avgFreeRentMonth": 7.926571024734982,
-    "avgTIAllowance": 102.16771316254416,
+    "a": 7.926,
+    "b": 102.167,
     "date": "2019-04-01"
   },
   {
-    "avgFreeRentMonth": 7.173633230134159,
-    "avgTIAllowance": 56.450098555211554,
+    "a": 5.173,
+    "b": 56.45,
     "date": "2019-07-01"
   },
   {
-    "avgFreeRentMonth": 7.391599030303031,
-    "avgTIAllowance": 55.55917903030303,
+    "a": 5.391,
+    "b": 55.559,
     "date": "2019-10-01"
   },
   {
-    "avgFreeRentMonth": 7.295157627118644,
-    "avgTIAllowance": 56.557463135593224,
+    "a": 6.295,
+    "b": 85.557,
     "date": "2020-01-01"
   },
   {
-    "avgFreeRentMonth": 8.091506681034483,
-    "avgTIAllowance": 55.579249784482755,
+    "a": 8.091,
+    "b": 55.579,
     "date": "2020-04-01"
   },
   {
-    "avgFreeRentMonth": 8.018481333333334,
-    "avgTIAllowance": 56.762964,
+    "a": 8.018,
+    "b": 106.762,
     "date": "2020-07-01"
   },
   {
-    "avgFreeRentMonth": 8.656354647887325,
-    "avgTIAllowance": 54.97489408450704,
+    "a": 7.656,
+    "b": 94.974,
     "date": "2020-10-01"
   },
   {
-    "avgFreeRentMonth": 8.957215968586388,
-    "avgTIAllowance": 328.5979664921466,
+    "a": 8.957,
+    "b": 328.597,
     "date": "2021-01-01"
   },
   {
-    "avgFreeRentMonth": 8.467782561307901,
-    "avgTIAllowance": 55.08797847411444,
+    "a": 6.467,
+    "b": 95.087,
     "date": "2021-04-01"
   },
   {
-    "avgFreeRentMonth": 9.504903278688523,
-    "avgTIAllowance": 60.7133868852459,
+    "a": 9.504,
+    "b": 140.713,
     "date": "2021-07-01"
+  },
+  {
+    "a": 8.382,
+    "b": 165.223,
+    "date": "2021-10-01"
   }
 ]

@@ -3,7 +3,7 @@ import { format } from "d3";
 export default {
   id: "lines",
   title: "Lines",
-  subtitle: "This example only shows lines",
+  subtitle: "This example shows lines and a custom white color",
   values: {
     year: {
       scale: "band",

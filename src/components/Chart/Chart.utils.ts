@@ -286,7 +286,7 @@ export function renderVerticalBars(
   const halfColWidth = colWidth / 2;
   const barWidth = component.barWidth || colWidth;
   const halfWidth = isScaleTime
-    ? -halfColWidth
+    ? -barWidth / 2
     : halfColWidth - barWidth / 2 + barGap / 2;
   const left = config.internalDimensions.left + xGap;
   const $component = config.svg

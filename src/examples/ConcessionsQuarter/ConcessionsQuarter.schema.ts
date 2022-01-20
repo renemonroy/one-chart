@@ -8,11 +8,11 @@ export default {
     date: {
       scale: "time",
     },
-    avgFreeRentMonth: {
+    a: {
       scale: "linear",
       domain: [0, 10], // @TODO - measure this number from max value
     },
-    avgTIAllowance: {
+    b: {
       scale: "linear",
       domain: [0, 330], // @TODO - measure this number from max value
     },
@@ -28,29 +28,30 @@ export default {
       value: "date",
       format: timeFormat("%Y"),
       height: 13,
+      ticks: 4,
     },
     {
       type: "left-axis",
-      value: "avgTIAllowance",
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
+      value: "b",
+      format: (val: number) => `$${format(".2s")(val)}`,
       width: 70,
     },
     {
       type: "right-axis",
-      value: "avgFreeRentMonth",
-      format: (val: number) => `${val} months`,
+      value: "a",
+      format: (val: number) => `${val} buyers`,
       width: 70,
     },
     {
       type: "vertical-bars",
-      value: ["date", "avgFreeRentMonth"],
+      value: ["date", "a"],
       borderRadius: 4,
       barWidth: 20,
       legend: "Months of Free Rent",
     },
     {
       type: "line",
-      value: ["date", "avgTIAllowance"],
+      value: ["date", "b"],
       enabledColor: "supportive400",
       legend: "Tenant Improvement Allowance",
     },
