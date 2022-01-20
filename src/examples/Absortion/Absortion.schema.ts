@@ -1,19 +1,19 @@
 import { format } from "d3";
 
 export default {
-  id: "absortion",
-  title: "Absortion",
-  subtitle: "Change in occupancy over time",
+  id: "min-max-range",
+  title: "Min Max Range",
+  subtitle: "This examples shows how to custom add grapsh based on range",
   values: {
     year: {
       scale: "band",
       gap: 0.2,
     },
-    occupancy: {
+    profit: {
       scale: "linear",
       domain: [-2500000, 2500000],
     },
-    vacancy: {
+    loss: {
       scale: "linear",
       domain: [-2500000, 2500000],
     },
@@ -30,21 +30,21 @@ export default {
     },
     {
       type: "left-axis",
-      value: "occupancy",
-      format: (val: number) => `$${format(".2s")(val)} sf`,
+      value: "profit",
+      format: (val: number) => `$${format(".2s")(val)}`,
       ticks: [-2500000, 0, 2500000], // Custom values here
       width: 60,
     },
     {
       type: "vertical-bars",
-      value: ["year", "occupancy"],
-      legend: "Occupancy",
+      value: ["year", "profit"],
+      legend: "Profit",
       borderRadius: "5 5 0 0",
     },
     {
       type: "vertical-bars",
-      value: ["year", "vacancy"],
-      legend: "Vacancy",
+      value: ["year", "loss"],
+      legend: "Loss",
       borderRadius: "0 0 5 5",
       enabledColor: "supportive600",
       hoveredColor: "supportive500",

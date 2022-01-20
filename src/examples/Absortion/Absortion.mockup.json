@@ -1,26 +1,32 @@
 [
   {
     "year": 2016,
-    "vacancy": -2316559
+    "profit": 0,
+    "loss": -2316559
   },
   {
     "year": 2017,
-    "occupancy": 255334
+    "profit": 255334,
+    "loss": 0
   },
   {
     "year": 2018,
-    "occupancy": 913132
+    "profit": 913132,
+    "loss": 0
   },
   {
     "year": 2019,
-    "vacancy": -558367
+    "profit": 0,
+    "loss": -558367
   },
   {
     "year": 2020,
-    "occupancy": 1587294
+    "profit": 1587294,
+    "loss": 0
   },
   {
     "year": 2021,
-    "vacancy": -1375703
+    "profit": 0,
+    "loss": -1375703
   }
 ]
