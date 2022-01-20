@@ -1,23 +1,22 @@
 import { format } from "d3";
 
 export default {
-  id: "historical-rent",
-  title: "Historical Rent",
-  subtitle: "Annual values shown on graph",
+  id: "lines",
+  title: "Lines",
+  subtitle: "This example only shows lines",
   values: {
     year: {
       scale: "band",
     },
-    avgRentFS: {
+    line1: {
       scale: "linear",
       domain: [20, 120],
     },
-    avgRentNNN: {
+    line2: {
       scale: "linear",
       domain: [20, 120],
     },
   },
-  xAxisGap: -20, // A hack we can do to follow a custom design
   components: [
     {
       type: "background-lines",
@@ -30,26 +29,21 @@ export default {
     },
     {
       type: "left-axis",
-      value: "avgRentFS",
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
-      width: 80,
-    },
-    {
-      type: "right-axis",
-      value: "avgRentNNN",
-      format: () => ``,
-      width: -10, // Another hack we can do :)
+      value: "line1",
+      format: (val: number) => `$${format(".2s")(val)}`,
+      width: 50,
     },
     {
       type: "line",
-      value: ["year", "avgRentFS"],
-      legend: "Average Rent • FS",
+      value: ["year", "line1"],
+      legend: "Line 1 values",
+      enabledColor: "primary500",
     },
     {
       type: "line",
-      value: ["year", "avgRentNNN"],
-      legend: "Average Rent • NNN",
-      enabledColor: "secondary500",
+      value: ["year", "line2"],
+      legend: "Line 2 values",
+      enabledColor: "uiWhite",
     },
   ],
 };

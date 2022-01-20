@@ -1,18 +1,18 @@
 import { format } from "d3";
 
 export default {
-  id: "concessions",
-  title: "Concessions",
-  subtitle: "Values normalized for a ten-year term",
+  id: "left-right-axis",
+  title: "Left & Right Axis",
+  subtitle: "This example shows 2 x axis, bars and lines",
   values: {
     year: {
       scale: "band",
     },
-    monthsOfFreeRent: {
+    a: {
       scale: "linear",
       domain: [0, 11], // @TODO - measure this number from max value
     },
-    tenantImprovement: {
+    b: {
       scale: "linear",
       domain: [0, 90], // @TODO - measure this number from max value
     },
@@ -29,27 +29,27 @@ export default {
     },
     {
       type: "left-axis",
-      value: "tenantImprovement",
-      format: (val: number) => `TI $${format(".2s")(val)} psf`,
+      value: "b",
+      format: (val: number) => `$${format(".2s")(val)}`,
       width: 70,
     },
     {
       type: "right-axis",
-      value: "monthsOfFreeRent",
-      format: (val: number) => `${val} months`,
+      value: "a",
+      format: (val: number) => `${val}x`,
       width: 70,
     },
     {
       type: "vertical-bars",
-      value: ["year", "monthsOfFreeRent"],
-      legend: "Months of Free Rent",
+      value: ["year", "a"],
+      legend: "A values",
       borderRadius: "4 4 0 0",
       barWidth: 20,
     },
     {
       type: "line",
-      value: ["year", "tenantImprovement"],
-      legend: "Tenant Improvement Allowance",
+      value: ["year", "b"],
+      legend: "B values",
       enabledColor: "supportive400",
     },
   ],

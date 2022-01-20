@@ -46,10 +46,10 @@ export default {
       value: ["year", "vacancy"],
       legend: "Vacancy",
       borderRadius: "0 0 5 5",
-      enabledColor: "secondary700",
-      hoveredColor: "secondary600",
-      disabledColor: "secondary800",
-      strokeColor: "secondary700", // this because using Thanos theme for examples
+      enabledColor: "supportive600",
+      hoveredColor: "supportive500",
+      disabledColor: "supportive700",
+      strokeColor: "supportive600", // this because using Thanos theme for examples
     },
   ],
 };

@@ -1,14 +1,14 @@
 import { format } from "d3";
 
 export default {
-  id: "development-timeline",
-  title: "Development Timeline",
-  subtitle: "Square feet being built over time",
+  id: "vertical-bars",
+  title: "Vertical Bars",
+  subtitle: "This example only shows vertical bars",
   values: {
-    x: {
+    year: {
       scale: "band",
     },
-    y: {
+    value: {
       scale: "linear",
       domain: [0, 1400000],
     },
@@ -16,22 +16,22 @@ export default {
   components: [
     {
       type: "background-lines",
-      value: "x",
+      value: "year",
     },
     {
       type: "bottom-axis",
-      value: "x",
+      value: "year",
       height: 13,
     },
     {
       type: "left-axis",
-      value: "y",
-      format: (val: number) => `$${format(".2s")(val)} sf`,
+      value: "value",
+      format: (val: number) => `$${format(".2s")(val)}`,
       width: 50,
     },
     {
       type: "vertical-bars",
-      value: ["x", "y"],
+      value: ["year", "value"],
       borderRadius: "4 4 0 0",
       barWidth: 20,
     },
