@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
+// import { ThemeContext } from "styled-components";
+import { useCharts } from "../../stores/ChartsStore/ChartsStore";
 import { IText } from "./Text.types";
 import {
   H1,
@@ -16,7 +17,7 @@ import {
 
 function Text(props: IText): JSX.Element {
   const { children, tag, weight, style, ...rest } = props;
-  const theme = useContext(ThemeContext);
+  const [{ theme }] = useCharts();
 
   const tempStyle = {
     "--text-weight": weight || theme.def.fontWeight,

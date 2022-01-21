@@ -1,11 +1,12 @@
-import * as constants from "./themes.constants";
+import * as constants from "./theme.constants";
+import { ITheme } from "./theme.types";
 
 export default {
   def: {
+    backgroundColor: constants.COLORS.uiWhite,
     borderRadius: constants.BORDER_RADIUS.base,
     font: constants.FONT_FAMILY.openSans,
     fontWeight: constants.FONT_WEIGHT.normal,
-    backgroundColor: constants.COLORS.uiWhite,
     textColor: constants.COLORS.uiBlack,
     h1: constants.FONT_SIZE.xxxl,
     h2: constants.FONT_SIZE.xxl,
@@ -28,6 +29,15 @@ export default {
   legends: {
     borderRadius: constants.BORDER_RADIUS.lg,
   },
-  space: constants.SPACE, // only required here to override defaul spaces
+  space: constants.SPACE, // only required here to override default spaces
+  chart: {
+    valueEnabled: constants.COLORS.primary800,
+    valueDisabled: constants.COLORS.primary900,
+    valueHovered: constants.COLORS.primary700,
+    strokeColor: constants.COLORS.primary800,
+    strokeOpacity: constants.GRAPH_STROKE_OPACITY,
+    strokeWidth: constants.GRAPH_STROKE_WIDTH,
+    lineColor: constants.COLORS.ui700,
+  },
   __COLORS: constants.COLORS,
-};
+} as ITheme;

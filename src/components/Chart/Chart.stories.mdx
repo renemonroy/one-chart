@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+// import { ChartsProvider } from "../../stores/ChartsStore/ChartsStore.tsx";
 import Chart from "./Chart";
-import ChartsProvider from "../ChartsProvider/ChartsProvider";
+import { ChartsProvider } from "../../stores/ChartsStore/ChartsStore.tsx";
 import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts";
 import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
 import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
@@ -16,7 +17,7 @@ import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.moc
   title="Chart"
   decorators={[
     (storyFn) => (
-      <ChartsProvider theme="thanos">
+      <ChartsProvider theme={{ def: { borderRadius: "1rem" } }}>
         <div style={{ height: "355px" }}>{storyFn()}</div>
       </ChartsProvider>
     ),

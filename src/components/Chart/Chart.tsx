@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTheme } from "styled-components";
 import { select } from "d3";
-import { ITheme } from "../../themes/themes.types";
+import { useCharts } from "../../stores/ChartsStore/ChartsStore";
 import useResizeObserver from "../../hooks/useResizeObserver/useResizeObserver";
 import Card from "../Card/Card";
 import Legends from "../Legends/Legends";
@@ -16,7 +15,7 @@ import { SLittChart } from "./Chart.styles";
  * -----------------------------------------------------------------------
  */
 function Chart({ schema, data, isLoading = true }: types.ILittChartProps) {
-  const theme = useTheme() as ITheme;
+  const [{ theme }] = useCharts();
   const wrapperRef = useRef<types.TWrapperRef>(null);
   const svgRef = useRef<types.TSVGRef>(null);
   const dimensions = useResizeObserver(

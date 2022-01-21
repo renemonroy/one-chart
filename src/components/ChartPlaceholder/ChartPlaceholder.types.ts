@@ -1,4 +1,4 @@
-import { TColor } from "../../themes/themes.types";
+import { TColor } from "../../theme/theme.types";
 
 export interface IChartPlaceholderProps {
   dimensions: DOMRect;

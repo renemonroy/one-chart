@@ -112,10 +112,13 @@ export type TTextTag =
   | "body2"
   | "caption1"
   | "caption2";
+
 export interface IDef {
-  borderRadius?: TBorderRadius;
-  font?: TFont;
   backgroundColor?: TColor;
+  borderRadius?: TBorderRadius;
+  bulletColor?: TColor;
+  font?: TFont;
+  fontWeight?: number;
   textColor: TColor;
   h1?: TFontSize;
   h2?: TFontSize;
@@ -139,6 +142,7 @@ export interface IChart extends IDef {
   strokeColor: TColor;
   strokeOpacity: number;
   strokeWidth: number;
+  lineColor: TColor;
 }
 
 export interface ITheme {
@@ -146,6 +150,7 @@ export interface ITheme {
   card: IDef;
   chart: IChart;
   legends: IDef;
+  space: (string | number)[];
   __COLORS: IColors;
 }
 

@@ -1,4 +1,4 @@
-import { ITheme, TColor } from "../../themes/themes.types";
+import { ITheme, TColor } from "../../theme/theme.types";
 
 export type TShapeType = "dot" | "line";
 

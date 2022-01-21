@@ -7,7 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { ThemeContext } from "styled-components";
+import { useCharts } from "../../stores/ChartsStore/ChartsStore";
 import { INITIAL_STATE } from "./Card.constants";
 import {
   SCard,
@@ -34,7 +34,8 @@ const CardContext = createContext<ICardContext>(INITIAL_STATE);
  */
 function Header(props: ICardHeaderProps) {
   const { title, subtitle, children } = props;
-  const theme = useContext(ThemeContext);
+
+  const [{ theme }] = useCharts();
   const { isLoading } = useContext(CardContext);
   const titleStyle = {
     "--title-color": theme.card.h4Color,
@@ -58,7 +59,7 @@ function Header(props: ICardHeaderProps) {
  */
 function Content(props: ICardContentProps, ref?: React.Ref<HTMLDivElement>) {
   const { children } = props;
-  const theme = useContext(ThemeContext);
+  const [{ theme }] = useCharts();
   const { isLoading } = useContext(CardContext);
   const contentStyle = {
     "--graph-card-content-color": theme.card.textColor,
@@ -97,7 +98,7 @@ function Placeholder(props: ICardPlaceholderProps) {
  */
 function Card(props: ICardProps): JSX.Element {
   const { children, ...rest } = props;
-  const theme = useContext(ThemeContext);
+  const [{ theme }] = useCharts();
   const value = useMemo(() => ({ ...rest }), [props.children, props.isLoading]);
   const cardStyle = {
     "--bg-color": theme.card.backgroundColor,

@@ -1,5 +1,5 @@
 import { Selection } from "d3";
-import { ITheme, TColor } from "../../themes/themes.types";
+import { ITheme, TColor } from "../../theme/theme.types";
 
 export type TValueName = Record<string, any>;
 export interface IY {

@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import React from "react";
 import ContentLoader from "react-content-loader";
 import {
   PADDING,
@@ -8,6 +7,7 @@ import {
   FG_COLOR,
 } from "./ChartPlaceholder.constants";
 import { IChartPlaceholderProps } from "./ChartPlaceholder.types";
+import { useCharts } from "../../stores/ChartsStore/ChartsStore";
 
 function ChartPlaceholder({
   dimensions,
@@ -18,7 +18,7 @@ function ChartPlaceholder({
   backgroundColor = BG_COLOR,
   foregroundColor = FG_COLOR,
 }: IChartPlaceholderProps) {
-  const theme = useContext(ThemeContext);
+  const [{ theme }] = useCharts();
   const { height, width } = dimensions;
   const plx = PADDING;
   const prx = width - plx;
