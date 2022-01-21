@@ -38,10 +38,10 @@ the use of schemas.
 ## 💡 Motivation
 
 There are plenty of use cases for charts and D3 has been the go-to for many
-years, but somehow it still misses that dev experience that we'd like for quick
-usage. Moreover, D3 is a so convenient tool that it lets you do a lot of
-other hidden things too. But that advantage left no easy control over user
-interfaces dedicated to pure graphs.
+years. But somehow it still misses that development experience that we would
+like to create a great set of graphics. Moreover, D3 is a so convenient tool
+that it lets you do a lot of other things as well and that advantage sometimes
+left no easy control over UIs dedicated to pure graphs.
 
 The idea behind this PoC is to ease the creation of charts following a single
 pattern while giving the consistency required to have multiple yet different
