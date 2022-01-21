@@ -29,7 +29,7 @@
 
 For developers who want to build a group of powerful D3 charts faster, 1Chart is
 a Proof of Concept project that explores the possibility to simplify the
-building of charts while following a consitent and simple pattern.
+creation of charts while following a consitent and simple pattern.
 
 Unlike D3 alone, where you need to spend time dealing with its sometimes complex
 syntax and organization, this PoC focuses on building powerful charts through
