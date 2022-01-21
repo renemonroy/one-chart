@@ -31,7 +31,7 @@ For developers who want to build powerful D3 charts faster, 1Chart is a Proof
 of Concept project that explores the possibility to simplify the building of
 charts while following a consitent and simple pattern.
 
-Unlike D3 alone, where you need to spend time dealing with its sometime complex
+Unlike D3 alone, where you need to spend time dealing with its sometimes complex
 syntax and organization, this PoC focuses on building powerful charts through
 the use of schemas.
 
@@ -55,28 +55,44 @@ Let's say you have the next data:
 ```json
 [
   {
+    "year": 2012,
+    "value": 557948
+  },
+  {
+    "year": 2013,
+    "value": 127633
+  },
+  {
+    "year": 2014,
+    "value": 835987
+  },
+  {
+    "year": 2015,
+    "value": 958813
+  },
+  {
+    "year": 2016,
+    "value": 1325000
+  },
+  {
+    "year": 2017,
+    "value": 653300
+  },
+  {
+    "year": 2018,
+    "value": 228088
+  },
+  {
+    "year": 2019,
+    "value": 1020893
+  },
+  {
+    "year": 2020,
+    "value": 335443
+  },
+  {
     "year": 2021,
-    "total": 557948
-  },
-  {
-    "year": 2022,
-    "total": 127633
-  },
-  {
-    "year": 2023,
-    "total": 835987
-  },
-  {
-    "year": 2024,
-    "total": 0
-  },
-  {
-    "year": 2025,
-    "total": 1325000
-  },
-  {
-    "year": 2026,
-    "total": 653300
+    "value": 653300
   }
 ]
 ```
@@ -87,14 +103,14 @@ We can tell 1Chart to build a "Vertical Bars" chart with this simple schema:
 import { format } from "d3";
 
 export default {
-  id: "development-timeline",
-  title: "Development Timeline",
-  subtitle: "Square feet being built over time",
+  id: "vertical-bars",
+  title: "Vertical Bars",
+  subtitle: "This example only shows vertical bars",
   values: {
     year: {
       scale: "band",
     },
-    total: {
+    value: {
       scale: "linear",
       domain: [0, 1400000],
     },
@@ -111,17 +127,22 @@ export default {
     },
     {
       type: "left-axis",
-      value: "total",
-      format: (val: number) => `$${format(".2s")(val)} sf`,
+      value: "value",
+      format: (val: number) => `$${format(".2s")(val)}`,
       width: 50,
     },
     {
       type: "vertical-bars",
-      value: ["year", "total"],
-      borderRadius: 4,
+      value: ["year", "value"],
+      borderRadius: "4 4 0 0",
+      barWidth: 20,
     },
   ],
+};
 ```
+
+Those `values` come from your data naming so you're telling 1Chart to generate
+scales for them.
 
 All we need to do then is to pass both data and schema to the component:
 
