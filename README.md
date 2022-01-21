@@ -21,9 +21,9 @@
 
 </div>
 
-![Storybook Screenshot 1](https://user-images.githubusercontent.com/106011/139783618-84663fc6-c601-4ae8-95c5-4d82b9c5a439.png)
-![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/139783624-fa1bf3b7-bf3e-441f-bd8f-dcd56a5c9420.png)
-![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783633-c752b9eb-d379-4bb5-adb4-3266c9a0b974.png)
+![Storybook Screenshot 1](https://user-images.githubusercontent.com/106011/150472991-bf51d6eb-dbf5-4676-abb2-74fe8259ffac.png)
+![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/150472993-4fbc291d-0ce5-4229-aab1-bb570fc3e77b.png)
+![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472994-4efaa353-e175-4d58-8899-79f7000335b6.png)
 
 ## 📖 Description
 
@@ -140,7 +140,7 @@ function DevelopmentTimeline() {
 
 The code above will render a chart similar to this:
 
-![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/139783597-b514d69c-868b-492a-be2d-2cc63f9bf01e.png)
+![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472985-e5bf60ff-291d-44ca-8586-f5cbed2d339a.png)
 
 ## ⚙️ Run Locally
 
