@@ -37,7 +37,7 @@ export function ChartsProvider({ children, theme }: IChartsStoreProviderProps) {
  * --------------------------------------------------------------------
  * @description Creates a hook instead of exporting a Consumer
  */
-export function useCharts() {
+export function useCharts(): [IChartsStoreState] {
   const state = useContext(ChartsContext);
 
   return [state];

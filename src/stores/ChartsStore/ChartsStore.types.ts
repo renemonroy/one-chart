@@ -1,7 +1,7 @@
 import { ITheme } from "../../theme/theme.types";
 
 export interface IChartsStoreState {
-  theme?: ITheme;
+  theme: ITheme;
 }
 
 export interface IChartsStoreProviderProps {
