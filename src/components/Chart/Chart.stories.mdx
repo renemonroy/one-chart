@@ -2,16 +2,16 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 // import { ChartsProvider } from "../../stores/ChartsStore/ChartsStore.tsx";
 import Chart from "./Chart";
 import { ChartsProvider } from "../../stores/ChartsStore/ChartsStore.tsx";
-import concessionsSchema from "../../examples/Concessions/Concessions.schema.ts";
-import concessionsData from "../../examples/Concessions/Concessions.mockup.json";
-import developmentTimelineSchema from "../../examples/DevelopmentTimeline/DevelopmentTimeline.schema.ts";
-import developmentTimelineData from "../../examples/DevelopmentTimeline/DevelopmentTimeline.mockup.json";
-import absortionSchema from "../../examples/Absortion/Absortion.schema.ts";
-import absortionData from "../../examples/Absortion/Absortion.mockup.json";
-import concessionsQuarterSchema from "../../examples/ConcessionsQuarter/ConcessionsQuarter.schema.ts";
-import concessionsQuarterMockup from "../../examples/ConcessionsQuarter/ConcessionsQuarter.mockup.json";
-import historicalRentSchema from "../../examples/HistoricalRent/HistoricalRent.schema.ts";
-import historicalRentData from "../../examples/HistoricalRent/HistoricalRent.mockup.json";
+import leftRightAxisSchema from "../../examples/LeftRightAxis/LeftRightAxis.schema.ts";
+import leftRightAxisData from "../../examples/LeftRightAxis/LeftRightAxis.mockup.json";
+import verticalBarsSchema from "../../examples/VerticalBars/VerticalBars.schema.ts";
+import verticalBarslineData from "../../examples/VerticalBars/VerticalBars.mockup.json";
+import minMaxRangeSchema from "../../examples/MinMaxRange/MinMaxRange.schema.ts";
+import minMaxRangeData from "../../examples/MinMaxRange/MinMaxRange.mockup.json";
+import quarterSchema from "../../examples/Quarter/Quarter.schema.ts";
+import quarterMockup from "../../examples/Quarter/Quarter.mockup.json";
+import linesSchema from "../../examples/Lines/Lines.schema.ts";
+import linesData from "../../examples/Lines/Lines.mockup.json";
 
 <Meta
   title="Chart"
@@ -45,8 +45,8 @@ export const Template = (args) => <Chart {...args} />;
   <Story
     name="withVerticalBars"
     args={{
-      schema: developmentTimelineSchema,
-      data: developmentTimelineData,
+      schema: verticalBarsSchema,
+      data: verticalBarslineData,
       isLoading: false,
     }}
   >
@@ -58,8 +58,8 @@ export const Template = (args) => <Chart {...args} />;
   <Story
     name="withLines"
     args={{
-      schema: historicalRentSchema,
-      data: historicalRentData,
+      schema: linesSchema,
+      data: linesData,
       isLoading: false,
     }}
   >
@@ -71,8 +71,8 @@ export const Template = (args) => <Chart {...args} />;
   <Story
     name="withLeftRightAxis"
     args={{
-      schema: concessionsSchema,
-      data: concessionsData,
+      schema: leftRightAxisSchema,
+      data: leftRightAxisData,
       isLoading: false,
     }}
   >
@@ -84,8 +84,8 @@ export const Template = (args) => <Chart {...args} />;
   <Story
     name="withQuarter"
     args={{
-      schema: concessionsQuarterSchema,
-      data: concessionsQuarterMockup,
+      schema: quarterSchema,
+      data: quarterMockup,
       isLoading: false,
     }}
   >
@@ -97,8 +97,8 @@ export const Template = (args) => <Chart {...args} />;
   <Story
     name="withMinMaxRange"
     args={{
-      schema: absortionSchema,
-      data: absortionData,
+      schema: minMaxRangeSchema,
+      data: minMaxRangeData,
       isLoading: false,
     }}
   >
