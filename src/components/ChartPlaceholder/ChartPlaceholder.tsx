@@ -7,7 +7,7 @@ import {
   FG_COLOR,
 } from "./ChartPlaceholder.constants";
 import { IChartPlaceholderProps } from "./ChartPlaceholder.types";
-import { useCharts } from "../../stores/ChartsStore/ChartsStore";
+import { useChartsStore } from "../../stores/ChartsStore/ChartsStore";
 
 function ChartPlaceholder({
   dimensions,
@@ -18,7 +18,7 @@ function ChartPlaceholder({
   backgroundColor = BG_COLOR,
   foregroundColor = FG_COLOR,
 }: IChartPlaceholderProps) {
-  const [{ theme }] = useCharts();
+  const [{ theme }] = useChartsStore();
   const { height, width } = dimensions;
   const plx = PADDING;
   const prx = width - plx;

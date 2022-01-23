@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { SCard } from "../Card/Card.styles";
-import * as constants from "./Chart.constants";
+import * as constants from "../../hooks/useChart/useChart.constants";
 
-export const SLittChartContainer = styled.div`
+export const SChartContainer = styled.div`
   height: 100%;
   width: 100%;
 `;
 
-export const SLittChart = styled.svg`
+export const SChart = styled.svg`
   display: block;
   height: 100%;
   overflow: visible;
