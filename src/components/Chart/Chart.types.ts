@@ -8,4 +8,5 @@ export interface IChartProps {
   data: TData;
   schema: ISchema;
   isLoading: boolean;
+  inCard: boolean;
 }

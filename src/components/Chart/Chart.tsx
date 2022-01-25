@@ -3,16 +3,16 @@ import Card from "../Card/Card";
 import Legends from "../Legends/Legends";
 import ChartPlaceholder from "../ChartPlaceholder/ChartPlaceholder";
 import { IChartProps } from "./Chart.types";
-import { SChart } from "./Chart.styles";
+import { SChart, SChartContainer } from "./Chart.styles";
 import useChart from "../../hooks/useChart/useChart";
 
 /**
  * Chart
  * -----------------------------------------------------------------------
  */
-function Chart({ data, schema, isLoading }: IChartProps) {
+function Chart({ data, schema, isLoading, inCard = true }: IChartProps) {
   const [{ theme, legends, svgRef, wrapperRef }] = useChart(data, schema);
-  return (
+  return inCard ? (
     <Card isLoading={isLoading}>
       <Card.Header title={schema.title} subtitle={schema.subtitle}>
         {legends && <Legends legendsData={legends} />}
@@ -32,6 +32,10 @@ function Chart({ data, schema, isLoading }: IChartProps) {
         )}
       </Card.Placeholder>
     </Card>
+  ) : (
+    <SChartContainer ref={wrapperRef}>
+      <SChart ref={svgRef} id={`${schema.id}-svg`} theme={theme} />
+    </SChartContainer>
   );
 }
 
