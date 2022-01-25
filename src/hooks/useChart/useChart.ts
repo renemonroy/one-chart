@@ -21,7 +21,7 @@ export type TSVGRef = SVGSVGElement | null;
  * use of schemas.
  */
 export default function useChart(data: TData, schema: ISchema) {
-  const [{ theme, components }] = useChartsStore();
+  const [{ components, scales, theme }] = useChartsStore();
 
   const wrapperRef = useRef<TWrapperRef>(null);
   const svgRef = useRef<TSVGRef>(null);
@@ -40,11 +40,7 @@ export default function useChart(data: TData, schema: ISchema) {
       const chart = {
         dimensions,
         internalDimensions,
-        scales: generateScales({
-          dimensions: internalDimensions,
-          schema,
-          data,
-        }),
+        scales: generateScales(scales, internalDimensions, schema, data),
         svg: select(svgRef.current),
         theme,
         wrapperRef,

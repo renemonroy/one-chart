@@ -2,18 +2,27 @@ import {
   extent,
   interpolateRound,
   max,
+  ScaleBand,
   scaleBand,
+  ScaleLinear,
   scaleLinear,
+  scalePoint,
+  ScalePoint,
+  ScaleTime,
   scaleTime,
 } from "d3";
-import { IScaleConfig, TValueName } from "./useChart.types";
+import { IScaleConfig, TData, TDimensions, TValueName } from "./useChart.types";
 
 export default {
   /**
    * Scale type Band
    * -----------------------------------------------------------------------
    */
-  ["band"]({ data, dimensions, value, domain, range, size }: IScaleConfig) {
+  ["band"](
+    { value, domain, range, size }: IScaleConfig,
+    dimensions: TDimensions,
+    data: TData,
+  ): ScaleBand<string> {
     return scaleBand()
       .domain(domain ? domain : data.map((d) => (d as TValueName)[value]))
       .range(range ? [range[0], range[1]] : [0, size || dimensions.width]);
@@ -24,7 +33,11 @@ export default {
    * Scale type Linear
    * -----------------------------------------------------------------------
    */
-  ["linear"]({ dimensions, data, value, domain, range }: IScaleConfig) {
+  ["linear"](
+    { value, domain, range }: IScaleConfig,
+    dimensions: TDimensions,
+    data: TData,
+  ): ScaleLinear<number, number, never> {
     const maxVal = max(data, (d) => (d as TValueName)[value]);
     return scaleLinear()
       .domain(domain ? [domain[0], domain[1]] : [0, maxVal])
@@ -37,7 +50,11 @@ export default {
    * getScaleTime
    * -----------------------------------------------------------------------
    */
-  ["time"]({ data, dimensions, domain, range, size, value }: IScaleConfig) {
+  ["time"](
+    { domain, range, size, value }: IScaleConfig,
+    dimensions: TDimensions,
+    data: TData,
+  ): ScaleTime<number, number, never> {
     return scaleTime()
       .domain(
         domain

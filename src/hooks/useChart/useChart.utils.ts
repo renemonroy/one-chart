@@ -4,10 +4,11 @@ import {
   IChart,
   IComponents,
   ILegendsArgs,
-  IScalesArgs,
+  IScales,
   ISchema,
   ISchemaComponents,
   TData,
+  TDimensions,
   TSchemaComponent,
 } from "./useChart.types";
 import {
@@ -16,7 +17,6 @@ import {
   X_AXIS_SPACE,
   Y_AXIS_SPACE,
 } from "./useChart.constants";
-import scales from "./useChart.scales";
 
 /**
  * getAxisComponents
@@ -103,12 +103,17 @@ export function generateLegends({
  * generateScales
  * -----------------------------------------------------------------------
  */
-export function generateScales({ dimensions, schema, data }: IScalesArgs) {
+export function generateScales(
+  scales: IScales,
+  dimensions: TDimensions,
+  schema: ISchema,
+  data: TData,
+) {
   const { values } = schema;
   return Object.keys(values).reduce((acc, curr) => {
     const { scale, ...rest } = values[curr];
-    const config = { ...rest, data, dimensions, value: curr };
-    acc[`${curr}Scale`] = scales[scale](config);
+    const config = { ...rest, dimensions, value: curr };
+    acc[`${curr}Scale`] = scales[scale](config, dimensions, data);
     return acc;
   }, {} as any); // @ToDo: Figure the type instead "any"
 }

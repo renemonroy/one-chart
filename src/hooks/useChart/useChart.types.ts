@@ -1,4 +1,18 @@
-import { Selection } from "d3";
+import {
+  Selection,
+  ScaleBand,
+  ScaleDiverging,
+  ScaleIdentity,
+  ScaleLinear,
+  ScaleOrdinal,
+  ScalePoint,
+  ScaleQuantile,
+  ScaleQuantize,
+  ScaleRadial,
+  ScaleSequential,
+  ScaleThreshold,
+  ScaleTime,
+} from "d3";
 import { ITheme, TColor } from "../../theme/theme.types";
 
 /**
@@ -64,9 +78,7 @@ export interface IComponents {
 export type TDimensions = DOMRectReadOnly;
 
 export interface IScaleConfig {
-  data: TData;
   value: string;
-  dimensions: TDimensions;
   domain?: string[];
   range?: [number, number];
   gap?: number;
@@ -75,10 +87,24 @@ export interface IScaleConfig {
 
 export type TScaleType = "band" | "linear" | "time";
 
-export interface IScalesArgs {
-  dimensions: TDimensions;
-  schema: ISchema;
-  data: TData;
+export interface IScales {
+  [key: string]: (
+    scale: IScaleConfig,
+    dimensions: TDimensions,
+    data: TData,
+  ) =>
+    | ScaleBand<string>
+    | ScaleDiverging<number, never>
+    | ScaleIdentity<never>
+    | ScaleLinear<number, number, never>
+    | ScaleOrdinal<string, unknown, never>
+    | ScalePoint<string>
+    | ScaleQuantize<number, never>
+    | ScaleQuantile<number, never>
+    | ScaleRadial<number, never>
+    | ScaleSequential<number, never>
+    | ScaleThreshold<number, number, never>
+    | ScaleTime<number, number, never>;
 }
 
 /**
