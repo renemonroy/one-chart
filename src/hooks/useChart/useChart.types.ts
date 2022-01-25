@@ -23,6 +23,7 @@ export interface IAxisComponent extends IComponent {
   value: string;
   ticks: [number];
   format(value: any): string;
+  [key: string]: any;
 }
 
 export interface IBackgroundLinesComponent extends IComponent {
@@ -49,7 +50,11 @@ export type TSchemaComponent =
 export type ISchemaComponents = TSchemaComponent[];
 
 export interface IComponents {
-  [key: string]: any;
+  [key: string]: (
+    component?: TSchemaComponent,
+    chart?: IChart,
+    data?: TData,
+  ) => void;
 }
 
 /**

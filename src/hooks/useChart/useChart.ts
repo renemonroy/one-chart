@@ -21,7 +21,7 @@ export type TSVGRef = SVGSVGElement | null;
  * use of schemas.
  */
 export default function useChart(data: TData, schema: ISchema) {
-  const [{ theme }] = useChartsStore();
+  const [{ theme, components }] = useChartsStore();
 
   const wrapperRef = useRef<TWrapperRef>(null);
   const svgRef = useRef<TSVGRef>(null);
@@ -52,9 +52,7 @@ export default function useChart(data: TData, schema: ISchema) {
         schema,
       };
 
-      console.log("chart:", chart);
-
-      renderComponents(chart, data);
+      renderComponents(components, chart, data);
       setLegends(generateLegends({ schema, chart }));
     }
   }, [data, dimensions]);

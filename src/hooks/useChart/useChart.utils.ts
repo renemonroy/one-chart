@@ -2,6 +2,7 @@ import { ILegend } from "../../components/Legends/Legends.types";
 import {
   IAxisComponent,
   IChart,
+  IComponents,
   ILegendsArgs,
   IScalesArgs,
   ISchema,
@@ -15,7 +16,6 @@ import {
   X_AXIS_SPACE,
   Y_AXIS_SPACE,
 } from "./useChart.constants";
-import components from "./useChart.components";
 import scales from "./useChart.scales";
 
 /**
@@ -117,7 +117,11 @@ export function generateScales({ dimensions, schema, data }: IScalesArgs) {
  * renderComponents
  * -----------------------------------------------------------------------
  */
-export function renderComponents(chart: IChart, data: TData) {
+export function renderComponents(
+  components: IComponents,
+  chart: IChart,
+  data: TData,
+) {
   const { svg, schema } = chart;
   svg.selectAll("g").remove();
   schema.components.forEach((component: TSchemaComponent) => {

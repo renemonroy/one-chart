@@ -20,8 +20,17 @@ const ChartsContext = createContext<IChartsStoreState>(INITIAL_STATE);
  * --------------------------------------------------------------------
  * @description Creates a Provider for the Charts Store
  */
-export function ChartsProvider({ children, theme }: IChartsStoreProviderProps) {
-  const state = merge({}, INITIAL_STATE, theme && { theme });
+export function ChartsProvider({
+  children,
+  theme,
+  components,
+}: IChartsStoreProviderProps) {
+  const state = merge(
+    {},
+    INITIAL_STATE,
+    theme && { theme },
+    components && { components },
+  );
   return (
     <ChartsContext.Provider value={state}>
       <ThemeProvider theme={state.theme}>

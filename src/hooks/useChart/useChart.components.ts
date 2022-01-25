@@ -229,7 +229,6 @@ export default {
               h: scaleY(0) - scaleY(yVal),
               r: borderRadius || BORDER_RADIUS,
             };
-            console.log("rectConfig:", rectConfig);
             return yVal > 0
               ? drawRect(rectConfig)
               : yVal < 0
