@@ -172,7 +172,7 @@ This project is composed by 3 major exports:
   all children charts.
 - `useChart` - An optional hook that could be used to build other custom charts.
 
-### <Chart>
+### `<Chart>`
 
 <table>
   <thead>
@@ -185,8 +185,8 @@ This project is composed by 3 major exports:
   <tbody>
     <tr>
       <td><code>data?: ([key: string]: number | string | (number | string)[])[]</code></td>
-      <td>The number of lines of skeletons to render.</td>
-      <td><code>1</code></td>
+      <td>The data that will be handled by the `schema` prop.</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
