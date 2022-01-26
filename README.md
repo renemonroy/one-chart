@@ -25,7 +25,7 @@
 ![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/150472993-4fbc291d-0ce5-4229-aab1-bb570fc3e77b.png)
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472994-4efaa353-e175-4d58-8899-79f7000335b6.png)
 
-## 📖 Description
+## 🖋 Description
 
 For developers who want to build a group of powerful D3 charts faster, 1Chart is
 a Proof of Concept project that explores the possibility to simplify the
@@ -162,6 +162,16 @@ function DevelopmentTimeline() {
 The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472985-e5bf60ff-291d-44ca-8586-f5cbed2d339a.png)
+
+## 📖 Documentation
+
+This package has 3 major exports:
+
+- `<ChartsProvider>` - A component that provides a set of global variables to
+  all children charts.
+- `<Chart>` - A component that renders a D3 chart by following a data schema.
+- `useChart` - A hook that listens to ChartsProvider and which the `<Chart>` is
+  built with.
 
 ## ⚙️ Run Locally
 
