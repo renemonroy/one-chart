@@ -165,13 +165,31 @@ The code above will render a chart similar to this:
 
 ## 📖 Documentation
 
-This package has 3 major exports:
+This project is composed by 3 major exports:
 
+- `<Chart>` - A component that renders a D3 chart by following schemas.
 - `<ChartsProvider>` - A component that provides a set of global variables to
   all children charts.
-- `<Chart>` - A component that renders a D3 chart by following a data schema.
-- `useChart` - A hook that listens to ChartsProvider and which the `<Chart>` is
-  built with.
+- `useChart` - An optional hook that could be used to build other custom charts.
+
+### <Chart>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data?: ([key: string]: number | string | (number | string)[])[]</code></td>
+      <td>The number of lines of skeletons to render.</td>
+      <td><code>1</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## ⚙️ Run Locally
 
@@ -200,14 +218,13 @@ yarn dev
 - Styled System
 - Storybook
 
-## 🎯 Goals
+## 🎯 Focused On
 
 - Consistency
-- Performance
+- Productivity
+- Flexibility
 - Maintainability
-- Productive
+- Performance
 - Data Agnostic
 - Responsiveness
-- Themed
-- Isolated
-- Autonomous
+- Themeable
