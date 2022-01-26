@@ -167,7 +167,8 @@ The code above will render a chart similar to this:
 
 This project is composed by 3 major exports:
 
-- `<Chart>` - A component that renders a D3 chart by following schemas.
+- [`<Chart>`](https://github.com/renemonroy/one-chart#chart) - A component that
+  renders a D3 chart by following schemas.
 - `<ChartsProvider>` - A component that provides a set of global variables to
   all children charts.
 - `useChart` - An optional hook that could be used to build other custom charts.
