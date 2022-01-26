@@ -178,15 +178,15 @@ This project is composed by 3 major exports:
   <thead>
     <tr>
       <th>Prop</th>
+      <th>Type</th>
       <th>Description</th>
-      <th>Default</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>data: { [key: string]: number | string }[]</code></td>
+      <td><code>data</code></td>
+      <td><code>{ [key: string]: number | string }[]</code></td>
       <td>The data that will be handled by the <code>schema</code> prop.</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
