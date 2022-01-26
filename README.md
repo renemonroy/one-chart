@@ -186,10 +186,81 @@ This project is composed by 3 major exports:
     <tr>
       <td><code>data</code></td>
       <td><code>{ [key: string]: number | string }[]</code></td>
-      <td>The data that will be handled by the <code>schema</code> prop.</td>
+      <td>The data that will be handled by the prop <code>schema</code>.</td>
+    </tr>
+    <tr>
+      <td><code>schema</code></td>
+      <td><code>Object</code></td>
+      <td>A configuration for each chart. See schema for a comple list of
+      available options.</td>
+    </tr>
+    <tr>
+      <td><code>isLoading?</code></td>
+      <td><code>boolean</code></td>
+      <td>Show a placeholder loader instead of the chart. Default: <code>false</code>,</td>
+    </tr>
+    <tr>
+      <td><code>inCard?</code></td>
+      <td><code>boolean</code></td>
+      <td>Shows chart inside a card or alone. Default <code>true</code>.</td>
     </tr>
   </tbody>
 </table>
+
+The chart `schema` is created as follows:
+
+```js
+// @property {Object} schema - The schema configuration
+export const schema = {
+  // @property {string} schema.id - A html id used to insert the svg components
+  id: "you-schema-id",
+  // @property {string=} schema.title - Optional title, displayed above the chart
+  title: "Schema Title",
+  // @property {string=} schema.subtitle - Optional subtitle, displayed below title
+  subtitle: "Schema Subtitle",
+  // @property {Object} schema.values - Specify data values and how should be treated
+  values: {
+    // @property {Object} schema.values[keyname] - Values that will be searched in data
+    example1: {
+      // @property {string} schema.values[keyname].scale - Type of scale to be used for data
+      scale: "band",
+      // @property {string=} schema.values[keyname].gap - Optional gap between values
+      gap: 0.2,
+    },
+    example2: {
+      scale: "linear",
+      // @property {[number, number]=} schema.values[keyname].domain - Range of min/max values to scale
+      domain: [0, 1000],
+    },
+  },
+  // @property {Array} schema.components - Elements that will be rendered at the svg Chart
+  components: [
+    {
+      // @property {string} schema.components[0].type - Name of the component to use
+      type: "background-lines",
+      // @property {string} schema.components[0].value - Name of value specified from "values" above
+      value: "example1",
+    },
+    {
+      type: "bottom-axis",
+      value: "example1",
+      // @property {string} schema.components[1].height - Optional height of element
+      height: 13,
+    },
+    {
+      type: "line",
+      // @property {string} schema.components[2].value - This component expects 2 type of values
+      value: ["example1", "example2"],
+      // @property {string} schema.components[2].legend - Used to render legends at card header
+      legend: "Line legend",
+      // @property {string} schema.components[2].enabledColor - Custom color taken from a theme provided
+      enabledColor: "primary500",
+    },
+  ],
+};
+```
+
+> All `components` are rendered in the Array order, acting like layers.
 
 ## ⚙️ Run Locally
 
