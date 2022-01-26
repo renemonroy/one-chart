@@ -185,7 +185,7 @@ This project is composed by 3 major exports:
   <tbody>
     <tr>
       <td><code>data: { [key: string]: number | string }[]</code></td>
-      <td>The data that will be handled by the `schema` prop.</td>
+      <td>The data that will be handled by the <code>schema<code> prop.</td>
       <td></td>
     </tr>
   </tbody>
