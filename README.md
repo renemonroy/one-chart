@@ -311,7 +311,7 @@ export const schema = {
   </tbody>
 </table>
 
-The `components` can be extended as follows:
+The available `components` can be extended as follows:
 
 ```js
 // @property {Object} components - A set of methods that extend the components supported
