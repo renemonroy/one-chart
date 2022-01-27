@@ -319,9 +319,9 @@ export const components = {
   /**
    * @function
    * @name my-component-name
-   * @description - This methods generates svg elements with D3. The arguments represent
+   * @description - These methods generate svg elements with D3. The arguments represent
    * info that helps to create such elements (aka components).
-   * @param {Object} componentConfig - It passes whatever you decided to use as config
+   * @param {Object} componentConfig - It passes whatever you decide to use as config
    * for the component. As convention it should have at least a `value` property.
    * @param {Object} chartConfig - Multiple properties (scales, dimensions,
    * internalDimensions, schema, svg, theme and others) which help to create and render
@@ -344,6 +344,35 @@ export const components = {
       )
       .call((g: any) => g.select(".domain").attr("stroke-width", 0))
       .call((g: any) => g.selectAll("text").attr("class", "my-text-example"));
+};
+```
+
+The `scales` are limited to those that D3 support, but those can be extended with
+specific needs:
+
+```js
+// @property {Object} scales - A set of methods that extend the scales supported
+export const scales = {
+  /**
+  * @function
+  * @name my-scale-name
+  * @description - These methods create custom scales required to enhaced values
+  * behavior over the chart components.
+  * @param {Object} scaleConfig - It passes whatever you decide to use as config
+  * for the sale. As convention it should have at least a `value` property.
+  * @param {Object} dimensions - These are internal dimensions which are limited
+  * to the final chart itself.
+  * @param {Array} data - The data passed to a <Chart> component as prop.
+  * @returns {Scale} - It must return at type of D3 Scale (band, linear, quantile,
+  * radial, sequential, threshold, time, etc).
+  */
+  ["my-band-example"](scaleConfig, dimensions, data) {
+    const { value, domain, range, size } = scaleConfig;
+    const { width } = dimensions;
+    return scaleBand()
+      .domain(domain ? domain : data.map((d) => (d as TValueName)[value]))
+      .range(range ? [range[0], range[1]] : [0, size || width]);
+  },
 };
 ```
 
