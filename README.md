@@ -263,7 +263,7 @@ export const schema = {
 
 > All `components` are rendered in the Array order, acting like layers.
 
-### <ChartsProvider>
+### `<ChartsProvider>`
 
 <table>
   <thead>
