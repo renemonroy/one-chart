@@ -219,8 +219,6 @@ This project is composed by 3 major exports:
   </tbody>
 </table>
 
-#### Schema
-
 A `schema` is created as follows:
 
 ```js
@@ -312,6 +310,42 @@ export const schema = {
     </tr>
   </tbody>
 </table>
+
+The `components` can be extended as follows:
+
+```js
+// @property {Object} components - A set of methods that extend the components supported
+export const components = {
+  /**
+   * @function
+   * @name my-component-name
+   * @description - This methods generates svg elements with D3. The arguments represent
+   * info that helps to create such elements (aka components).
+   * @param {Object} componentConfig - It passes whatever you decided to use as config
+   * for the component. As convention it should have at least a `value` property.
+   * @param {Object} chartConfig - Multiple properties (scales, dimensions,
+   * internalDimensions, schema, svg, theme and others) which help to create and render
+   * components in the right place.
+   * @param {Array} data - The data passed to a <Chart> component as prop.
+   * @returns {Selection} - As convention, should return a TSVGSelection from D3.
+   */
+  ["my-left-axis-example"](componentConfig, chartConfig, data) {
+    const { format, ticks, value } = componentConfig;
+    const { internalDimensions, scales, schema, svg } = chartConfig;
+    return svg
+      .append("g")
+      .attr("class", "my-left-axis-example")
+      .attr("transform", `translate(${internalDimensions.left}, 0)`)
+      .call(
+        axisLeft(scales[value] as any)
+          .tickFormat(format)
+          .tickValues(ticks || schema.values[value].domain)
+          .tickSize(0),
+      )
+      .call((g: any) => g.select(".domain").attr("stroke-width", 0))
+      .call((g: any) => g.selectAll("text").attr("class", "my-text-example"));
+};
+```
 
 <br>
 
