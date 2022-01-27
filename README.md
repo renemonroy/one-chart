@@ -263,6 +263,41 @@ export const schema = {
 
 > All `components` are rendered in the Array order, acting like layers.
 
+### <ChartsProvider>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>children</code></td>
+      <td><code>React.ReactNode</code></td>
+      <td>It can be basically a ReactElement, a ReactFragment, a string,
+      a number or an array of ReactNodes, or null, or undefined, or a boolean.</td>
+    </tr>
+    <tr>
+      <td><code>components?</code></td>
+      <td><code>IComponents</code></td>
+      <td>Optional methods which extend the chart elements that are currently supported.</td>
+    </tr>
+    <tr>
+      <td><code>scales?</code></td>
+      <td><code>IScales</code></td>
+      <td>Optional methods which extend the scales types that are currently supported.</td>
+    </tr>
+    <tr>
+      <td><code>theme?</code></td>
+      <td><code>ITheme</code></td>
+      <td>Optional variables that extend the theme that is currently set.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## ⚙️ Run Locally
 
 To run the project locally you need to install the dependencies first. 1Chart
