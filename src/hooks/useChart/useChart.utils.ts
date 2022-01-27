@@ -113,7 +113,7 @@ export function generateScales(
   return Object.keys(values).reduce((acc, curr) => {
     const { scale, ...rest } = values[curr];
     const config = { ...rest, dimensions, value: curr };
-    acc[`${curr}Scale`] = scales[scale](config, dimensions, data);
+    acc[curr] = scales[scale](config, dimensions, data);
     return acc;
   }, {} as any); // @ToDo: Figure the type instead "any"
 }

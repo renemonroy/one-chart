@@ -53,7 +53,7 @@ export default {
         })`,
       )
       .call(
-        axisBottom(scales[`${value}Scale`] as any)
+        axisBottom(scales[value] as any)
           .tickFormat(format || null)
           .ticks(ticks || null)
           .tickSize(0),
@@ -77,7 +77,7 @@ export default {
       .attr("class", LEFT_AXIS_CLASSNAME)
       .attr("transform", `translate(${internalDimensions.left}, 0)`)
       .call(
-        axisLeft(scales[`${value}Scale`] as any)
+        axisLeft(scales[value] as any)
           .tickFormat(format)
           .tickValues(ticks || schema.values[value].domain)
           .tickSize(0),
@@ -104,7 +104,7 @@ export default {
         `translate(${dimensions.width - internalDimensions.right}, 0)`,
       )
       .call(
-        axisRight(scales[`${value}Scale`] as any)
+        axisRight(scales[value] as any)
           .tickFormat(format)
           .tickValues(ticks || schema.values[value].domain)
           .tickSize(0),
@@ -124,7 +124,7 @@ export default {
     { internalDimensions, scales, schema, svg }: IChart,
     data: TData,
   ) {
-    const scaleX = scales[`${value}Scale`] as any;
+    const scaleX = scales[value] as any;
     const isScaleTime = schema.values[`${value}`].scale === "time";
     const xGap = schema.xAxisGap || X_AXIS_SPACE;
     const width = scaleX.bandwidth ? scaleX.bandwidth() : 0;
@@ -174,8 +174,8 @@ export default {
     data: TData,
   ) {
     const xGap = schema.xAxisGap || X_AXIS_SPACE;
-    const scaleX = scales[`${value[0]}Scale`] as any;
-    const scaleY = scales[`${value[1]}Scale`] as any;
+    const scaleX = scales[value[0]] as any;
+    const scaleY = scales[value[1]] as any;
     const bGap = gap || SCALE_GAP / 2;
     const isScaleTime = schema.values[`${value[0]}`].scale === "time";
     const colWidth = internalDimensions.width / data.length - bGap;
@@ -256,8 +256,8 @@ export default {
     { internalDimensions, scales, schema, svg, theme }: IChart,
     data: TData,
   ) {
-    const scaleX = scales[`${value[0]}Scale`] as any;
-    const scaleY = scales[`${value[1]}Scale`] as any;
+    const scaleX = scales[value[0]] as any;
+    const scaleY = scales[value[1]] as any;
     const xGap = schema.xAxisGap || X_AXIS_SPACE;
     const isScaleTime = schema.values[`${value[0]}`].scale === "time";
     const width = isScaleTime ? 0 : internalDimensions.width / data.length / 2;
