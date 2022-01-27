@@ -197,12 +197,12 @@ This project is composed by 3 major exports:
   <tbody>
     <tr>
       <td><code>data</code></td>
-      <td><code>TData</code></td>
+      <td><a href="https://github.com/renemonroy/one-chart/blob/86384fe8d29a9f57f96e376a77affb01b1ddacfb/src/hooks/useChart/useChart.types.ts#L167"><code>TData</code></a></td>
       <td>The data that will be handled by the prop <code>schema</code>.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td><code>ISchema</code></td>
+      <td><a href="https://github.com/renemonroy/one-chart/blob/86384fe8d29a9f57f96e376a77affb01b1ddacfb/src/hooks/useChart/useChart.types.ts#L133"><code>ISchema</code></a></td>
       <td>A configuration for each chart. See schema for a comple list of
       available options.</td>
     </tr>
