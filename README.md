@@ -300,12 +300,12 @@ export const schema = {
     </tr>
     <tr>
       <td><code>scales?</code></td>
-      <td><code>IScales</code></td>
+      <td><a href="https://github.com/renemonroy/one-chart/blob/7f560e4d3912e57926d406c8279698235836b7b5/src/hooks/useChart/useChart.types.ts#L90"><code>IScales</code></a></td>
       <td>Optional methods which extend the scales types that are currently supported.</td>
     </tr>
     <tr>
       <td><code>theme?</code></td>
-      <td><code>ITheme</code></td>
+      <td><a href="https://github.com/renemonroy/one-chart/blob/ea211d105d152f39c483b5611c2dc87c8a130173/src/theme/theme.types.ts#L148"><code>ITheme</code></a></td>
       <td>Optional variables that extend the theme that is currently set.</td>
     </tr>
   </tbody>
