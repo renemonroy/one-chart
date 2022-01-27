@@ -295,7 +295,7 @@ export const schema = {
     </tr>
     <tr>
       <td><code>components?</code></td>
-      <td><code>IComponents</code></td>
+      <td><a href="https://github.com/renemonroy/one-chart/blob/7f560e4d3912e57926d406c8279698235836b7b5/src/hooks/useChart/useChart.types.ts#L66"><code>IComponents</code></a></td>
       <td>Optional methods which extend the chart elements that are currently supported.</td>
     </tr>
     <tr>
