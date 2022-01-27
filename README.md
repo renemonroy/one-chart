@@ -177,7 +177,8 @@ This project is composed by 3 major exports:
 
 - [`<Chart>`](https://github.com/renemonroy/one-chart#chart) - A component that
   renders a D3 chart by following schemas.
-- `<ChartsProvider>` - A component that provides a set of global variables to
+- [`<ChartsProvider>`](https://github.com/renemonroy/one-chart#chartsprovider) -
+  A component that provides a set of global variables to
   all children charts.
 - `useChart` - An optional hook that could be used to build other custom charts.
 
@@ -196,12 +197,12 @@ This project is composed by 3 major exports:
   <tbody>
     <tr>
       <td><code>data</code></td>
-      <td><code>{ [key: string]: number | string }[]</code></td>
+      <td><code>TData</code></td>
       <td>The data that will be handled by the prop <code>schema</code>.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td><code>Object</code></td>
+      <td><code>ISchema</code></td>
       <td>A configuration for each chart. See schema for a comple list of
       available options.</td>
     </tr>
