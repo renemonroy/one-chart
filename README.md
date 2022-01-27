@@ -219,7 +219,9 @@ This project is composed by 3 major exports:
   </tbody>
 </table>
 
-The chart `schema` is created as follows:
+#### Schema
+
+A `schema` is created as follows:
 
 ```js
 // @property {Object} schema - The schema configuration
