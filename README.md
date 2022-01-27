@@ -25,6 +25,8 @@
 ![Storybook Screenshot 2](https://user-images.githubusercontent.com/106011/150472993-4fbc291d-0ce5-4229-aab1-bb570fc3e77b.png)
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472994-4efaa353-e175-4d58-8899-79f7000335b6.png)
 
+<br>
+
 ## 🖋 Description
 
 For developers who want to build a group of powerful D3 charts faster, 1Chart is
@@ -34,6 +36,8 @@ creation of charts while following a consitent and simple pattern.
 Unlike D3 alone, where you need to spend time dealing with its sometimes complex
 syntax and organization, this PoC focuses on building powerful charts through
 the use of schemas.
+
+<br>
 
 ## 💡 Motivation
 
@@ -47,6 +51,8 @@ The idea behind this PoC is to ease the creation of charts following a single
 pattern while giving the consistency required to have multiple yet different
 graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is
 focused only on charts.
+
+<br>
 
 ## 👀 Example
 
@@ -163,6 +169,8 @@ The code above will render a chart similar to this:
 
 ![Storybook Screenshot 3](https://user-images.githubusercontent.com/106011/150472985-e5bf60ff-291d-44ca-8586-f5cbed2d339a.png)
 
+<br>
+
 ## 📖 Documentation
 
 This project is composed by 3 major exports:
@@ -172,6 +180,8 @@ This project is composed by 3 major exports:
 - `<ChartsProvider>` - A component that provides a set of global variables to
   all children charts.
 - `useChart` - An optional hook that could be used to build other custom charts.
+
+<br>
 
 ### `<Chart>`
 
@@ -263,6 +273,8 @@ export const schema = {
 
 > All `components` are rendered in the Array order, acting like layers.
 
+<br>
+
 ### `<ChartsProvider>`
 
 <table>
@@ -298,6 +310,8 @@ export const schema = {
   </tbody>
 </table>
 
+<br>
+
 ## ⚙️ Run Locally
 
 To run the project locally you need to install the dependencies first. 1Chart
@@ -315,6 +329,8 @@ it locally:
 yarn dev
 ```
 
+<br>
+
 ## 🥞 Stack
 
 - Typescript
@@ -324,6 +340,8 @@ yarn dev
 - Styled Components
 - Styled System
 - Storybook
+
+<br>
 
 ## 🎯 Focused On
 
