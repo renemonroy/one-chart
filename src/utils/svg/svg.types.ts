@@ -14,3 +14,9 @@ export interface ISvgLine {
   w: number;
   h: number;
 }
+
+export interface ISvgCircle {
+  x: number;
+  y: number;
+  r: number;
+}

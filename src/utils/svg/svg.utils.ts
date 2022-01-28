@@ -1,4 +1,4 @@
-import { ISvgRect, ISvgLine } from "./svg.types";
+import { ISvgRect, ISvgLine, ISvgCircle } from "./svg.types";
 
 /**
  * convertBorderRadius
@@ -59,5 +59,17 @@ export function drawVerticalLine({ x, y, w, h }: ISvgLine): string {
   return `
     M ${xw} ${y}
     L ${xw} ${h}
+  `;
+}
+
+/**
+ * drawCircle
+ * -----------------------------------------------------------------------
+ */
+export function drawCircle({ x, y, r }: ISvgCircle): string {
+  return `
+    M ${x}, ${y}
+    a ${r},${r} 0 1,0 ${r * 2},0
+    a ${r},${r} 0,1,0 -${r * 2}, 0
   `;
 }
