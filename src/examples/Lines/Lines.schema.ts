@@ -45,5 +45,12 @@ export default {
       legend: "Line 2 values",
       enabledColor: "uiWhite",
     },
+    {
+      type: "dots",
+      value: ["year", "line1"],
+      dotWidth: 15,
+      enabledColor: "transparent",
+      disabledColor: "transparent",
+    },
   ],
 };
