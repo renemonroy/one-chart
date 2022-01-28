@@ -33,7 +33,8 @@ export const SChart = styled.svg`
     fill: var(--component-disabled-color);
   } */
 
-  g.${constants.CHART_VERTICAL_BARS} {
+  g.${constants.CHART_VERTICAL_BARS},
+  g.${constants.CHART_DOTS} {
     path.${constants.COMPONENT_CLASSNAME} {
       fill: var(--component-enabled-color);
       transition: all 0.1s ease;
