@@ -45,6 +45,7 @@ export const COLORS = {
   systemError: "#DC1631",
   systemSuccess: "#2FBD42",
   systemWarning: "#F5AD1D",
+  transparent: "transparent",
 };
 
 export const FONT_WEIGHT = {

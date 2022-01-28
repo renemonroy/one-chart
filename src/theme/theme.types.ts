@@ -40,6 +40,7 @@ export interface IColors {
   systemError: string;
   systemSuccess: string;
   systemWarning: string;
+  transparent: string;
 }
 
 export type TColor =
@@ -83,7 +84,8 @@ export type TColor =
   | "uiWhite"
   | "systemError"
   | "systemSuccess"
-  | "systemWarning";
+  | "systemWarning"
+  | "transparent";
 
 export type TBorderRadius = "base" | "lg";
 
