@@ -15,6 +15,7 @@
 [Description](#-description) •
 [Motivation](#-motivation) •
 [Example](#-example) •
+[Documentation](#-documentation) •
 [Run Locally](#%EF%B8%8F-run-locally) •
 [Stack](#-stack) •
 [Goals](#-goals)
