@@ -55,6 +55,11 @@ export interface ILineComponent extends IComponent {
   value: string[];
 }
 
+export interface IDotsComponent extends IComponent {
+  dotWidth?: number;
+  value: string[];
+}
+
 export type TSchemaComponent =
   | IAxisComponent
   | IBackgroundLinesComponent

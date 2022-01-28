@@ -1,5 +1,13 @@
-import { axisBottom, axisLeft, axisRight, line, select } from "d3";
 import {
+  axisBottom,
+  axisLeft,
+  axisRight,
+  line,
+  select,
+  interpolateString,
+} from "d3";
+import {
+  drawCircle,
   drawNegativeRect,
   drawRect,
   drawVerticalLine,
@@ -9,6 +17,7 @@ import {
   BG_LINES_CLASSNAME,
   BORDER_RADIUS,
   BOTTOM_AXIS_CLASSNAME,
+  CHART_DOTS,
   CHART_LINE,
   CHART_VERTICAL_BARS,
   COMPONENT_CLASSNAME,
@@ -24,6 +33,7 @@ import {
   IBackgroundLinesComponent,
   IChart,
   IComponents,
+  IDotsComponent,
   ILineComponent,
   IVerticalBarsComponent,
   TData,
@@ -289,6 +299,89 @@ export default {
       .append("path")
       .attr("d", drawLine(data))
       .attr("class", COMPONENT_CLASSNAME);
+    return $component;
+  },
+
+  /**
+   * Dots component
+   * -----------------------------------------------------------------------
+   */
+  ["dots"](
+    {
+      disabledColor,
+      dotWidth,
+      enabledColor,
+      gap,
+      hoveredColor,
+      strokeColor,
+      strokeOpacity,
+      strokeWidth,
+      value,
+    }: IDotsComponent,
+    { internalDimensions, scales, schema, svg, theme }: IChart,
+    data: TData,
+  ) {
+    const xGap = schema.xAxisGap || X_AXIS_SPACE;
+    const scaleX = scales[value[0]] as any;
+    const scaleY = scales[value[1]] as any;
+    const dGap = gap || SCALE_GAP / 2;
+    const colWidth = internalDimensions.width / data.length - dGap;
+    const halfColWidth = colWidth / 2;
+    const dWidth = dotWidth || colWidth;
+    const halfWidth = halfColWidth - dWidth / 2 + dGap / 2;
+    const left = internalDimensions.left + xGap;
+    const radius = dWidth / 2;
+
+    const $component = svg
+      .append("g")
+      .attr("class", CHART_DOTS)
+      .style(
+        "--component-enabled-color",
+        enabledColor ? theme.__COLORS[enabledColor] : theme.chart.valueEnabled,
+      )
+      .style(
+        "--component-hovered-color",
+        hoveredColor ? theme.__COLORS[hoveredColor] : theme.chart.valueHovered,
+      )
+      .style(
+        "--component-disabled-color",
+        disabledColor
+          ? theme.__COLORS[disabledColor]
+          : theme.chart.valueDisabled,
+      )
+      .style(
+        "--component-stroke-color",
+        strokeColor ? theme.__COLORS[strokeColor] : theme.chart.strokeColor,
+      )
+      .style(
+        "--component-stroke-opacity",
+        strokeOpacity || theme.chart.strokeOpacity,
+      )
+      .style("--component-stroke-width", strokeWidth || theme.chart.strokeWidth)
+      .selectAll("path")
+      .data(data.filter((d) => !!d[value[1]]))
+      .enter()
+      .append("path")
+      .call((g) =>
+        g
+          .attr("d", (d: TValueName) => {
+            const xVal = scaleX(d[value[0]]);
+            const yVal = scaleY(d[value[1]]);
+            return drawCircle({
+              r: radius,
+              x: left + xVal + halfWidth,
+              y: yVal,
+            });
+          })
+          .attr("class", COMPONENT_CLASSNAME)
+          .on("mouseover", function onBarOver() {
+            select(this).classed("hovered", true);
+          })
+          .on("mouseout", function onBarOut() {
+            select(this).classed("hovered", false);
+          }),
+      );
+
     return $component;
   },
 } as IComponents;
