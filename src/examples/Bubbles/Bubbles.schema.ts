@@ -1,7 +1,10 @@
+import { format } from "d3";
+
 export default {
   id: "bubbles",
   title: "Bubbles",
-  subtitle: "This example shows a plot of bubbles",
+  subtitle:
+    "Relationship between life expectancy, GDP (PPP) and population for multiple countries",
   values: {
     lifeExp: {
       scale: "linear",
@@ -23,12 +26,14 @@ export default {
     {
       type: "bottom-axis",
       value: "gdpPerCap",
+      format: (val: number) => `$${format(".1s")(val)}`,
       height: 13,
     },
     {
       type: "left-axis",
       value: "lifeExp",
-      width: 30,
+      format: (val: number) => `${val} years`,
+      width: 50,
     },
     {
       type: "right-axis",
@@ -42,6 +47,7 @@ export default {
       strokeEnabledOpacity: 1,
       strokeEnabledColor: "primary600",
       strokeWidth: 1,
+      legend: "Population",
     },
   ],
 };
