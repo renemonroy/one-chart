@@ -4,6 +4,7 @@ export const BOTTOM_AXIS_CLASSNAME = "one-chart-bottom-axis";
 export const CHART_VERTICAL_BARS = "one-chart-vertical-bars";
 export const CHART_LINE = "one-chart-line";
 export const CHART_DOTS = "one-chart-dots";
+export const CHART_BUBBLES = "one-char-bubbles";
 export const COMPONENT_CLASSNAME = "one-chart-component";
 export const LEFT_AXIS_CLASSNAME = "one-chart-left-axis";
 export const RIGHT_AXIS_CLASSNAME = "one-chart-right-axis";

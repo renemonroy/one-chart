@@ -24,8 +24,12 @@ export interface IComponent {
   enabledColor?: TColor;
   disabledColor?: TColor;
   hoveredColor?: TColor;
-  strokeColor?: TColor;
-  strokeOpacity?: number;
+  strokeEnabledColor?: TColor;
+  strokeDisabledColor?: TColor;
+  strokeHoveredColor?: TColor;
+  strokeEnabledOpacity?: number;
+  strokeDisabledOpacity?: number;
+  strokeHoveredOpacity?: number;
   strokeWidth?: number;
   legend?: string;
   gap?: number;
@@ -88,6 +92,7 @@ export interface IScaleConfig {
   range?: [number, number];
   gap?: number;
   size?: number;
+  orientation?: "horizontal" | "vertical";
 }
 
 export type TScaleType = "band" | "linear" | "time";

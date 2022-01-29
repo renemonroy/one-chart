@@ -34,15 +34,21 @@ export default {
    * -----------------------------------------------------------------------
    */
   ["linear"](
-    { value, domain, range }: IScaleConfig,
+    { value, domain, range, orientation = "vertical" }: IScaleConfig,
     dimensions: TDimensions,
     data: TData,
   ): ScaleLinear<number, number, never> {
     const maxVal = max(data, (d) => (d as TValueName)[value]);
+    let _range;
+    if (orientation === "vertical") {
+      _range = range ? [range[1], range[0]] : [dimensions.height, 0];
+    } else {
+      _range = range ? [range[0], range[1]] : [0, dimensions.width];
+    }
     return scaleLinear()
       .domain(domain ? [domain[0], domain[1]] : [0, maxVal])
       .nice()
-      .range(range ? [range[1], range[0]] : [dimensions.height, 0])
+      .range(_range)
       .interpolate(interpolateRound);
   },
 
