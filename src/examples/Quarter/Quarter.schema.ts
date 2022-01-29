@@ -62,6 +62,7 @@ export default {
       enabledColor: "supportive400",
       hoveredColor: "supportive300",
       disabledColor: "supportive500",
+      strokeHoveredColor: "supportive200",
     },
   ],
 };

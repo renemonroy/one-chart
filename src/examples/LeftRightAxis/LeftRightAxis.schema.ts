@@ -52,5 +52,14 @@ export default {
       legend: "B values",
       enabledColor: "supportive400",
     },
+    {
+      type: "dots",
+      value: ["year", "b"],
+      dotWidth: 15,
+      enabledColor: "transparent",
+      disabledColor: "transparent",
+      hoveredColor: "supportive400",
+      strokeHoveredColor: "supportive200",
+    },
   ],
 };

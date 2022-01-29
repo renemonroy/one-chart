@@ -141,8 +141,12 @@ export interface IChart extends IDef {
   valueEnabled: TColor;
   valueDisabled: TColor;
   valueHovered: TColor;
-  strokeColor: TColor;
-  strokeOpacity: number;
+  strokeEnabledColor: TColor;
+  strokeDisabledColor: TColor;
+  strokeHoveredColor: TColor;
+  strokeEnabledOpacity: number;
+  strokeDisabledOpacity: number;
+  strokeHoveredOpacity: number;
   strokeWidth: number;
   lineColor: TColor;
 }
