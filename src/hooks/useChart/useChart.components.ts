@@ -325,10 +325,13 @@ export default {
     const scaleX = scales[value[0]] as any;
     const scaleY = scales[value[1]] as any;
     const dGap = gap || SCALE_GAP / 2;
+    const isScaleTime = schema.values[`${value[0]}`].scale === "time";
     const colWidth = internalDimensions.width / data.length - dGap;
     const halfColWidth = colWidth / 2;
     const dWidth = dotWidth || colWidth;
-    const halfWidth = halfColWidth - dWidth / 2 + dGap / 2;
+    const halfWidth = isScaleTime
+      ? -dWidth / 2
+      : halfColWidth - dWidth / 2 + dGap / 2;
     const left = internalDimensions.left + xGap;
     const radius = dWidth / 2;
 
@@ -365,7 +368,9 @@ export default {
       .call((g) =>
         g
           .attr("d", (d: TValueName) => {
-            const xVal = scaleX(d[value[0]]);
+            const xVal = scaleX(
+              isScaleTime ? new Date(d[value[0]]) : d[value[0]],
+            );
             const yVal = scaleY(d[value[1]]);
             return drawCircle({
               r: radius,
