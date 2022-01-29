@@ -52,5 +52,13 @@ export default {
       enabledColor: "transparent",
       disabledColor: "transparent",
     },
+    {
+      type: "dots",
+      value: ["year", "line2"],
+      dotWidth: 15,
+      enabledColor: "transparent",
+      disabledColor: "transparent",
+      hoveredColor: "uiWhite",
+    },
   ],
 };

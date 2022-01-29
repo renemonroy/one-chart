@@ -55,5 +55,13 @@ export default {
       enabledColor: "supportive400",
       legend: "Line values",
     },
+    {
+      type: "dots",
+      value: ["date", "lineVal"],
+      dotWidth: 15,
+      enabledColor: "supportive400",
+      hoveredColor: "supportive300",
+      disabledColor: "supportive500",
+    },
   ],
 };
