@@ -1,11 +1,4 @@
-import {
-  axisBottom,
-  axisLeft,
-  axisRight,
-  line,
-  select,
-  interpolateString,
-} from "d3";
+import { axisBottom, axisLeft, axisRight, line, select } from "d3";
 import {
   drawCircle,
   drawNegativeRect,
@@ -19,6 +12,7 @@ import {
   BOTTOM_AXIS_CLASSNAME,
   CHART_DOTS,
   CHART_LINE,
+  CHART_BUBBLES,
   CHART_VERTICAL_BARS,
   COMPONENT_CLASSNAME,
   LEFT_AXIS_CLASSNAME,
@@ -135,7 +129,7 @@ export default {
     data: TData,
   ) {
     const scaleX = scales[value] as any;
-    const isScaleTime = schema.values[`${value}`].scale === "time";
+    const isScaleTime = schema.values[value].scale === "time";
     const xGap = schema.xAxisGap || X_AXIS_SPACE;
     const width = scaleX.bandwidth ? scaleX.bandwidth() : 0;
     const height = internalDimensions.height;
@@ -175,8 +169,8 @@ export default {
       enabledColor,
       gap,
       hoveredColor,
-      strokeColor,
-      strokeOpacity,
+      strokeEnabledColor,
+      strokeEnabledOpacity,
       strokeWidth,
       value,
     }: IVerticalBarsComponent,
@@ -213,12 +207,14 @@ export default {
           : theme.chart.valueDisabled,
       )
       .style(
-        "--component-stroke-color",
-        strokeColor ? theme.__COLORS[strokeColor] : theme.chart.strokeColor,
+        "--component-stroke-enabled-color",
+        strokeEnabledColor
+          ? theme.__COLORS[strokeEnabledColor]
+          : theme.chart.strokeEnabledColor,
       )
       .style(
-        "--component-stroke-opacity",
-        strokeOpacity || theme.chart.strokeOpacity,
+        "--component-stroke-enabled-opacity",
+        strokeEnabledOpacity || theme.chart.strokeEnabledOpacity,
       )
       .style("--component-stroke-width", strokeWidth || theme.chart.strokeWidth)
       .selectAll("path")
@@ -313,8 +309,12 @@ export default {
       enabledColor,
       gap,
       hoveredColor,
-      strokeColor,
-      strokeOpacity,
+      strokeEnabledColor,
+      strokeDisabledColor,
+      strokeHoveredColor,
+      strokeEnabledOpacity,
+      strokeDisabledOpacity,
+      strokeHoveredOpacity,
       strokeWidth,
       value,
     }: IDotsComponent,
@@ -353,12 +353,34 @@ export default {
           : theme.chart.valueDisabled,
       )
       .style(
-        "--component-stroke-color",
-        strokeColor ? theme.__COLORS[strokeColor] : theme.chart.strokeColor,
+        "--component-stroke-enabled-color",
+        strokeEnabledColor
+          ? theme.__COLORS[strokeEnabledColor]
+          : theme.chart.strokeEnabledColor,
       )
       .style(
-        "--component-stroke-opacity",
-        strokeOpacity || theme.chart.strokeOpacity,
+        "--component-stroke-disabled-color",
+        strokeDisabledColor
+          ? theme.__COLORS[strokeDisabledColor]
+          : theme.chart.strokeDisabledColor,
+      )
+      .style(
+        "--component-stroke-hovered-color",
+        strokeHoveredColor
+          ? theme.__COLORS[strokeHoveredColor]
+          : theme.chart.strokeEnabledColor,
+      )
+      .style(
+        "--component-stroke-enabled-opacity",
+        strokeEnabledOpacity || theme.chart.strokeEnabledOpacity,
+      )
+      .style(
+        "--component-stroke-disabled-opacity",
+        strokeDisabledOpacity || theme.chart.strokeDisabledOpacity,
+      )
+      .style(
+        "--component-stroke-hovered-opacity",
+        strokeHoveredOpacity || theme.chart.strokeHoveredOpacity,
       )
       .style("--component-stroke-width", strokeWidth || theme.chart.strokeWidth)
       .selectAll("path")
@@ -374,6 +396,122 @@ export default {
             const yVal = scaleY(d[value[1]]);
             return drawCircle({
               r: radius,
+              x: left + xVal + halfWidth,
+              y: yVal,
+            });
+          })
+          .attr("class", COMPONENT_CLASSNAME)
+          .on("mouseover", function onBarOver() {
+            select(this).classed("hovered", true);
+          })
+          .on("mouseout", function onBarOut() {
+            select(this).classed("hovered", false);
+          }),
+      );
+
+    return $component;
+  },
+
+  /**
+   * Bubbles component
+   * -----------------------------------------------------------------------
+   */
+  ["bubbles"](
+    {
+      disabledColor,
+      dotWidth,
+      enabledColor,
+      gap,
+      hoveredColor,
+      strokeEnabledColor,
+      strokeDisabledColor,
+      strokeHoveredColor,
+      strokeEnabledOpacity,
+      strokeDisabledOpacity,
+      strokeHoveredOpacity,
+      strokeWidth,
+      value,
+    }: IDotsComponent,
+    { internalDimensions, scales, schema, svg, theme }: IChart,
+    data: TData,
+  ) {
+    const xGap = schema.xAxisGap || X_AXIS_SPACE;
+    const scaleX = scales[value[0]] as any;
+    const scaleY = scales[value[1]] as any;
+    const scaleZ = scales[value[2]] as any;
+    const dGap = gap || SCALE_GAP / 2;
+    const isScaleTime = schema.values[`${value[0]}`].scale === "time";
+    const colWidth = internalDimensions.width / data.length - dGap;
+    const halfColWidth = colWidth / 2;
+    const dWidth = dotWidth || colWidth;
+    const halfWidth = isScaleTime
+      ? -dWidth / 2
+      : halfColWidth - dWidth / 2 + dGap / 2;
+    const left = internalDimensions.left + xGap;
+    // const radius = dWidth / 2;
+
+    const $component = svg
+      .append("g")
+      .attr("class", CHART_BUBBLES)
+      .style(
+        "--component-enabled-color",
+        enabledColor ? theme.__COLORS[enabledColor] : theme.chart.valueEnabled,
+      )
+      .style(
+        "--component-hovered-color",
+        hoveredColor ? theme.__COLORS[hoveredColor] : theme.chart.valueHovered,
+      )
+      .style(
+        "--component-disabled-color",
+        disabledColor
+          ? theme.__COLORS[disabledColor]
+          : theme.chart.valueDisabled,
+      )
+      .style(
+        "--component-stroke-enabled-color",
+        strokeEnabledColor
+          ? theme.__COLORS[strokeEnabledColor]
+          : theme.chart.strokeEnabledColor,
+      )
+      .style(
+        "--component-stroke-disabled-color",
+        strokeDisabledColor
+          ? theme.__COLORS[strokeDisabledColor]
+          : theme.chart.strokeDisabledColor,
+      )
+      .style(
+        "--component-stroke-hovered-color",
+        strokeHoveredColor
+          ? theme.__COLORS[strokeHoveredColor]
+          : theme.chart.strokeEnabledColor,
+      )
+      .style(
+        "--component-stroke-enabled-opacity",
+        strokeEnabledOpacity || theme.chart.strokeEnabledOpacity,
+      )
+      .style(
+        "--component-stroke-disabled-opacity",
+        strokeDisabledOpacity || theme.chart.strokeDisabledOpacity,
+      )
+      .style(
+        "--component-stroke-hovered-opacity",
+        strokeHoveredOpacity || theme.chart.strokeHoveredOpacity,
+      )
+      .style("--component-stroke-width", strokeWidth || theme.chart.strokeWidth)
+      .selectAll("path")
+      .data(data.filter((d) => !!d[value[1]]))
+      .enter()
+      .append("path")
+      .call((g) =>
+        g
+          .attr("d", (d: TValueName) => {
+            const xVal = scaleX(
+              isScaleTime ? new Date(d[value[0]]) : d[value[0]],
+            );
+            const yVal = scaleY(d[value[1]]);
+            const zVal = scaleZ(d[value[2]]);
+            return drawCircle({
+              r: zVal,
               x: left + xVal + halfWidth,
               y: yVal,
             });

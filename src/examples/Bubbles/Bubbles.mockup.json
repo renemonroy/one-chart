@@ -1,0 +1,996 @@
+[
+  {
+    "country": "Afghanistan",
+    "continent": "Asia",
+    "lifeExp": 43.828,
+    "pop": 31889923,
+    "gdpPerCap": 974.5803384
+  },
+  {
+    "country": "Albania",
+    "continent": "Europe",
+    "lifeExp": 76.423,
+    "pop": 3600523,
+    "gdpPerCap": 5937.029526
+  },
+  {
+    "country": "Algeria",
+    "continent": "Africa",
+    "lifeExp": 72.301,
+    "pop": 33333216,
+    "gdpPerCap": 6223.367465
+  },
+  {
+    "country": "Angola",
+    "continent": "Africa",
+    "lifeExp": 42.731,
+    "pop": 12420476,
+    "gdpPerCap": 4797.231267
+  },
+  {
+    "country": "Argentina",
+    "continent": "Americas",
+    "lifeExp": 75.32,
+    "pop": 40301927,
+    "gdpPerCap": 12779.37964
+  },
+  {
+    "country": "Australia",
+    "continent": "Oceania",
+    "lifeExp": 81.235,
+    "pop": 20434176,
+    "gdpPerCap": 34435.36744
+  },
+  {
+    "country": "Austria",
+    "continent": "Europe",
+    "lifeExp": 79.829,
+    "pop": 8199783,
+    "gdpPerCap": 36126.4927
+  },
+  {
+    "country": "Bahrain",
+    "continent": "Asia",
+    "lifeExp": 75.635,
+    "pop": 708573,
+    "gdpPerCap": 29796.04834
+  },
+  {
+    "country": "Bangladesh",
+    "continent": "Asia",
+    "lifeExp": 64.062,
+    "pop": 150448339,
+    "gdpPerCap": 1391.253792
+  },
+  {
+    "country": "Belgium",
+    "continent": "Europe",
+    "lifeExp": 79.441,
+    "pop": 10392226,
+    "gdpPerCap": 33692.60508
+  },
+  {
+    "country": "Benin",
+    "continent": "Africa",
+    "lifeExp": 56.728,
+    "pop": 8078314,
+    "gdpPerCap": 1441.284873
+  },
+  {
+    "country": "Bolivia",
+    "continent": "Americas",
+    "lifeExp": 65.554,
+    "pop": 9119152,
+    "gdpPerCap": 3822.137084
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "lifeExp": 74.852,
+    "pop": 4552198,
+    "gdpPerCap": 7446.298803
+  },
+  {
+    "country": "Botswana",
+    "continent": "Africa",
+    "lifeExp": 50.728,
+    "pop": 1639131,
+    "gdpPerCap": 12569.85177
+  },
+  {
+    "country": "Brazil",
+    "continent": "Americas",
+    "lifeExp": 72.39,
+    "pop": 190010647,
+    "gdpPerCap": 9065.800825
+  },
+  {
+    "country": "Bulgaria",
+    "continent": "Europe",
+    "lifeExp": 73.005,
+    "pop": 7322858,
+    "gdpPerCap": 10680.79282
+  },
+  {
+    "country": "Burkina Faso",
+    "continent": "Africa",
+    "lifeExp": 52.295,
+    "pop": 14326203,
+    "gdpPerCap": 1217.032994
+  },
+  {
+    "country": "Burundi",
+    "continent": "Africa",
+    "lifeExp": 49.58,
+    "pop": 8390505,
+    "gdpPerCap": 430.0706916
+  },
+  {
+    "country": "Cambodia",
+    "continent": "Asia",
+    "lifeExp": 59.723,
+    "pop": 14131858,
+    "gdpPerCap": 1713.778686
+  },
+  {
+    "country": "Cameroon",
+    "continent": "Africa",
+    "lifeExp": 50.43,
+    "pop": 17696293,
+    "gdpPerCap": 2042.09524
+  },
+  {
+    "country": "Canada",
+    "continent": "Americas",
+    "lifeExp": 80.653,
+    "pop": 33390141,
+    "gdpPerCap": 36319.23501
+  },
+  {
+    "country": "Central African Republic",
+    "continent": "Africa",
+    "lifeExp": 44.741,
+    "pop": 4369038,
+    "gdpPerCap": 706.016537
+  },
+  {
+    "country": "Chad",
+    "continent": "Africa",
+    "lifeExp": 50.651,
+    "pop": 10238807,
+    "gdpPerCap": 1704.063724
+  },
+  {
+    "country": "Chile",
+    "continent": "Americas",
+    "lifeExp": 78.553,
+    "pop": 16284741,
+    "gdpPerCap": 13171.63885
+  },
+  {
+    "country": "China",
+    "continent": "Asia",
+    "lifeExp": 72.961,
+    "pop": 1318683096,
+    "gdpPerCap": 4959.114854
+  },
+  {
+    "country": "Colombia",
+    "continent": "Americas",
+    "lifeExp": 72.889,
+    "pop": 44227550,
+    "gdpPerCap": 7006.580419
+  },
+  {
+    "country": "Comoros",
+    "continent": "Africa",
+    "lifeExp": 65.152,
+    "pop": 710960,
+    "gdpPerCap": 986.1478792
+  },
+  {
+    "country": "Congo, Dem. Rep.",
+    "continent": "Africa",
+    "lifeExp": 46.462,
+    "pop": 64606759,
+    "gdpPerCap": 277.5518587
+  },
+  {
+    "country": "Congo, Rep.",
+    "continent": "Africa",
+    "lifeExp": 55.322,
+    "pop": 3800610,
+    "gdpPerCap": 3632.557798
+  },
+  {
+    "country": "Costa Rica",
+    "continent": "Americas",
+    "lifeExp": 78.782,
+    "pop": 4133884,
+    "gdpPerCap": 9645.06142
+  },
+  {
+    "country": "Cote d'Ivoire",
+    "continent": "Africa",
+    "lifeExp": 48.328,
+    "pop": 18013409,
+    "gdpPerCap": 1544.750112
+  },
+  {
+    "country": "Croatia",
+    "continent": "Europe",
+    "lifeExp": 75.748,
+    "pop": 4493312,
+    "gdpPerCap": 14619.22272
+  },
+  {
+    "country": "Cuba",
+    "continent": "Americas",
+    "lifeExp": 78.273,
+    "pop": 11416987,
+    "gdpPerCap": 8948.102923
+  },
+  {
+    "country": "Czech Republic",
+    "continent": "Europe",
+    "lifeExp": 76.486,
+    "pop": 10228744,
+    "gdpPerCap": 22833.30851
+  },
+  {
+    "country": "Denmark",
+    "continent": "Europe",
+    "lifeExp": 78.332,
+    "pop": 5468120,
+    "gdpPerCap": 35278.41874
+  },
+  {
+    "country": "Djibouti",
+    "continent": "Africa",
+    "lifeExp": 54.791,
+    "pop": 496374,
+    "gdpPerCap": 2082.481567
+  },
+  {
+    "country": "Dominican Republic",
+    "continent": "Americas",
+    "lifeExp": 72.235,
+    "pop": 9319622,
+    "gdpPerCap": 6025.374752
+  },
+  {
+    "country": "Ecuador",
+    "continent": "Americas",
+    "lifeExp": 74.994,
+    "pop": 13755680,
+    "gdpPerCap": 6873.262326
+  },
+  {
+    "country": "Egypt",
+    "continent": "Africa",
+    "lifeExp": 71.338,
+    "pop": 80264543,
+    "gdpPerCap": 5581.180998
+  },
+  {
+    "country": "El Salvador",
+    "continent": "Americas",
+    "lifeExp": 71.878,
+    "pop": 6939688,
+    "gdpPerCap": 5728.353514
+  },
+  {
+    "country": "Equatorial Guinea",
+    "continent": "Africa",
+    "lifeExp": 51.579,
+    "pop": 551201,
+    "gdpPerCap": 12154.08975
+  },
+  {
+    "country": "Eritrea",
+    "continent": "Africa",
+    "lifeExp": 58.04,
+    "pop": 4906585,
+    "gdpPerCap": 641.3695236
+  },
+  {
+    "country": "Ethiopia",
+    "continent": "Africa",
+    "lifeExp": 52.947,
+    "pop": 76511887,
+    "gdpPerCap": 690.8055759
+  },
+  {
+    "country": "Finland",
+    "continent": "Europe",
+    "lifeExp": 79.313,
+    "pop": 5238460,
+    "gdpPerCap": 33207.0844
+  },
+  {
+    "country": "France",
+    "continent": "Europe",
+    "lifeExp": 80.657,
+    "pop": 61083916,
+    "gdpPerCap": 30470.0167
+  },
+  {
+    "country": "Gabon",
+    "continent": "Africa",
+    "lifeExp": 56.735,
+    "pop": 1454867,
+    "gdpPerCap": 13206.48452
+  },
+  {
+    "country": "Gambia",
+    "continent": "Africa",
+    "lifeExp": 59.448,
+    "pop": 1688359,
+    "gdpPerCap": 752.7497265
+  },
+  {
+    "country": "Germany",
+    "continent": "Europe",
+    "lifeExp": 79.406,
+    "pop": 82400996,
+    "gdpPerCap": 32170.37442
+  },
+  {
+    "country": "Ghana",
+    "continent": "Africa",
+    "lifeExp": 60.022,
+    "pop": 22873338,
+    "gdpPerCap": 1327.60891
+  },
+  {
+    "country": "Greece",
+    "continent": "Europe",
+    "lifeExp": 79.483,
+    "pop": 10706290,
+    "gdpPerCap": 27538.41188
+  },
+  {
+    "country": "Guatemala",
+    "continent": "Americas",
+    "lifeExp": 70.259,
+    "pop": 12572928,
+    "gdpPerCap": 5186.050003
+  },
+  {
+    "country": "Guinea",
+    "continent": "Africa",
+    "lifeExp": 56.007,
+    "pop": 9947814,
+    "gdpPerCap": 942.6542111
+  },
+  {
+    "country": "Guinea-Bissau",
+    "continent": "Africa",
+    "lifeExp": 46.388,
+    "pop": 1472041,
+    "gdpPerCap": 579.231743
+  },
+  {
+    "country": "Haiti",
+    "continent": "Americas",
+    "lifeExp": 60.916,
+    "pop": 8502814,
+    "gdpPerCap": 1201.637154
+  },
+  {
+    "country": "Honduras",
+    "continent": "Americas",
+    "lifeExp": 70.198,
+    "pop": 7483763,
+    "gdpPerCap": 3548.330846
+  },
+  {
+    "country": "Hong Kong, China",
+    "continent": "Asia",
+    "lifeExp": 82.208,
+    "pop": 6980412,
+    "gdpPerCap": 39724.97867
+  },
+  {
+    "country": "Hungary",
+    "continent": "Europe",
+    "lifeExp": 73.338,
+    "pop": 9956108,
+    "gdpPerCap": 18008.94444
+  },
+  {
+    "country": "Iceland",
+    "continent": "Europe",
+    "lifeExp": 81.757,
+    "pop": 301931,
+    "gdpPerCap": 36180.78919
+  },
+  {
+    "country": "India",
+    "continent": "Asia",
+    "lifeExp": 64.698,
+    "pop": 1110396331,
+    "gdpPerCap": 2452.210407
+  },
+  {
+    "country": "Indonesia",
+    "continent": "Asia",
+    "lifeExp": 70.65,
+    "pop": 223547000,
+    "gdpPerCap": 3540.651564
+  },
+  {
+    "country": "Iran",
+    "continent": "Asia",
+    "lifeExp": 70.964,
+    "pop": 69453570,
+    "gdpPerCap": 11605.71449
+  },
+  {
+    "country": "Iraq",
+    "continent": "Asia",
+    "lifeExp": 59.545,
+    "pop": 27499638,
+    "gdpPerCap": 4471.061906
+  },
+  {
+    "country": "Ireland",
+    "continent": "Europe",
+    "lifeExp": 78.885,
+    "pop": 4109086,
+    "gdpPerCap": 40675.99635
+  },
+  {
+    "country": "Israel",
+    "continent": "Asia",
+    "lifeExp": 80.745,
+    "pop": 6426679,
+    "gdpPerCap": 25523.2771
+  },
+  {
+    "country": "Italy",
+    "continent": "Europe",
+    "lifeExp": 80.546,
+    "pop": 58147733,
+    "gdpPerCap": 28569.7197
+  },
+  {
+    "country": "Jamaica",
+    "continent": "Americas",
+    "lifeExp": 72.567,
+    "pop": 2780132,
+    "gdpPerCap": 7320.880262
+  },
+  {
+    "country": "Japan",
+    "continent": "Asia",
+    "lifeExp": 82.603,
+    "pop": 127467972,
+    "gdpPerCap": 31656.06806
+  },
+  {
+    "country": "Jordan",
+    "continent": "Asia",
+    "lifeExp": 72.535,
+    "pop": 6053193,
+    "gdpPerCap": 4519.461171
+  },
+  {
+    "country": "Kenya",
+    "continent": "Africa",
+    "lifeExp": 54.11,
+    "pop": 35610177,
+    "gdpPerCap": 1463.249282
+  },
+  {
+    "country": "Korea, Dem. Rep.",
+    "continent": "Asia",
+    "lifeExp": 67.297,
+    "pop": 23301725,
+    "gdpPerCap": 1593.06548
+  },
+  {
+    "country": "Korea, Rep.",
+    "continent": "Asia",
+    "lifeExp": 78.623,
+    "pop": 49044790,
+    "gdpPerCap": 23348.13973
+  },
+  {
+    "country": "Kuwait",
+    "continent": "Asia",
+    "lifeExp": 77.588,
+    "pop": 2505559,
+    "gdpPerCap": 47306.98978
+  },
+  {
+    "country": "Lebanon",
+    "continent": "Asia",
+    "lifeExp": 71.993,
+    "pop": 3921278,
+    "gdpPerCap": 10461.05868
+  },
+  {
+    "country": "Lesotho",
+    "continent": "Africa",
+    "lifeExp": 42.592,
+    "pop": 2012649,
+    "gdpPerCap": 1569.331442
+  },
+  {
+    "country": "Liberia",
+    "continent": "Africa",
+    "lifeExp": 45.678,
+    "pop": 3193942,
+    "gdpPerCap": 414.5073415
+  },
+  {
+    "country": "Libya",
+    "continent": "Africa",
+    "lifeExp": 73.952,
+    "pop": 6036914,
+    "gdpPerCap": 12057.49928
+  },
+  {
+    "country": "Madagascar",
+    "continent": "Africa",
+    "lifeExp": 59.443,
+    "pop": 19167654,
+    "gdpPerCap": 1044.770126
+  },
+  {
+    "country": "Malawi",
+    "continent": "Africa",
+    "lifeExp": 48.303,
+    "pop": 13327079,
+    "gdpPerCap": 759.3499101
+  },
+  {
+    "country": "Malaysia",
+    "continent": "Asia",
+    "lifeExp": 74.241,
+    "pop": 24821286,
+    "gdpPerCap": 12451.6558
+  },
+  {
+    "country": "Mali",
+    "continent": "Africa",
+    "lifeExp": 54.467,
+    "pop": 12031795,
+    "gdpPerCap": 1042.581557
+  },
+  {
+    "country": "Mauritania",
+    "continent": "Africa",
+    "lifeExp": 64.164,
+    "pop": 3270065,
+    "gdpPerCap": 1803.151496
+  },
+  {
+    "country": "Mauritius",
+    "continent": "Africa",
+    "lifeExp": 72.801,
+    "pop": 1250882,
+    "gdpPerCap": 10956.99112
+  },
+  {
+    "country": "Mexico",
+    "continent": "Americas",
+    "lifeExp": 76.195,
+    "pop": 108700891,
+    "gdpPerCap": 11977.57496
+  },
+  {
+    "country": "Mongolia",
+    "continent": "Asia",
+    "lifeExp": 66.803,
+    "pop": 2874127,
+    "gdpPerCap": 3095.772271
+  },
+  {
+    "country": "Montenegro",
+    "continent": "Europe",
+    "lifeExp": 74.543,
+    "pop": 684736,
+    "gdpPerCap": 9253.896111
+  },
+  {
+    "country": "Morocco",
+    "continent": "Africa",
+    "lifeExp": 71.164,
+    "pop": 33757175,
+    "gdpPerCap": 3820.17523
+  },
+  {
+    "country": "Mozambique",
+    "continent": "Africa",
+    "lifeExp": 42.082,
+    "pop": 19951656,
+    "gdpPerCap": 823.6856205
+  },
+  {
+    "country": "Myanmar",
+    "continent": "Asia",
+    "lifeExp": 62.069,
+    "pop": 47761980,
+    "gdpPerCap": 944
+  },
+  {
+    "country": "Namibia",
+    "continent": "Africa",
+    "lifeExp": 52.906,
+    "pop": 2055080,
+    "gdpPerCap": 4811.060429
+  },
+  {
+    "country": "Nepal",
+    "continent": "Asia",
+    "lifeExp": 63.785,
+    "pop": 28901790,
+    "gdpPerCap": 1091.359778
+  },
+  {
+    "country": "Netherlands",
+    "continent": "Europe",
+    "lifeExp": 79.762,
+    "pop": 16570613,
+    "gdpPerCap": 36797.93332
+  },
+  {
+    "country": "New Zealand",
+    "continent": "Oceania",
+    "lifeExp": 80.204,
+    "pop": 4115771,
+    "gdpPerCap": 25185.00911
+  },
+  {
+    "country": "Nicaragua",
+    "continent": "Americas",
+    "lifeExp": 72.899,
+    "pop": 5675356,
+    "gdpPerCap": 2749.320965
+  },
+  {
+    "country": "Niger",
+    "continent": "Africa",
+    "lifeExp": 56.867,
+    "pop": 12894865,
+    "gdpPerCap": 619.6768924
+  },
+  {
+    "country": "Nigeria",
+    "continent": "Africa",
+    "lifeExp": 46.859,
+    "pop": 135031164,
+    "gdpPerCap": 2013.977305
+  },
+  {
+    "country": "Norway",
+    "continent": "Europe",
+    "lifeExp": 80.196,
+    "pop": 4627926,
+    "gdpPerCap": 49357.19017
+  },
+  {
+    "country": "Oman",
+    "continent": "Asia",
+    "lifeExp": 75.64,
+    "pop": 3204897,
+    "gdpPerCap": 22316.19287
+  },
+  {
+    "country": "Pakistan",
+    "continent": "Asia",
+    "lifeExp": 65.483,
+    "pop": 169270617,
+    "gdpPerCap": 2605.94758
+  },
+  {
+    "country": "Panama",
+    "continent": "Americas",
+    "lifeExp": 75.537,
+    "pop": 3242173,
+    "gdpPerCap": 9809.185636
+  },
+  {
+    "country": "Paraguay",
+    "continent": "Americas",
+    "lifeExp": 71.752,
+    "pop": 6667147,
+    "gdpPerCap": 4172.838464
+  },
+  {
+    "country": "Peru",
+    "continent": "Americas",
+    "lifeExp": 71.421,
+    "pop": 28674757,
+    "gdpPerCap": 7408.905561
+  },
+  {
+    "country": "Philippines",
+    "continent": "Asia",
+    "lifeExp": 71.688,
+    "pop": 91077287,
+    "gdpPerCap": 3190.481016
+  },
+  {
+    "country": "Poland",
+    "continent": "Europe",
+    "lifeExp": 75.563,
+    "pop": 38518241,
+    "gdpPerCap": 15389.92468
+  },
+  {
+    "country": "Portugal",
+    "continent": "Europe",
+    "lifeExp": 78.098,
+    "pop": 10642836,
+    "gdpPerCap": 20509.64777
+  },
+  {
+    "country": "Puerto Rico",
+    "continent": "Americas",
+    "lifeExp": 78.746,
+    "pop": 3942491,
+    "gdpPerCap": 19328.70901
+  },
+  {
+    "country": "Reunion",
+    "continent": "Africa",
+    "lifeExp": 76.442,
+    "pop": 798094,
+    "gdpPerCap": 7670.122558
+  },
+  {
+    "country": "Romania",
+    "continent": "Europe",
+    "lifeExp": 72.476,
+    "pop": 22276056,
+    "gdpPerCap": 10808.47561
+  },
+  {
+    "country": "Rwanda",
+    "continent": "Africa",
+    "lifeExp": 46.242,
+    "pop": 8860588,
+    "gdpPerCap": 863.0884639
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "continent": "Africa",
+    "lifeExp": 65.528,
+    "pop": 199579,
+    "gdpPerCap": 1598.435089
+  },
+  {
+    "country": "Saudi Arabia",
+    "continent": "Asia",
+    "lifeExp": 72.777,
+    "pop": 27601038,
+    "gdpPerCap": 21654.83194
+  },
+  {
+    "country": "Senegal",
+    "continent": "Africa",
+    "lifeExp": 63.062,
+    "pop": 12267493,
+    "gdpPerCap": 1712.472136
+  },
+  {
+    "country": "Serbia",
+    "continent": "Europe",
+    "lifeExp": 74.002,
+    "pop": 10150265,
+    "gdpPerCap": 9786.534714
+  },
+  {
+    "country": "Sierra Leone",
+    "continent": "Africa",
+    "lifeExp": 42.568,
+    "pop": 6144562,
+    "gdpPerCap": 862.5407561
+  },
+  {
+    "country": "Singapore",
+    "continent": "Asia",
+    "lifeExp": 79.972,
+    "pop": 4553009,
+    "gdpPerCap": 47143.17964
+  },
+  {
+    "country": "Slovak Republic",
+    "continent": "Europe",
+    "lifeExp": 74.663,
+    "pop": 5447502,
+    "gdpPerCap": 18678.31435
+  },
+  {
+    "country": "Slovenia",
+    "continent": "Europe",
+    "lifeExp": 77.926,
+    "pop": 2009245,
+    "gdpPerCap": 25768.25759
+  },
+  {
+    "country": "Somalia",
+    "continent": "Africa",
+    "lifeExp": 48.159,
+    "pop": 9118773,
+    "gdpPerCap": 926.1410683
+  },
+  {
+    "country": "South Africa",
+    "continent": "Africa",
+    "lifeExp": 49.339,
+    "pop": 43997828,
+    "gdpPerCap": 9269.657808
+  },
+  {
+    "country": "Spain",
+    "continent": "Europe",
+    "lifeExp": 80.941,
+    "pop": 40448191,
+    "gdpPerCap": 28821.0637
+  },
+  {
+    "country": "Sri Lanka",
+    "continent": "Asia",
+    "lifeExp": 72.396,
+    "pop": 20378239,
+    "gdpPerCap": 3970.095407
+  },
+  {
+    "country": "Sudan",
+    "continent": "Africa",
+    "lifeExp": 58.556,
+    "pop": 42292929,
+    "gdpPerCap": 2602.394995
+  },
+  {
+    "country": "Swaziland",
+    "continent": "Africa",
+    "lifeExp": 39.613,
+    "pop": 1133066,
+    "gdpPerCap": 4513.480643
+  },
+  {
+    "country": "Sweden",
+    "continent": "Europe",
+    "lifeExp": 80.884,
+    "pop": 9031088,
+    "gdpPerCap": 33859.74835
+  },
+  {
+    "country": "Switzerland",
+    "continent": "Europe",
+    "lifeExp": 81.701,
+    "pop": 7554661,
+    "gdpPerCap": 37506.41907
+  },
+  {
+    "country": "Syria",
+    "continent": "Asia",
+    "lifeExp": 74.143,
+    "pop": 19314747,
+    "gdpPerCap": 4184.548089
+  },
+  {
+    "country": "Taiwan",
+    "continent": "Asia",
+    "lifeExp": 78.4,
+    "pop": 23174294,
+    "gdpPerCap": 28718.27684
+  },
+  {
+    "country": "Tanzania",
+    "continent": "Africa",
+    "lifeExp": 52.517,
+    "pop": 38139640,
+    "gdpPerCap": 1107.482182
+  },
+  {
+    "country": "Thailand",
+    "continent": "Asia",
+    "lifeExp": 70.616,
+    "pop": 65068149,
+    "gdpPerCap": 7458.396327
+  },
+  {
+    "country": "Togo",
+    "continent": "Africa",
+    "lifeExp": 58.42,
+    "pop": 5701579,
+    "gdpPerCap": 882.9699438
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "continent": "Americas",
+    "lifeExp": 69.819,
+    "pop": 1056608,
+    "gdpPerCap": 18008.50924
+  },
+  {
+    "country": "Tunisia",
+    "continent": "Africa",
+    "lifeExp": 73.923,
+    "pop": 10276158,
+    "gdpPerCap": 7092.923025
+  },
+  {
+    "country": "Turkey",
+    "continent": "Europe",
+    "lifeExp": 71.777,
+    "pop": 71158647,
+    "gdpPerCap": 8458.276384
+  },
+  {
+    "country": "Uganda",
+    "continent": "Africa",
+    "lifeExp": 51.542,
+    "pop": 29170398,
+    "gdpPerCap": 1056.380121
+  },
+  {
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "lifeExp": 79.425,
+    "pop": 60776238,
+    "gdpPerCap": 33203.26128
+  },
+  {
+    "country": "United States",
+    "continent": "Americas",
+    "lifeExp": 78.242,
+    "pop": 301139947,
+    "gdpPerCap": 42951.65309
+  },
+  {
+    "country": "Uruguay",
+    "continent": "Americas",
+    "lifeExp": 76.384,
+    "pop": 3447496,
+    "gdpPerCap": 10611.46299
+  },
+  {
+    "country": "Venezuela",
+    "continent": "Americas",
+    "lifeExp": 73.747,
+    "pop": 26084662,
+    "gdpPerCap": 11415.80569
+  },
+  {
+    "country": "Vietnam",
+    "continent": "Asia",
+    "lifeExp": 74.249,
+    "pop": 85262356,
+    "gdpPerCap": 2441.576404
+  },
+  {
+    "country": "West Bank and Gaza",
+    "continent": "Asia",
+    "lifeExp": 73.422,
+    "pop": 4018332,
+    "gdpPerCap": 3025.349798
+  },
+  {
+    "country": "Yemen, Rep.",
+    "continent": "Asia",
+    "lifeExp": 62.698,
+    "pop": 22211743,
+    "gdpPerCap": 2280.769906
+  },
+  {
+    "country": "Zambia",
+    "continent": "Africa",
+    "lifeExp": 42.384,
+    "pop": 11746035,
+    "gdpPerCap": 1271.211593
+  },
+  {
+    "country": "Zimbabwe",
+    "continent": "Africa",
+    "lifeExp": 43.487,
+    "pop": 12311143,
+    "gdpPerCap": 469.7092981
+  }
+]
