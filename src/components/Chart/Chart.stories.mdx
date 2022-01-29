@@ -12,6 +12,10 @@ import quarterSchema from "../../examples/Quarter/Quarter.schema.ts";
 import quarterMockup from "../../examples/Quarter/Quarter.mockup.json";
 import linesSchema from "../../examples/Lines/Lines.schema.ts";
 import linesData from "../../examples/Lines/Lines.mockup.json";
+import dotsSchema from "../../examples/Dots/Dots.schema.ts";
+import dotsData from "../../examples/Dots/Dots.mockup.json";
+import bubblesSchema from "../../examples/Bubbles/Bubbles.schema.ts";
+import bubblesData from "../../examples/Bubbles/Bubbles.mockup.json";
 
 <Meta
   title="Chart"
@@ -56,10 +60,36 @@ export const Template = (args) => <Chart {...args} />;
 
 <Canvas>
   <Story
+    name="withDots"
+    args={{
+      schema: dotsSchema,
+      data: dotsData,
+      isLoading: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
     name="withLines"
     args={{
       schema: linesSchema,
       data: linesData,
+      isLoading: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="withBubbles"
+    args={{
+      schema: bubblesSchema,
+      data: bubblesData,
       isLoading: false,
     }}
   >
