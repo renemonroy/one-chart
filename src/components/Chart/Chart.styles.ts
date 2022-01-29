@@ -33,8 +33,7 @@ export const SChart = styled.svg`
     fill: var(--component-disabled-color);
   } */
 
-  g.${constants.CHART_VERTICAL_BARS},
-  g.${constants.CHART_DOTS} {
+  g.${constants.CHART_VERTICAL_BARS} {
     path.${constants.COMPONENT_CLASSNAME} {
       fill: var(--component-enabled-color);
       transition: all 0.1s ease;
@@ -61,6 +60,34 @@ export const SChart = styled.svg`
           fill: var(--component-disabled-color);
         }
       } */
+    }
+  }
+
+  g.${constants.CHART_DOTS},
+  g.${constants.CHART_BUBBLES} {
+    path.${constants.COMPONENT_CLASSNAME} {
+      fill: var(--component-enabled-color);
+      transition: all 0.1s ease;
+      stroke: var(--component-stroke-enabled-color);
+      stroke-opacity: var(--component-stroke-enabled-opacity);
+      stroke-width: var(--component-stroke-width);
+    }
+
+    &:hover {
+      path.${constants.COMPONENT_CLASSNAME} {
+        &.hovered {
+          fill: var(--component-hovered-color);
+          paint-order: stroke;
+          stroke: var(--component-stroke-hovered-color);
+          stroke-opacity: var(--component-stroke-hovered-opacity);
+        }
+
+        &:not(.hovered) {
+          fill: var(--component-disabled-color);
+          stroke: var(--component-stroke-disabled-color);
+          stroke-opacity: var(--component-stroke-disabled-opacity);
+        }
+      }
     }
   }
 
