@@ -10,7 +10,7 @@
 
 # [📈 1Chart](https://renemonroy.github.io/one-chart)
 
-**A single chart component to rule them all?!**
+**A single chart component to rule them all.**
 
 [Description](#-description) •
 [Motivation](#-motivation) •
