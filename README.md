@@ -50,8 +50,8 @@ left no easy control over UIs dedicated to pure graphs.
 
 The idea behind this PoC is to ease the creation of charts following a single
 pattern while giving the consistency required to have multiple yet different
-graphs. 1Chart is basically a mix between a D3 wrapper and an UI Library that is
-focused only on charts.
+graphs. You can think of 1Chart as tool that helps creating your custom Charts
+Library by using D3 as wrapper.
 
 <br>
 
